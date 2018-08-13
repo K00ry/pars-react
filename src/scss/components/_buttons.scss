@@ -1,0 +1,143 @@
+
+#btn{
+color:$text-yellow-main;
+
+}
+
+.head-intro-sub {
+    height: 0;
+    width: 100%;
+    position: relative;
+    z-index: 100000;
+    // top: 0;
+    // right: 0; // background-color: rgba(33, 33, 33, 0.91);
+    background-color: #000;
+    // overflow: auto;
+    transition: 0.5s;
+    // padding-top: 60px;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1000000;
+    top: 0;
+    right: 0; // background-color: rgba(33, 33, 33, 0.91);
+    background-color: #000;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+.sideNav-sub{
+    @include flex-display(flex, column, space-between, 100%,center);
+    li a{
+        width: 100%;
+        text-align: right;
+    }
+}
+.sidenav-home-btn{
+
+    @include font-fam-size( 3em, asli, 200, rgba(255, 255, 255, .9));
+    float: right;
+
+}
+
+.sidenav .nav-link-style {
+    // padding: 8px;
+    text-decoration: none;
+    @include flex-display(flex, row, space-between, 100%);
+    transition: 0.3s;
+}
+
+.nav-link-style {
+    @include font-fam-size( 2em, asli, 200, rgba(255, 255, 255, .9));
+}
+
+.nav-link-style-sub {
+
+    @include font-fam-size( 1.4em, asli, 100, rgba(255, 255, 255, .9));
+}
+
+.nav-link-no-sub {
+    text-align: right;
+    @include font-fam-size( 1.4em, asli, 100, rgba(255, 255, 255, .9));
+}
+
+.nav {
+
+
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out ;
+
+}
+
+.nav-sub-container {
+    display: none;
+}
+
+
+
+.sidenav a:hover,
+.offcanvas a:focus {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    //position: absolute;
+    //top: 0;
+    //right: 25px;
+    //font-size: 36px;
+    //margin-left: 50px;
+    position: absolute;
+    top: -20px;
+    right: 3px;
+    font-size: 4em;
+    margin-left: 50px;
+    color: #ffffff;
+}
+
+#main {
+    @include flex-display(flex, row, space-between, 100%);
+    transition: margin-left .5s;
+    padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+.slidedown-nav {
+    position: relative;
+    height: 0;
+    overflow: hidden;
+}
+
+.arrow-icon {
+    width: 20px;
+    height: 20px;
+}
+
+///// arrow turns down \\\\
+.arrow-style {
+    width: 20px;
+    height: 20px;
+    transition: all 0.3s;
+}
+
+.arrow-style-sub {
+    width: 15px;
+    height: 15px;
+    transition: all 0.3s;
+}
+
+.expand {
+    transform-origin: center;
+    transform: rotateZ(-90deg);
+}

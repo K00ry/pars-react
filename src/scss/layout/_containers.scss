@@ -1,0 +1,263 @@
+.head-intro {
+    // background: url(../img/int-2.png) no-repeat;
+    // background-size: cover;
+    // background: url(../img/jadval-kh.png) no-repeat 100%;
+    // background-size: 65%;
+    // background-position: center;
+    @include flex-display(flex, column, center, 100%, center); // height: 50vh;
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    .image-head-slog {
+        font-family: asli;
+        font-size: 2em;
+        color: #fff;
+        text-decoration: none;
+        margin: 0;
+    }
+    .image-head-company {
+        font-family: asli;
+        font-size: 4em;
+        color: #fff;
+        text-decoration: none;
+    }
+}
+
+.sub-title {
+    text-align: center;
+    @include font-fam-size( 3em, asli, bold, $text-black-m);
+    padding: 10px 0;
+}
+
+.genres {
+    @include flex-display(flex, row, center, 100%);
+    list-style: none;
+    padding: 0;
+
+    .active a {
+        color: $text-yellow-main;
+        font-size: 1.7em;
+    }
+    li a:focus,
+    li a:hover {
+        color: $text-yellow-main;
+        transition-duration: .7s;
+    }
+    li a {
+
+        margin: 10px;
+        @include font-fam-size( 1.2em, asli, bold, $text-black-m);
+    }
+}
+
+.group {
+    // transition-duration: 2s;
+    @include flex-display(flex, column, space-between, 100%, center);
+    .itemha {
+        @include flex-display(flex, column, space-between, 70%, center);
+        padding: 10px 0;
+        border-bottom: 2px solid #BFBFBF;
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        &:last-child {
+            border-bottom: none;
+            padding-bottom: 20px;
+        }
+        .item-detail {
+            @include flex-display(flex, row, space-between, 50%, center);
+            span {
+                @include font-fam-size( 1em, sevom, bold, $text-black-m);
+            }
+            .item-name {
+                @include font-fam-size( 1em, charom, bold, $text-black-m);
+            }
+        }
+    }
+}
+
+
+.home-genres{
+     @include flex-display(flex, row, space-evenly, 100%, center);
+     flex-wrap:wrap;
+     padding:15px 0;
+     background-color:$text-black;
+
+      .home-genres-title{
+        @include font-fam-size( 1em, asli, bold, $text-yellow-main);
+        width:100%;
+        h2{
+            margin: auto;
+            text-align:center;
+            
+        }
+    }
+
+    .home-genre-item{
+        @include flex-display(flex, column, space-evenly, 40%, center);
+       
+        border: 1px solid $text-yellow-main;
+        padding:10px;
+        margin:25px 0;
+        a{
+             @include font-fam-size( 1.3em, asli, bold, $text-yellow-main);
+
+        }
+    }
+   
+
+}
+
+
+
+
+.gallery-wrapper {
+    @include flex-display(flex, column, space-evenly, 100%, center); // padding:0 10px;
+    // flex-wrap: wrap;
+    .gallery-item {
+        @include flex-display(flex, row, space-evenly, 100%);
+        border-bottom: 1px solid $text-black-l;
+        .item-img {
+            width:50%;
+            margin: auto;
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+
+        .item-title {
+            @include flex-display(flex, column, space-evenly, 50%, center); 
+            @include font-fam-size( 1.1em, asli, bold, $text-black-l);
+            padding: 40px 0;
+            span{
+                @include font-fam-size( 1em, asli, bold, $text-black-m);
+            }
+            
+        }
+    }
+}
+
+.table_wrapper {
+    @include flex-display(flex, column, space-between, 100%, center);
+    padding: 2em 0;
+    .aks_preview {
+        padding: 1em 0;
+        max-width: 100%;
+        height: auto;
+    }
+
+    tr:nth-child(even) {
+        background-color: #e6e6e6;
+    }
+
+    tr:nth-child(odd) {
+        background-color: #f5f5f5;
+    }
+    td {
+
+        padding: 10px;
+    }
+    th {
+        font-weight: 400;
+        padding: 10px;
+        text-align: center; // background-color: #f5f5f5;
+    }
+    th {
+        @include font-fam-size( 1.2em, asli, bold, $text-black-m);
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+    td,
+    th {
+        text-align: center;
+    }
+}
+
+
+.axs1 {
+    background: url("../img/1.jpg") no-repeat center;
+}
+
+.axs2 {
+    background: url("../img/2.jpg") no-repeat center;
+}
+
+.axs3 {
+    background: url("../img/3.jpg") no-repeat center;
+}
+
+.axs4 {
+    background: url("../img/jadval-kh.png") no-repeat 50%;
+}
+
+.col-feature {
+    // background-size: cover;
+    @include flex-display(flex,
+    row,
+    space-between,
+    100%,
+    center);
+    height: 50vh;
+    a {
+        margin: auto;
+    }
+}
+
+.contact {
+    @include flex-display(flex,
+    column,
+    space-between,
+    90%,
+    center);
+
+
+
+
+    .top-nav {
+        width: 100%;
+        padding: 20px 0;
+        border-bottom: 2px solid #000; // #BFBFBF
+        text-align: center;
+        a {
+            @include font-fam-size( 1em,
+            asli,
+            bold,
+            $text-black-m);
+        }
+    }
+    .contact-info {
+        font-family: asli;
+        padding: 30px 0; // border-bottom: 2px solid #BFBFBF;
+        text-align: center;
+        h4 a {
+            @include font-fam-size( 0.9em,
+            -apple-,
+            bold,
+            $text-black-m);
+        }
+        span {
+            @include font-fam-size( 1em,
+            asli,
+            bold,
+            $text-yellow-main);
+        }
+    }
+}
+
+.jabeja {
+    @include background('../img/chideman.jpg',
+    40% 50%,
+    no-repeat,
+    414px 550px) @include media(landscape) {
+        @include background('../img/pars-jadval.jpg',
+        center,
+        no-repeat,
+        cover)
+    }
+}

@@ -1,0 +1,74 @@
+// color variabes \\
+
+$main-background-color : #C7DAEC;
+$main-content-color    : #E4F1FF;
+$link-color			   : #6633ff;
+$text-black			   : #222;
+$nav-li-color		   : #BFBFBF;
+$head-color			   : #43495C;
+$shadow		    	   : #FFBD4F;
+$border-color		   : 2px dotted rgba(0, 0, 0, 0.1);
+
+
+// added colors
+$text-yellow-main : #FFCC00;
+$light-blue	  : #CCCCCC;
+$hard-blue	  : #5F74CF;
+$button-color : #D3D1FF;
+$dark-purple  : #7000CE;
+$body-text    : #E7F0E2;
+$highlight	  : #EBB301;
+
+// lightend colors \\
+$text-black-l	  		   : rgba($text-black,.4);
+$text-black-m	  		   : rgba($text-black,.9);
+$hard-blue-l			   : rgba($hard-blue,.7);
+$dark-purple-l			   : rgba($dark-purple,.1);
+$dark-purple-m			   : rgba($dark-purple,.6);
+$text-color			   : rgba($text-black,.7);
+$link-color-light	   : rgba($link-color,.6);
+$h-color			   : rgba($head-color,.8);
+
+// font variables \\
+
+$main-font  : 'Poiret One', cursive;
+$main-font-2: 'Josefin Sans', sans-serif;
+$p-font     : 'Julius Sans One', sans-serif;
+$h-font     : 'Limelight', cursive;
+
+$sm-font    : 1em;
+$md-font    : 1.3em;
+$lg-font    : 2em;
+$font-w     : 900;
+
+// border variable \\
+
+$border   :  2px solid $nav-li-color;
+ 
+// utilities \\
+
+$auto    :  auto;
+$full    :  100%;
+$trans-default:all 1s;
+
+
+
+// variables for media queries \\
+
+$brk-xs	   : 320px;
+$brk-s	   : 375px;
+$brk-landscape : 414px;
+$brk-mobile-l  : 425px;
+$brk-tablet    : 768px;
+$brk-laptop    : 1024px;
+$brk-laptop-l  : 1440px;
+$brk-4k  	   : 2522px;
+$brk-height	   : 900px;
+
+
+
+$h-iphone4     : 480px;
+$h-iphone5     : 568px;
+$h-iphone6     : 667px;
+$h-iphone6p    : 736px;
+

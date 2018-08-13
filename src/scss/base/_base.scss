@@ -1,0 +1,75 @@
+body {
+    // padding-top: 75px; // background: url(../img/asset-3.png) no-repeat 100%;
+    // background-size: 100%;
+    // background-position: bottom left;
+}
+
+a:hover,
+a:focus {
+    color: none;
+    text-decoration: none;
+}
+
+.container {
+    padding: 0;
+}
+
+.main {
+    padding: 0;
+    width: 100%;
+    margin: auto;
+    // background: url(../img/shade.png) no-repeat 100%;
+    background-size: 100%;
+    background-position: top right;
+}
+
+// .carousel-control.left {
+//     background-image: none;
+// }
+// .carousel-control.right {
+//     background-image: none;
+// }
+.is-visible {
+    opacity: 1;
+    -webkit-transform: translate(0, 0);
+    -webkit-transition: all .3s ease-out;
+}
+
+.is-hidden {
+    opacity: 0;
+    -webkit-transform: translate(0, -60px);
+    -webkit-transition: all .3s ease-out;
+}
+
+.navbar {
+    width: 100%;
+    background-color: #000;
+    #main h1 {
+        display: inline-block;
+        @include font-fam-size( 2.5em, asli, bold, $text-yellow-main);
+        margin: auto 40px;
+        b {
+            @include font-fam-size( 1em, asli, bold, #fff);
+        }
+    }
+    .navbar-toggler {
+        font-size: 1.9em;
+        outline: none;
+    }
+}
+
+.back-axs {
+    width: 100%;
+}
+
+///////////////////////////////////////////////test///////////////
+.parallaxParent {
+    height: 50vh;
+    overflow: hidden;
+}
+
+.parallaxParent>* {
+    height: 200%;
+    position: relative;
+    top: -100%;
+}

@@ -1,0 +1,26 @@
+.nav {
+    @include media(tablet) {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+}
+
+.sideNav-title {
+    width: 100%;
+    padding: 10px;
+    li{
+        @include flex-display(flex, column, space-between, 100%, center);
+    }
+}
+.sideNav-sub {
+    width: 100%;
+    padding: 0;
+    list-style: none;
+    // li{
+    // 	@include flex-display(flex, row, space-between, 100%, center);
+    // }
+}
+
+.nav-link {
+    @include font-fam-size( 1.3em, asli, bold, $text-black-m);
+}

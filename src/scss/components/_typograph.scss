@@ -1,0 +1,40 @@
+@font-face {
+    font-family: asli;
+    src: url(../fonts/AAmine.ttf);
+}
+
+@font-face {
+    font-family: dovom;
+    src: url(../fonts/zarghan.ttf);
+}
+
+//@font-face {
+//    font-family: sevom;
+//    src: url(../fonts/vazir-FD.ttf);
+//}
+//@font-face {
+//    font-family: charom;
+//    src: url(../fonts/vazir-WOL.ttf);
+//}
+
+
+a {
+    text-decoration: none;
+    color: $text-black-l;
+}
+
+.image-head {
+    font-family: asli;
+    font-size: 3em;
+    color: $text-yellow-main;
+    text-decoration: none;
+    margin: auto;
+    z-index: 2;
+}
+
+
+
+.arrow {
+    width: 20px;
+    height: 20px;
+}
