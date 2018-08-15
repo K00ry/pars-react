@@ -1,10 +1,7 @@
 .head-intro {
-    // background: url(../img/int-2.png) no-repeat;
-    // background-size: cover;
-    // background: url(../img/jadval-kh.png) no-repeat 100%;
-    // background-size: 65%;
-    // background-position: center;
-    @include flex-display(flex, column, center, 100%, center); // height: 50vh;
+
+    @include flex-display(flex, column, center, 100%, center);
+
     img {
         max-width: 100%;
         height: auto;
@@ -22,6 +19,17 @@
         color: #fff;
         text-decoration: none;
     }
+}
+
+
+
+.main {
+    padding-top: 5em;
+    width: 100%;
+    margin: auto;
+    // background: url(../img/shade.png) no-repeat 100%;
+    background-size: 100%;
+    background-position: top right;
 }
 
 .sub-title {

@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import Sublinks from  './sideDrawerLinks';
+import Sublinks from  './subLinks';
 
 
 import logo from '../../logo.svg';
+import data from "../../data";
 
 
 
@@ -63,8 +64,21 @@ class SideDrawer extends Component {
                     </div>
                     <div className="nav 1" style={subOpenDisplay}>
 
+                        <ul className="sideNav-sub">
+                            {this.props.dataMain.map((arr,index)=>(
 
-                        <Sublinks dataMain={this.props.dataObj} />
+                                <Sublinks
+                                    key={index}
+                                    address={`/catalog/${arr[0].genreEn}`}
+                                    product={arr[0].genreFarsi}
+                                    correctCatalogClick={()=> this.props.correctCatalog(index)}
+                                />))}
+
+                        </ul>
+
+
+
+
 
 
 

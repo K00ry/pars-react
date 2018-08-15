@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const HomeGenres = props => {
 
     let prodName = props.mainObj.map((prod,index) =>(
         <div key={index} className="home-genre-item">
-            <a href="#">{prod.a.genre}</a>
+            <Link to={`catalog/${prod[0].genreId}`}>{prod[0].genreFarsi}</Link>
         </div>)
     );
 

@@ -1,8 +1,9 @@
 import React from 'react';
+import {Navbar} from 'react-bootstrap';
 
 const Toolbar = props => (
   <header>
-    <nav className="navbar navbar-fixed-top" data-nav-status="toggle">
+    <Navbar className="navbar" fixedTop fluid>
       <div id="main">
         <span
           id="btn"
@@ -17,7 +18,7 @@ const Toolbar = props => (
           </h1>
         </a>
       </div>
-    </nav>
+    </Navbar>
   </header>
 );
 

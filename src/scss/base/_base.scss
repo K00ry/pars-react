@@ -14,21 +14,8 @@ a:focus {
     padding: 0;
 }
 
-.main {
-    padding: 0;
-    width: 100%;
-    margin: auto;
-    // background: url(../img/shade.png) no-repeat 100%;
-    background-size: 100%;
-    background-position: top right;
-}
 
-// .carousel-control.left {
-//     background-image: none;
-// }
-// .carousel-control.right {
-//     background-image: none;
-// }
+
 .is-visible {
     opacity: 1;
     -webkit-transform: translate(0, 0);
@@ -44,6 +31,7 @@ a:focus {
 .navbar {
     width: 100%;
     background-color: #000;
+    border: none;
     #main h1 {
         display: inline-block;
         @include font-fam-size( 2.5em, asli, bold, $text-yellow-main);
@@ -62,14 +50,4 @@ a:focus {
     width: 100%;
 }
 
-///////////////////////////////////////////////test///////////////
-.parallaxParent {
-    height: 50vh;
-    overflow: hidden;
-}
 
-.parallaxParent>* {
-    height: 200%;
-    position: relative;
-    top: -100%;
-}
