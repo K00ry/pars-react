@@ -1,9 +1,13 @@
 import React from 'react';
 import {Navbar} from 'react-bootstrap';
+import Headroom from 'react-headroom';
+import { Link } from 'react-router-dom';
+
 
 const Toolbar = props => (
+    <Headroom wrapperStyle={{backgroundColor: '#000'}}>
   <header>
-    <Navbar className="navbar" fixedTop fluid>
+    <Navbar className="navbar" >
       <div id="main">
         <span
           id="btn"
@@ -12,14 +16,15 @@ const Toolbar = props => (
         >
           ☰
         </span>
-        <a>
+        <Link to="/">
           <h1>
             پارس <b>جدول</b>
           </h1>
-        </a>
+        </Link>
       </div>
     </Navbar>
   </header>
+    </Headroom>
 );
 
 export default Toolbar;

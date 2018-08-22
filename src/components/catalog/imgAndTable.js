@@ -1,4 +1,5 @@
 import React from 'react';
+import Table from'./table';
 
 const ImgAndTable = props =>{
 
@@ -11,17 +12,18 @@ const ImgAndTable = props =>{
 
     return(
 
-        <div className="wrapper">
-            <div className="group Jadval-page">
-                {' '}
+
+            <div className="group">
+
                 <div className="table_wrapper">
                     <div className="aks_table">
                         <img
                             className="aks_preview"
-                            src="images/jadval/mobile/wet.jpg"
-                            alt="وت پرس"
+                            src={process.env.PUBLIC_URL + props.img}
+                            // alt={props.imageAlt}
+                            alt={props.imageAlt}
                         />
-                    </div>{' '}
+                    </div>
 
 
 
@@ -32,26 +34,20 @@ const ImgAndTable = props =>{
                             <th className="tg-4s02">(فی(ریال</th>
                             <th>(cm)ابعاد</th>
                         </tr>
-                        <tr>
-                            <td>3000</td>
-                            <td>42300</td>
-                            <td>50*30*10</td>
-                        </tr>
-                        <tr>
-                            <td>3000</td>
-                            <td>47000</td>
-                            <td>50*30*12.5</td>
-                        </tr>
-                        <tr>
-                            <td>3000</td>
-                            <td>52800</td>
-                            <td>50*30*15</td>
-                        </tr>
+                        {
+                            props.tableSizes.map((obj,index)=>
+                            <Table
+                                key={index}
+                                type={obj.type}
+                                price={obj.price}
+                                shipping={obj.shipping}/>)
+                        }
+
                         </tbody>
                     </table>
                 </div>
             </div>
-        </div>
+
 
 
     );

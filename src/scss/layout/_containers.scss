@@ -24,18 +24,33 @@
 
 
 .main {
-    padding-top: 5em;
+    //padding-top: 5em;
     width: 100%;
     margin: auto;
-    // background: url(../img/shade.png) no-repeat 100%;
-    background-size: 100%;
-    background-position: top right;
+    //background: url("../img/cat-back.svg") no-repeat;
+    //background-size: 100%;
+    //background-position: top ;
+
 }
 
 .sub-title {
     text-align: center;
     @include font-fam-size( 3em, asli, bold, $text-black-m);
-    padding: 10px 0;
+
+    margin: auto;
+
+}
+
+#genre{
+    background: url("../img/cat-back.svg") no-repeat;
+    background-size: cover;
+    height: 30vh;
+    margin-bottom: 1em 0;
+    @include flex-display(flex, row, center, 100%);
+    div{margin: auto}
+
+
+
 }
 
 .genres {
@@ -44,18 +59,24 @@
     padding: 0;
 
     .active a {
-        color: $text-yellow-main;
+        //color: $text-yellow-main;
         font-size: 1.7em;
     }
-    li a:focus,
-    li a:hover {
-        color: $text-yellow-main;
+    li button:focus,
+    li button:hover {
         transition-duration: .7s;
+      outline:0;
     }
-    li a {
+    li button {
+      background: url("../img/button/button.png") no-repeat center;
+      background-size: 100%;
+        border: none;
+      padding: 10px;
+
+
 
         margin: 10px;
-        @include font-fam-size( 1.2em, asli, bold, $text-black-m);
+        @include font-fam-size( 1em, asli, bold, $text-black-m);
     }
 }
 
@@ -106,11 +127,14 @@
     .home-genre-item{
         @include flex-display(flex, column, space-evenly, 40%, center);
        
-        border: 1px solid $text-yellow-main;
-        padding:10px;
+        border: 2px solid $text-yellow-main;
+        padding:8px;
         margin:25px 0;
         a{
              @include font-fam-size( 1.3em, asli, bold, $text-yellow-main);
+            width: 100%;
+            text-align: center;
+
 
         }
     }
@@ -150,7 +174,7 @@
 
 .table_wrapper {
     @include flex-display(flex, column, space-between, 100%, center);
-    padding: 2em 0;
+    padding: 1em 0;
     .aks_preview {
         padding: 1em 0;
         max-width: 100%;
@@ -188,34 +212,98 @@
 }
 
 
-.axs1 {
-    background: url("../img/1.jpg") no-repeat center;
+.product-showcase{
+    @include flex-display(flex, column, flex-start, 100%, center);
+    & :nth-child(1) { order: 1; }
+    & :nth-child(2) { order: 2; }
+    & :nth-child(3) { order: 4; }
+    & :nth-child(4) { order: 3; }
+    & :nth-child(5) { order: 5; }
+    & :nth-child(6) { order: 6; }
+    & :nth-child(7) { order: 8; }
+    & :nth-child(8) { order: 7; }
+
+
+    @include media(tablet) {
+        @include flex-display(flex, row, space-between, 100%, center);
+        flex-wrap: wrap;
+
+        & :nth-child(1) { order: 1; }
+        & :nth-child(2) { order: 2; }
+        & :nth-child(3) { order: 3; }
+        & :nth-child(4) { order: 4; }
+        & :nth-child(5) { order: 5; }
+        & :nth-child(6) { order: 6; }
+        & :nth-child(7) { order: 7; }
+        & :nth-child(8) { order: 8; }
+    }
 }
 
+
+
+
+
+.axs0 {
+    background: url("../img/home-jadval.png") no-repeat center;
+    background-size: cover;
+}
+
+.axs1 {
+    background: url("../img/home-blook.png") no-repeat center;
+    background-size: cover;
+}
 .axs2 {
-    background: url("../img/2.jpg") no-repeat center;
+    background: url("../img/home-kafpoosh.png") no-repeat center;
+    background-size: cover;
 }
 
 .axs3 {
-    background: url("../img/3.jpg") no-repeat center;
+    background: url("../img/home-dal.png") no-repeat center;
+    background-size: cover;
+}
+.axs4 {
+    background: url("../img/home-mozayik.png") no-repeat center;
+    background-size: cover;
 }
 
-.axs4 {
-    background: url("../img/jadval-kh.png") no-repeat 50%;
+.axs5 {
+    background: url("../img/home-kaval.png") no-repeat center;
+    background-size: cover;
 }
+.axs6 {
+    background: url("../img/home-mobleman.png") no-repeat center;
+    background-size: cover;
+}
+
+.axs7 {
+    background: url("../img/home-nj.png") no-repeat center;
+    background-size: cover;
+}
+
+
+
+
 
 .col-feature {
     // background-size: cover;
     @include flex-display(flex,
-    row,
+    column,
     space-between,
     100%,
     center);
     height: 50vh;
     a {
-        margin: auto;
+        width: 100%;
+        flex: 1;
+
     }
+    @include media(tablet) {
+        width: 50%;
+
+    }
+
 }
+
 
 .contact {
     @include flex-display(flex,

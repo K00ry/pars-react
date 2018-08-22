@@ -6,7 +6,7 @@ const Contact = () =>{
     return(
         <div className="contact container m-x-auto">
             <div className="top-nav">
-                <a href="#" id="back-to-top">
+                <a  id="back-to-top">
                     <svg className="arrow-icon">
                         <use xlinkHref="#arrow-up" />
                     </svg>

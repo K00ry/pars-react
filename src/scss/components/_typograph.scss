@@ -25,12 +25,29 @@ a {
 
 .image-head {
     font-family: asli;
-    font-size: 3em;
+    font-size: 2em;
     color: $text-yellow-main;
     text-decoration: none;
-    margin: auto;
     z-index: 2;
 }
+.f-left{
+    padding-left: 10vw;
+    float: left;
+    @include media(tablet) {
+
+        padding-left: 10vw;
+    }
+}
+.f-right{
+    padding-right: 10vw;
+    float: right;
+    @include media(tablet) {
+
+        padding-right: 10vw;
+    }
+}
+
+
 
 
 
