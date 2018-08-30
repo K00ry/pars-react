@@ -24,10 +24,14 @@ color:$text-yellow-main;
     z-index: 1040;
     top: 0;
     right: 0; // background-color: rgba(33, 33, 33, 0.91);
-    background-color: #000;
+    background-color:$light-grey;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
+    .closebtn{
+
+        color: $text-yellow-main-l ;
+    }
 }
 .sideNav-sub{
     @include flex-display(flex, column, space-between, 100%,center);
@@ -38,8 +42,8 @@ color:$text-yellow-main;
 }
 .sidenav-home-btn{
 
-    @include font-fam-size( 3em, asli, 200, rgba(255, 255, 255, .9));
-    float: right;
+    @include font-fam-size( 2em, asli, 200, $text-yellow-main-l );
+    padding: 20px 0;
 
 }
 
@@ -51,17 +55,17 @@ color:$text-yellow-main;
 }
 
 .nav-link-style {
-    @include font-fam-size( 2em, asli, 200, rgba(255, 255, 255, .9));
+    @include font-fam-size( 2em, asli, 200, $text-yellow-main-l );
 }
 
 .nav-link-style-sub {
 
-    @include font-fam-size( 1.4em, asli, 100, rgba(255, 255, 255, .9));
+    @include font-fam-size( 1.4em, asli, 100, $text-yellow-main-l );
 }
 
 .nav-link-no-sub {
     text-align: right;
-    @include font-fam-size( 1.4em, asli, 100, rgba(255, 255, 255, .9));
+    @include font-fam-size( 1.4em, asli, 100, $text-yellow-main-l );
 }
 
 .nav {

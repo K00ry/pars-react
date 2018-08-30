@@ -5,7 +5,9 @@ import { Link } from 'react-router-dom';
 
 
 const Toolbar = props => (
-    <Headroom wrapperStyle={{backgroundColor: '#000'}}>
+    <Headroom
+        wrapperStyle={{height: 'auto'}}
+       >
   <header>
     <Navbar className="navbar" >
       <div id="main">

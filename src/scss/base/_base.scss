@@ -30,8 +30,9 @@ a:focus {
 
 .navbar {
     width: 100%;
-    background-color: #000;
+    background-color: $hard-gray;
     border: none;
+    margin-bottom: 0;
     #main h1 {
         display: inline-block;
         @include font-fam-size( 2.5em, asli, bold, $text-yellow-main);
@@ -61,19 +62,23 @@ a:focus {
 //}
 
 .example-enter {
+    opacity: 0.01;
     transform: translateX(-100%);
 }
 
 .example-enter.example-enter-active {
+    opacity: 1;
     transform: translateX(0);
-    transition: transform 0.5s ease-out;
+    transition: transform .5s ease-out;
 }
 
 .example-leave {
     transform: translateX(0);
+    opacity: 1;
 }
 
 .example-leave.example-leave-active {
+    opacity: 0.01;
     transform: translateX(100%);
 
     transition: transform 0.5s ease-in;

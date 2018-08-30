@@ -2,7 +2,7 @@
 
    h1 {
     	margin: 0;
-    	background-color: #000;
+    	background-color: $hard-gray;
         padding: 14px;
         @include font-fam-size( 1em, asli, bold, $text-yellow-main);
         text-align: left;

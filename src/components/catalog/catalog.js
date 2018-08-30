@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 
 import CatalogGenre from './catalogGenre';
 import ImgAndTable from './imgAndTable';
@@ -8,44 +8,86 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 
 
-const Catalog = props => {
+class Catalog extends Component {
 
 
 
 
+state = {
+    // jaber: this.props.location.pathname,
+    //
+    // catalogData:this.props.productData,
+
+    subLinkClass: 1
+
+};
+
+    isActive = index => {
+        return this.state.subLinkClass === index;
+    };
+    setActiveTab = index => {
+        this.setState({ subLinkClass:index });
+    };
+    componentWillMount (){
+    let rightIndex = this.props.location.pathname.charAt(1);
+
+        this.setState({
+            // CatSpec: this.props.productData[this.state.subLinkClass]
+            prodData: this.props.mainOfMain[rightIndex],
+            ProdSpec: this.props.mainOfMain[rightIndex][1]
+        });
+
+    };
+
+    subGenreView = chosen => {
+
+        this.setState({
+
+            ProdSpec: this.state.prodData[chosen]
+        });
 
 
 
-      let galleryType = props.productSpec.genreEn !== 'kafpoosh'?
+    };
 
-        <ImgAndTable key={props.productSpec.genreId} img={props.productSpec.img}
-                                     imageAlt={props.productSpec.type}
-                                     tableSizes={props.productSpec.sizes}
+
+
+
+render(){
+
+
+      let galleryType = this.state.ProdSpec.genreEn !== 'kafpoosh'?
+
+        <ImgAndTable key={this.state.ProdSpec.genreId} img={this.state.ProdSpec.img}
+                                     imageAlt={this.state.ProdSpec.type}
+                                     tableSizes={this.state.ProdSpec.sizes}
           />
           :
 
-          <ImgGallery key={props.productSpec.genreId} passData={props.productSpec.sizes}/>;
+          <ImgGallery key={this.state.ProdSpec.genreId} passData={this.state.ProdSpec.sizes}/>;
 
 
 
     return (
         <div className="container main">
 
-            <div id="genre" key={props.productSpec.genreFarsi}>
-                <div><h1 className="sub-title">{props.productData[0].genreFarsi}</h1></div>
+            <div id="genre" key={this.state.ProdSpec.genreFarsi}>
+                <div><h1 className="sub-title">{this.state.prodData[0].genreFarsi}</h1></div>
 
 
             </div>
 
             <ul   className="genres">
-                {props.productData.map((arr,index)=>
+                {this.state.prodData.map((arr,index)=>
                     <CatalogGenre
                         key={index}
                         productEn={arr.genreEn}
                         productSub={arr.type}
                         productId={arr.genreId}
-                        correctGallery={()=> props.subGenreSelect(index)}
-                        subtag={props.match.url}
+                        correctGallery={()=> this.subGenreView(index)}
+                        subtag={this.props.match.url}
+                        isActive={ this.isActive(index) }
+                        onActiveTab={()=> this.setActiveTab(index) }
                     />
                 )}
             </ul>
@@ -54,7 +96,8 @@ const Catalog = props => {
                 <ReactCSSTransitionGroup
                     transitionName="example"
                     transitionEnterTimeout={500}
-                    transitionLeaveTimeout={500}>
+                    transitionLeaveTimeout={500}
+                component="div">
 
                     {galleryType}
                 </ReactCSSTransitionGroup>
@@ -65,6 +108,7 @@ const Catalog = props => {
 
       </div>
     );
+}
 
-};
+}
 export default Catalog;

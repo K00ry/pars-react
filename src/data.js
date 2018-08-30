@@ -695,23 +695,39 @@ const data = [
           ],
           [
             {
-              genreEn: 'mobloman',
+              genreEn: 'mobleman',
               genreFarsi: 'مبلمان شهري',
-              genreId: '#',
+              genreId: 'mobleman',
               type: '#',
               img: '/images/kaval/mobile/2gerd.jpg',
               sizes: [],
             },
+              {
+                  genreEn: 'mobleman',
+                  genreFarsi: 'مبلمان شهري',
+                  genreId: 'mobleman',
+                  type: '#',
+                  img: '/images/kaval/mobile/2gerd.jpg',
+                  sizes: [],
+              }
           ],
     [
         {
-            genreEn: 'newJersey',
+            genreEn: 'nj',
             genreFarsi: 'نيوجرسی',
-            genreId: '#',
+            genreId: 'big',
             type: 'گرد',
             img: '/images/kaval/mobile/2gerd.jpg',
             sizes: [],
         },
+        {
+            genreEn: 'nj',
+            genreFarsi: 'نيوجرسی',
+            genreId: 'small',
+            type: 'گرد',
+            img: '/images/kaval/mobile/2gerd.jpg',
+            sizes: [],
+        }
     ]
 ];
 export default data;

@@ -10,6 +10,7 @@ import SideDrawer from './components/sidedrawer/sidedrawer';
 import MainContainer from './components/mainContainer/mainContainer';
 import Catalog from './components/catalog/catalog';
 import Contact from './components/contact';
+// import NotFound from './components/NotFound';
 // import {Navbar} from 'react-bootstrap';
 
 class App extends Component {
@@ -25,11 +26,14 @@ class App extends Component {
   };
 
 
+
+
+
   rightStateCatalog = rightCat =>{
 
       this.setState({
           CatalogData: data[rightCat],
-          CatalogSpec:data[rightCat][0]
+          CatalogSpec:data[rightCat][1]
 
       });
   };
@@ -42,38 +46,49 @@ class App extends Component {
     })
 
   };
-    subGenreView = chosen => {
-
-        this.setState({
-
-            CatalogSpec: this.state.CatalogData[chosen]
-        });
-
-
-
-    };
+    // subGenreView = chosen => {
+    //
+    //     this.setState({
+    //
+    //         CatalogSpec: this.state.CatalogData[chosen]
+    //     });
+    //
+    //
+    //
+    // };
 
 
 
 
   render() {
 
-      let catalogRouts =  this.state.CatalogData.map((arr,i)=>(
-          <Route exact key={i} path={`/catalog/${arr.genreEn}`} render={(routerProps)=> <Catalog productData={this.state.CatalogData}
-                                                                   productSpec={this.state.CatalogSpec}
-                                                                   {...routerProps}
-                                                                   subGenreSelect={this.subGenreView}/>} />
-      ));
+      // let catalogRouts =  this.state.CatalogData.map((arr,i)=>(
+      //     <Route exact key={i} path={`/catalog/${arr.genreEn}`} render={(routerProps)=> <Catalog productData={this.state.CatalogData}
+      //                                                              productSpec={this.state.CatalogSpec}
+      //                                                              mainOfMain={this.state.mainData}
+      //                                                              {...routerProps}
+      //                                                              subGenreSelect={this.subGenreView}/>} />
+      // ));
+      // let catalogRouts =  this.state.CatalogData.map((arr,i)=>(
+      //     <Route exact key={i} path={`/${i}`} render={(routerProps)=> <Catalog productData={this.state.CatalogData}
+      //                                                                                            productSpec={this.state.CatalogSpec}
+      //                                                                                            mainOfMain={this.state.mainData}
+      //                                                                                            {...routerProps}
+      //                                                                                            subGenreSelect={this.subGenreView}/>} />
+      // ));
 
     return (
+
         <Route render={({ location }) => (
+
       <div className="App">
 
           <Toolbar openDrawer={this.openDrawer}/>
           <SideDrawer closeDrawer={this.openDrawer}
                       show={this.state.openDrawer}
                       dataMain={this.state.mainData}
-                      correctCatalog={this.rightStateCatalog}/>
+                      // correctCatalog={this.rightStateCatalog}
+          />
 
           <TransitionGroup>
               <CSSTransition
@@ -85,10 +100,34 @@ class App extends Component {
               <Route  exact path="/" render={()=>
                   <MainContainer dataArray={this.state.mainData}
                                  productSpec={this.state.CatalogSpec}
-                                 correctHomeCatalog={this.rightStateCatalog}/>} />
-              {catalogRouts}
+                                 // correctHomeCatalog={this.rightStateCatalog}
+                  />
+              } />
+              {/*{catalogRouts}*/}
+              {/*<Route render={()=>*/}
+                  {/*<MainContainer dataArray={this.state.mainData}*/}
+                                 {/*productSpec={this.state.CatalogSpec}*/}
+                                 {/*correctHomeCatalog={this.rightStateCatalog}/>} />/>*/}
+              <Route exact path={`/0`} render={(routerProps)=> <Catalog mainOfMain={this.state.mainData}
+                                                                        {...routerProps}/>} />
+              <Route exact path={`/1`} render={(routerProps)=> <Catalog mainOfMain={this.state.mainData}
+                                                                        {...routerProps}/>} />
+              <Route exact path={`/2`} render={(routerProps)=> <Catalog mainOfMain={this.state.mainData}
+                                                                        {...routerProps}/>} />
 
-               {/*<Redirect push to="/catalog/jadval"/>*/}
+              <Route exact path={`/3`} render={(routerProps)=> <Catalog mainOfMain={this.state.mainData}
+                                                                          {...routerProps}/>} />
+              <Route exact path={`/4`} render={(routerProps)=> <Catalog mainOfMain={this.state.mainData}
+                                                                        {...routerProps}/>} />
+              <Route exact path={`/5`} render={(routerProps)=> <Catalog mainOfMain={this.state.mainData}
+                                                                        {...routerProps}/>} />
+              <Route exact path={`/6`} render={(routerProps)=> <Catalog mainOfMain={this.state.mainData}
+                                                                        {...routerProps}/>} />
+              <Route exact path={`/7`} render={(routerProps)=> <Catalog mainOfMain={this.state.mainData}
+                                                                        {...routerProps}/>} />
+
+
+               {/*<Redirect to="/"/>*/}
 
 
           </Switch>

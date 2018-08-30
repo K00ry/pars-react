@@ -20,7 +20,7 @@
 
 a {
     text-decoration: none;
-    color: $text-black-l;
+    color: $text-black-m;
 }
 
 .image-head {
@@ -30,22 +30,22 @@ a {
     text-decoration: none;
     z-index: 2;
 }
-.f-left{
-    padding-left: 10vw;
-    float: left;
-    @include media(tablet) {
-
-        padding-left: 10vw;
-    }
-}
-.f-right{
-    padding-right: 10vw;
-    float: right;
-    @include media(tablet) {
-
-        padding-right: 10vw;
-    }
-}
+//.f-left{
+//    padding-left: 10vw;
+//    float: left;
+//    @include media(tablet) {
+//
+//        padding-left: 10vw;
+//    }
+//}
+//.f-right{
+//    padding-right: 10vw;
+//    float: right;
+//    @include media(tablet) {
+//
+//        padding-right: 10vw;
+//    }
+//}
 
 
 

@@ -6,7 +6,11 @@ const Sublinks = props =>
 
 
 
-        <li onClick={()=>{props.correctCatalogClick(); props.closeNav();} } >
+        <li
+            onClick={()=>{
+                // props.correctCatalogClick();
+            props.closeNav();} }
+        >
             <Link  to={props.address} className="nav-link-style-sub">{props.product}</Link>
         </li>;
 

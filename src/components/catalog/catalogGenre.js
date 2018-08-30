@@ -7,10 +7,14 @@ const CatalogGenre = props =>
 
 
 
-        <li className="a" >
-            <button
+        <li
+            className={props.isActive ? 'navigation--active': ''}
+            onClick={ props.onActiveTab }
+        >
+            <span className={`button_example ${props.isActive ? 'navigation--active': ''}
+            `}
                 onClick={props.correctGallery}
-            >{props.productSub}</button>
+            >{props.productSub}</span>
         </li>;
 
 

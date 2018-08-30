@@ -32,32 +32,21 @@ class SideDrawer extends Component {
       };
     }
 
-
-
     return (
       <div id="mySidenav" style={sideDrawWidth} className={sideDraw}>
         <a onClick={this.props.closeDrawer} className="closebtn">
           ×
         </a>
         <ul className="sideNav-title">
-
-
           <li className="sidenav-li" onClick={this.props.closeDrawer}>
-            <Link to="/" className="sidenav-home-btn"  >
-              <h2>صفحه اصلی</h2>
+            <Link to="/" className="sidenav-home-btn">
+              صفحه اصلی
             </Link>
           </li>
 
-
           <li>
-
-
-            <div
-              className="nav-link-1 nav-link-style"
-              onClick={this.subNavToggle}
-            >
-
-
+            <div className="nav-link-1 nav-link-style"
+              onClick={this.subNavToggle}>
               <div className="jakesh">
                 <img className={subNavOpen} src={logo} alt="Arrow" />
               </div>
@@ -65,19 +54,16 @@ class SideDrawer extends Component {
             </div>
 
             <div className="nav 1" style={subOpenDisplay}>
-
               <ul className="sideNav-sub">
                 {this.props.dataMain.map((arr, index) => (
                   <Sublinks
                     key={index}
-                    address={`/catalog/${arr[0].genreEn}`}
+                    address={`/${index}`}
                     product={arr[0].genreFarsi}
-                    correctCatalogClick={() => this.props.correctCatalog(index)}
+                    // correctCatalogClick={() => this.props.correctCatalog(index)}
                     closeNav={this.props.closeDrawer}
                   />
                 ))}
-
-
               </ul>
             </div>
           </li>
