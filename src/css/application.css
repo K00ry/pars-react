@@ -706,25 +706,6 @@ a:focus {
   .sidenav .closebtn {
     color: rgba(255, 204, 51, 0.9); }
 
-.sideNav-sub {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 100%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center; }
-  .sideNav-sub li a {
-    width: 100%;
-    text-align: right; }
-
 .sidenav-home-btn {
   font-size: 2em;
   font-family: asli;
@@ -748,17 +729,55 @@ a:focus {
   -webkit-transition: 0.3s;
   transition: 0.3s; }
 
-.nav-link-style {
+.sidenav-li-drop .nav-link-style {
   font-size: 2em;
   font-family: asli;
   font-weight: 200;
   color: rgba(255, 204, 51, 0.9); }
+  .sidenav-li-drop .nav-link-style .arrow-style {
+    width: 20px;
+    height: 20px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s; }
+  .sidenav-li-drop .nav-link-style .arrow-style-sub {
+    width: 15px;
+    height: 15px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s; }
+  .sidenav-li-drop .nav-link-style .expand {
+    -webkit-transform-origin: center;
+            transform-origin: center;
+    -webkit-transform: rotateZ(-90deg);
+            transform: rotateZ(-90deg); }
 
-.nav-link-style-sub {
-  font-size: 1.4em;
-  font-family: asli;
-  font-weight: 100;
-  color: rgba(255, 204, 51, 0.9); }
+.sidenav-li-drop .nav {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height 0.3s ease-in-out;
+  transition: max-height 0.3s ease-in-out; }
+
+.sidenav-li-drop .sideNav-sub {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .sidenav-li-drop .sideNav-sub .nav-link-style-sub {
+    font-size: 1.4em;
+    font-family: asli;
+    font-weight: 100;
+    color: rgba(255, 204, 51, 0.9);
+    width: 100%;
+    text-align: right; }
 
 .nav-link-no-sub {
   text-align: right;
@@ -818,24 +837,6 @@ a:focus {
 .arrow-icon {
   width: 20px;
   height: 20px; }
-
-.arrow-style {
-  width: 20px;
-  height: 20px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s; }
-
-.arrow-style-sub {
-  width: 15px;
-  height: 15px;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s; }
-
-.expand {
-  -webkit-transform-origin: center;
-          transform-origin: center;
-  -webkit-transform: rotateZ(-90deg);
-          transform: rotateZ(-90deg); }
 
 @font-face {
   font-family: asli;

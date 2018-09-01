@@ -11,7 +11,7 @@ const Sublinks = props =>
                 // props.correctCatalogClick();
             props.closeNav();} }
         >
-            <Link  to={props.address} className="nav-link-style-sub">{props.product}</Link>
+            <Link  to={props.address} className="nav-link-style-sub">{props.t(props.product)}</Link>
         </li>;
 
 

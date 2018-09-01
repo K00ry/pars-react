@@ -32,7 +32,7 @@ const MainContainer = props => {
         <div style={{ height: '80vh' }}>
             <div className="home-genres" style={insideStyles}>
                 <div className="home-genres-title">
-                    <h2>محصولات</h2>
+                    <h2>{props.t("products")}</h2>
                 </div>
                 {/*{props.dataArray.map((arr, index) => (*/}
                     {/*<HomeGenres*/}
@@ -46,7 +46,8 @@ const MainContainer = props => {
                     <HomeGenres
                         key={index}
                         address={`/${index}`}
-                        product={arr[0].genreFarsi}
+                        product={arr[0].genreEn}
+                        t={props.t}
                         // correctCatalogClick={() => props.correctHomeCatalog(index)}
                     />
                 ))}

@@ -23,10 +23,10 @@ class SideDrawer extends Component {
       sideDraw = 'sidenav nav-open';
       sideDrawWidth = { width: '200px' };
     }
-    let subNavOpen = 'arrow-left-icon-1 arrow-style';
+    let subNavOpen = 'arrow-style';
     let subOpenDisplay;
     if (this.state.productSubNavOpen) {
-      subNavOpen = 'arrow-left-icon-1 arrow-style expand';
+      subNavOpen = 'arrow-style expand';
       subOpenDisplay = {
         maxHeight: '20em',
       };
@@ -38,28 +38,29 @@ class SideDrawer extends Component {
           ×
         </a>
         <ul className="sideNav-title">
-          <li className="sidenav-li" onClick={this.props.closeDrawer}>
+          <li className="sidenav-home" onClick={this.props.closeDrawer}>
             <Link to="/" className="sidenav-home-btn">
-              صفحه اصلی
+                {this.props.t("sideNav-home")}
             </Link>
           </li>
 
-          <li>
-            <div className="nav-link-1 nav-link-style"
+          <li className="sidenav-li-drop">
+            <div className="nav-link-style"
               onClick={this.subNavToggle}>
-              <div className="jakesh">
+              <div>
                 <img className={subNavOpen} src={logo} alt="Arrow" />
               </div>
-              <div>محصولات</div>
+              <div>{this.props.t("products")}</div>
             </div>
 
-            <div className="nav 1" style={subOpenDisplay}>
+            <div className="nav" style={subOpenDisplay}>
               <ul className="sideNav-sub">
                 {this.props.dataMain.map((arr, index) => (
                   <Sublinks
+                      t={this.props.t}
                     key={index}
                     address={`/${index}`}
-                    product={arr[0].genreFarsi}
+                    product={arr[0].genreEn}
                     // correctCatalogClick={() => this.props.correctCatalog(index)}
                     closeNav={this.props.closeDrawer}
                   />
@@ -67,15 +68,12 @@ class SideDrawer extends Component {
               </ul>
             </div>
           </li>
-          <li>
-            <div
-              className="nav-link-1 nav-link-style"
-              onClick={this.subNavToggle}
-            >
-              <div className="jakesh">
-                <img className={subNavOpen} src={logo} alt="Arrow" />
+          <li className="sidenav-li-drop">
+            <div className="nav-link-style" onClick={this.subNavToggle}>
+              <div>
+                {/*<img className={subNavOpen} src={logo} alt="Arrow" />*/}
               </div>
-              <div>تماس</div>
+              <div>{this.props.t("contact")}</div>
             </div>
           </li>
         </ul>

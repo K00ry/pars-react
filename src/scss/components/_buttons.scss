@@ -33,13 +33,7 @@ color:$text-yellow-main;
         color: $text-yellow-main-l ;
     }
 }
-.sideNav-sub{
-    @include flex-display(flex, column, space-between, 100%,center);
-    li a{
-        width: 100%;
-        text-align: right;
-    }
-}
+
 .sidenav-home-btn{
 
     @include font-fam-size( 2em, asli, 200, $text-yellow-main-l );
@@ -54,14 +48,49 @@ color:$text-yellow-main;
     transition: 0.3s;
 }
 
-.nav-link-style {
-    @include font-fam-size( 2em, asli, 200, $text-yellow-main-l );
+
+.sidenav-li-drop{
+    .nav-link-style {
+        @include font-fam-size( 2em, asli, 200, $text-yellow-main-l );
+        ///// arrow turns down \\\\
+        .arrow-style {
+            width: 20px;
+            height: 20px;
+            transition: all 0.3s;
+        }
+
+        .arrow-style-sub {
+            width: 15px;
+            height: 15px;
+            transition: all 0.3s;
+        }
+
+        .expand {
+            transform-origin: center;
+            transform: rotateZ(-90deg);
+        }
+    }
+
+    .nav {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out ;
+    }
+    .sideNav-sub{
+        @include flex-display(flex, column, space-between, 100%,center);
+        .nav-link-style-sub{
+            @include font-fam-size( 1.4em, asli, 100, $text-yellow-main-l );
+            width: 100%;
+            text-align: right;
+        }
+    }
+
 }
 
-.nav-link-style-sub {
 
-    @include font-fam-size( 1.4em, asli, 100, $text-yellow-main-l );
-}
+
+
+
 
 .nav-link-no-sub {
     text-align: right;
@@ -128,20 +157,3 @@ color:$text-yellow-main;
     height: 20px;
 }
 
-///// arrow turns down \\\\
-.arrow-style {
-    width: 20px;
-    height: 20px;
-    transition: all 0.3s;
-}
-
-.arrow-style-sub {
-    width: 15px;
-    height: 15px;
-    transition: all 0.3s;
-}
-
-.expand {
-    transform-origin: center;
-    transform: rotateZ(-90deg);
-}

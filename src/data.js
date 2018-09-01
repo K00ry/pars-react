@@ -446,7 +446,7 @@ const data = [
               ],
             },
           ],
-         [
+          [
             {
               genreEn: 'dal',
               genreFarsi: 'دال بتني',
@@ -711,7 +711,7 @@ const data = [
                   sizes: [],
               }
           ],
-    [
+          [
         {
             genreEn: 'nj',
             genreFarsi: 'نيوجرسی',
