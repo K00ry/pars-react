@@ -1,159 +1,170 @@
-
-#btn{
-color:$text-yellow-main;
-
+#btn {
+  color: $text-yellow-main;
 }
 
+
+
+
 .head-intro-sub {
-    height: 0;
-    width: 100%;
-    position: relative;
-    z-index: 100000;
-    // top: 0;
-    // right: 0; // background-color: rgba(33, 33, 33, 0.91);
-    background-color: #000;
-    // overflow: auto;
-    transition: 0.5s;
-    // padding-top: 60px;
+  height: 0;
+  width: 100%;
+  position: relative;
+  z-index: 100000;
+  background-color: #000;
+  transition: 0.5s;
 }
 
 .sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1040;
-    top: 0;
-    right: 0; // background-color: rgba(33, 33, 33, 0.91);
-    background-color:$light-grey;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-    .closebtn{
-
-        color: $text-yellow-main-l ;
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1040;
+  top: 0;
+  background-color: $hard-gray;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  &.nav-open {
+    width: 200px;
+  }
+    ///// style change from right to left on language change \\\\
+  &.left {
+    left: 0;
+    .closebtn {
+      left: 8px;
     }
-}
-
-.sidenav-home-btn{
-
-    @include font-fam-size( 2em, asli, 200, $text-yellow-main-l );
-    padding: 20px 0;
-
-}
-
-.sidenav .nav-link-style {
-    // padding: 8px;
-    text-decoration: none;
-    @include flex-display(flex, row, space-between, 100%);
-    transition: 0.3s;
-}
+    .sidenav-home-btn{
+      @include font-fam-size( 2em, $main-font-2, bold, $white);
 
 
-.sidenav-li-drop{
+    }
     .nav-link-style {
-        @include font-fam-size( 2em, asli, 200, $text-yellow-main-l );
-        ///// arrow turns down \\\\
-        .arrow-style {
-            width: 20px;
-            height: 20px;
-            transition: all 0.3s;
-        }
+      text-decoration: none;
+      @include flex-display(flex, row-reverse, space-between, 100%);
+      @include font-fam-size( 2em, $main-font-2, bold, $white);
+      transition: 0.3s;
+      .arrow-style {
+        transform: rotateZ(180deg);
 
-        .arrow-style-sub {
-            width: 15px;
-            height: 15px;
-            transition: all 0.3s;
+        &.expand {
+          transform-origin: center;
+          transform: rotateZ(270deg);
         }
-
-        .expand {
-            transform-origin: center;
-            transform: rotateZ(-90deg);
-        }
+      }
     }
 
-    .nav {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease-in-out ;
+    .nav-link-style-sub {
+      text-align: left;
+        @include font-fam-size(1em, $main-font-1, 100, $text-yellow-main-l);
     }
-    .sideNav-sub{
-        @include flex-display(flex, column, space-between, 100%,center);
-        .nav-link-style-sub{
-            @include font-fam-size( 1.4em, asli, 100, $text-yellow-main-l );
-            width: 100%;
-            text-align: right;
-        }
-    }
+  }
+  &.right {
+    right: 0;
 
+    .closebtn {
+      right: 3px;
+    }
+    .nav-link-style {
+      text-decoration: none;
+      @include flex-display(flex, row, space-between, 100%);
+      transition: 0.3s;
+      .expand {
+        transform-origin: center;
+        transform: rotateZ(-90deg);
+      }
+    }
+    .nav-link-style-sub {
+      text-align: right;
+        @include font-fam-size(1.4em, dovom, 100, $text-yellow-main-l);
+      margin: 6px 0;
+    }
+  }
+  .closebtn {
+    position: absolute;
+    top: -20px;
+    font-size: 4em;
+    color: $text-yellow-main-l;
+  }
 }
 
 
 
 
 
+
+
+
+
+
+.sidenav-home-btn {
+  @include font-fam-size(2em, asli, 200, $w-color );
+  padding: 20px 0;
+}
+
+.sidenav-li-drop {
+  .nav-link-style {
+    @include font-fam-size(2em, asli, 200, $w-color );
+    ///// arrow turns down main styles \\\\
+    .arrow-style {
+      width: 20px;
+      height: 20px;
+      transition: all 0.3s;
+    }
+
+    .arrow-style-sub {
+      width: 15px;
+      height: 15px;
+      transition: all 0.3s;
+    }
+  }
+
+  .sideNav-sub {
+    @include flex-display(flex, column, space-between, 100%, center);
+    .nav-link-style-sub {
+      width: 100%;
+    }
+  }
+}
 
 .nav-link-no-sub {
-    text-align: right;
-    @include font-fam-size( 1.4em, asli, 100, $text-yellow-main-l );
+  text-align: right;
+  @include font-fam-size(1.4em, asli, 100, $text-yellow-main-l);
 }
 
 .nav {
-
-
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease-in-out ;
-
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
 }
 
 .nav-sub-container {
-    display: none;
+  display: none;
 }
-
-
 
 .sidenav a:hover,
 .offcanvas a:focus {
-    color: #f1f1f1;
+  color: #f1f1f1;
 }
 
-.sidenav .closebtn {
-    //position: absolute;
-    //top: 0;
-    //right: 25px;
-    //font-size: 36px;
-    //margin-left: 50px;
-    position: absolute;
-    top: -20px;
-    right: 3px;
-    font-size: 4em;
-    margin-left: 50px;
-    color: #ffffff;
-}
 
-#main {
-    @include flex-display(flex, row, space-between, 100%);
-    transition: margin-left .5s;
-    padding: 16px;
-}
+
 
 @media screen and (max-height: 450px) {
-    .sidenav {
-        padding-top: 15px;
-    }
-    .sidenav a {
-        font-size: 18px;
-    }
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
 }
 
 .slidedown-nav {
-    position: relative;
-    height: 0;
-    overflow: hidden;
+  position: relative;
+  height: 0;
+  overflow: hidden;
 }
 
 .arrow-icon {
-    width: 20px;
-    height: 20px;
+  width: 20px;
+  height: 20px;
 }
-

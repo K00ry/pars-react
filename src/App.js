@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import {  Route, Switch
     // ,Redirect
 } from 'react-router-dom';
-import { translate, Trans } from "react-i18next";
+import { translate,
+    // Trans
+} from "react-i18next";
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
 import data from './data';
@@ -10,9 +12,9 @@ import Toolbar from './components/toolbar/toolbar';
 import SideDrawer from './components/sidedrawer/sidedrawer';
 import MainContainer from './components/mainContainer/mainContainer';
 import Catalog from './components/catalog/catalog';
-import Contact from './components/contact';
+import Contact from './components/contact/contact';
 // import NotFound from './components/NotFound';
-// import {Navbar} from 'react-bootstrap';
+
 
 class App extends Component {
 
@@ -21,45 +23,13 @@ class App extends Component {
       mainData: data,
       CatalogData: data[0],
       CatalogSpec:data[0][0]
-
-
-
   };
-
-
-
-
-
-  rightStateCatalog = rightCat =>{
-
-      this.setState({
-          CatalogData: data[rightCat],
-          CatalogSpec:data[rightCat][1]
-
-      });
-  };
-
-
-
   openDrawer = () => {
     this.setState((prevState) => {
      return  {openDrawer: !prevState.openDrawer}
     })
 
   };
-    // subGenreView = chosen => {
-    //
-    //     this.setState({
-    //
-    //         CatalogSpec: this.state.CatalogData[chosen]
-    //     });
-    //
-    //
-    //
-    // };
-
-
-
 
   render() {
 
@@ -71,7 +41,7 @@ class App extends Component {
 
       let catalogRouts =  this.state.mainData.map((arr,i)=>(
           <Route exact key={i} path={`/${i}`} render={(routerProps)=> <Catalog mainOfMain={this.state.mainData}
-                                                                               t={this.props.t}
+                                                                               t={t}
                                                                                {...routerProps}/>} />
       ));
 
@@ -81,10 +51,14 @@ class App extends Component {
         <Route render={({ location }) => (
 
       <div className="App">
-          <button onClick={() => changeLanguage("fa")}>fa</button>
-          <button onClick={() => changeLanguage("en")}>en</button>
+          <div className="lang-select">
+              <div className="lang-select__container">
+                  <button className="lang-select__container__btn en" onClick={() => changeLanguage("en")}>English</button>
+                  <button className="lang-select__container__btn fa" onClick={() => changeLanguage("fa")}>فارسی</button>
+              </div>
+          </div>
 
-          <Toolbar openDrawer={this.openDrawer}  t={this.props.t} />
+          <Toolbar openDrawer={this.openDrawer}  t={t} i18n={i18n}/>
           <SideDrawer closeDrawer={this.openDrawer}
                       show={this.state.openDrawer}
                       dataMain={this.state.mainData}
@@ -114,7 +88,7 @@ class App extends Component {
 
 
 
-          <Contact/>
+          <Contact t={this.props.t}/>
           <footer className="footer" >
               <h1>©{t("pars-title-footer")}</h1>
           </footer>

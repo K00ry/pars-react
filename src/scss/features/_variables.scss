@@ -18,12 +18,13 @@ $button-color : #D3D1FF;
 $dark-purple  : #7000CE;
 $body-text    : #E7F0E2;
 $highlight	  : #EBB301;
+$white      : #FFF;
 
 $active-color :#CC6600;
 
 // lightend colors \\
 $text-black-m	  		   : rgba($text-black,.9);
-$text-gray-m	  		   : rgba($text-black,.1);
+$text-gray-m	  		   : rgba($text-black,.7);
 $light-gray-l			   : rgba($light-grey,.9);
 $hard-gray-l			   : rgba($hard-gray,.9);
 $text-yellow-main-l         : rgba($text-yellow-main,.9);
@@ -33,13 +34,14 @@ $dark-purple-m			   : rgba($dark-purple,.6);
 $text-color			   : rgba($text-black,.7);
 $link-color-light	   : rgba($link-color,.6);
 $h-color			   : rgba($head-color,.8);
+$w-color                : rgba($white ,.8);
 
 // font variables \\
 
-$main-font  : 'Poiret One', cursive;
-$main-font-2: 'Josefin Sans', sans-serif;
-$p-font     : 'Julius Sans One', sans-serif;
-$h-font     : 'Limelight', cursive;
+$main-font-1 : 'Roboto', sans-serif;
+$main-font-2: 'Oswald', sans-serif;
+//$p-font     : 'Julius Sans One', sans-serif;
+//$h-font     : 'Limelight', cursive;
 
 $sm-font    : 1em;
 $md-font    : 1.3em;

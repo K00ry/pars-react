@@ -10,16 +10,37 @@
     padding: 10px;
     li{
         @include flex-display(flex, column, space-between, 100%, center);
+
+
+        .sideNav-sub {
+            width: 100%;
+            padding: 0;
+            list-style: none;
+            //@include font-fam-size(1em, asli, 100, $white);
+
+        }
+
     }
+
 }
-.sideNav-sub {
-    width: 100%;
-    padding: 0;
-    list-style: none;
-    // li{
-    // 	@include flex-display(flex, row, space-between, 100%, center);
-    // }
-}
+
+
+
+//.sideNav-title.english {
+//    width: 100%;
+//    padding: 10px;
+//
+//    .sidenav-home{
+//        //@include flex-display(flex, column, space-between, 100%, center);
+//        .sidenav-home-btn{
+//            @include font-fam-size(1em, $main-font-2, 100, $text-yellow-main-l);
+//
+//        }
+//    }
+//                //@include font-fam-size(1em, $main-font-1, 100, $text-yellow-main-l);
+//}
+
+
 
 .nav-link {
     @include font-fam-size( 1.3em, asli, bold, $text-black-m);

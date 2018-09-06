@@ -18,26 +18,26 @@ class SideDrawer extends Component {
 
   render() {
     let sideDraw = 'sidenav';
-    let sideDrawWidth;
+
     if (this.props.show) {
       sideDraw = 'sidenav nav-open';
-      sideDrawWidth = { width: '200px' };
+
     }
     let subNavOpen = 'arrow-style';
     let subOpenDisplay;
     if (this.state.productSubNavOpen) {
       subNavOpen = 'arrow-style expand';
       subOpenDisplay = {
-        maxHeight: '20em',
+        maxHeight: '30em',
       };
     }
 
     return (
-      <div id="mySidenav" style={sideDrawWidth} className={sideDraw}>
+      <div id="mySidenav" className={`${this.props.t("sideNav-class-select")} ${sideDraw}`}>
         <a onClick={this.props.closeDrawer} className="closebtn">
           ×
         </a>
-        <ul className="sideNav-title">
+        <ul className={`sideNav-title ${this.props.t("lang-class")}`}>
           <li className="sidenav-home" onClick={this.props.closeDrawer}>
             <Link to="/" className="sidenav-home-btn">
                 {this.props.t("sideNav-home")}

@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 
 import CatalogGenre from './catalogGenre';
 import ImgAndTable from './imgAndTable';
-import ImgGallery from './imgGallery';
+import ImgGallery from './imgGallery/imgGallery';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 
@@ -61,26 +61,29 @@ render(){
         <ImgAndTable key={this.state.ProdSpec.genreId} img={this.state.ProdSpec.img}
                                      imageAlt={this.state.ProdSpec.type}
                                      tableSizes={this.state.ProdSpec.sizes}
+                                    t={this.props.t}
           />
           :
 
-          <ImgGallery key={this.state.ProdSpec.genreId} passData={this.state.ProdSpec.sizes}/>;
+          <ImgGallery key={this.state.ProdSpec.genreId} passData={this.state.ProdSpec.sizes} t={this.props.t}/>;
 
 
 
     return (
         <div className="container main">
 
-            <div id="genre" key={this.state.ProdSpec.genreFarsi}>
-                <div><h1 className="sub-title">{this.state.prodData[0].genreFarsi}</h1></div>
+            <div className={`catalog-header-${this.props.t("lang-class")}`} key={this.state.ProdSpec.genreFarsi}>
+                <div className="catalog-header__title"><h1 className="catalog-header__title_info">{this.props.t(this.state.prodData[0].genreEn)}</h1></div>
 
 
-            </div>
 
-            <ul   className="genres">
+
+            <ul   className="catalog-header__genres">
                 {this.state.prodData.map((arr,index)=>
                     <CatalogGenre
                         key={index}
+                        t={this.props.t}
+
                         productEn={arr.genreEn}
                         productSub={arr.type}
                         productId={arr.genreId}
@@ -91,6 +94,7 @@ render(){
                     />
                 )}
             </ul>
+            </div>
 
             <div className="wrapper">
                 <ReactCSSTransitionGroup

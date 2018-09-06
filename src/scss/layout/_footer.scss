@@ -4,7 +4,7 @@
     	margin: 0;
     	background-color: $hard-gray;
         padding: 14px;
-        @include font-fam-size( 1em, asli, bold, $text-yellow-main);
+        @include font-fam-size( 1em, $main-font-1, bold, $text-yellow-main);
         text-align: left;
     }
 }

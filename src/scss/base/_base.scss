@@ -30,17 +30,37 @@ a:focus {
 
 .navbar {
     width: 100%;
-    background-color: $hard-gray;
+    background-color: $light-grey;
     border: none;
     margin-bottom: 0;
-    #main h1 {
-        display: inline-block;
-        @include font-fam-size( 2.5em, asli, bold, $text-yellow-main);
-        margin: auto 40px;
-        b {
-            @include font-fam-size( 1em, asli, bold, #fff);
+    border-radius: 0;
+    .header-div.farsi{
+        @include flex-display(flex, row, space-between, 100%);
+        transition: margin-left 0.5s;
+        padding: 16px;
+        .toolbar-title {
+            display: inline-block;
+            @include font-fam-size(2.5em, asli, bold, $text-yellow-main);
+            margin: auto;
+            b {
+                @include font-fam-size(1em, asli, bold, #fff);
+            }
         }
     }
+    .header-div.english{
+        @include flex-display(flex, row, space-between, 100%);
+        transition: margin-left 0.5s;
+        padding: 16px;
+        .toolbar-title {
+            display: inline-block;
+            @include font-fam-size(2.5em, $main-font-2, bold, $text-yellow-main);
+            margin: auto;
+            b {
+                @include font-fam-size(1em, $main-font-2, bold, #fff);
+            }
+        }
+    }
+
     .navbar-toggler {
         font-size: 1.9em;
         outline: none;
@@ -50,7 +70,31 @@ a:focus {
 .back-axs {
     width: 100%;
 }
+.lang-select{
+    @include flex-display(flex, row, flex-start, 100%);
+    background:$light-grey;
 
+    .lang-select__container{
+        @include flex-display(flex, row, space-around, 20%, center);
+
+        background:$light-grey;
+
+        .lang-select__container__btn {
+            outline: none;
+            margin: auto;
+            height: 100%;
+            border: 1px solid $white;
+        }
+        .en{
+
+            @include font-fam-size(.7em, $main-font-2, bold, $h-color);}
+
+        .fa{
+
+            @include font-fam-size(.7em, dovom, bold, $h-color);}
+
+    }
+}
 
 //.example-appear {
 //    opacity: 0.01;

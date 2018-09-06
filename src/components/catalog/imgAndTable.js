@@ -30,9 +30,9 @@ const ImgAndTable = props =>{
                     <table className="tg">
                         <tbody>
                         <tr>
-                            <th className="tg-6xid">هزینه</th>
-                            <th className="tg-4s02">(فی(ریال</th>
-                            <th>(cm)ابعاد</th>
+                            <th className="tg-6xid">{props.t("ship")}</th>
+                            <th className="tg-4s02">{props.t("price")}</th>
+                            <th>{props.t("sizes")}</th>
                         </tr>
                         {
                             props.tableSizes.map((obj,index)=>
@@ -40,7 +40,10 @@ const ImgAndTable = props =>{
                                 key={index}
                                 type={obj.type}
                                 price={obj.price}
-                                shipping={obj.shipping}/>)
+                                shipping={obj.shipping}
+                                t={props.t}
+                            />)
+
                         }
 
                         </tbody>

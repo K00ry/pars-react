@@ -8,11 +8,11 @@ import {  Trans } from "react-i18next";
 
 const Toolbar = props => {
 
-    // const { t, i18n } = this.props;
-    //
-    // const changeLanguage = lng => {
-    //     i18n.changeLanguage(lng);
-    // };
+    const { i18n } = props;
+
+    const changeLanguage = lng => {
+        i18n.changeLanguage(lng);
+    };
 
 
 
@@ -21,8 +21,8 @@ const Toolbar = props => {
         wrapperStyle={{height: 'auto'}}
        >
   <header>
-    <Navbar className="navbar" >
-      <div id="main">
+    <Navbar>
+      <div className={`header-div ${props.t("lang-class")}`}>
         <span
           id="btn"
           onClick={props.openDrawer}
@@ -32,10 +32,11 @@ const Toolbar = props => {
         </span>
 
 
+
         <Link to="/">
-          <h1>
+          <h1 className="toolbar-title">
               <Trans>
-                  Pars<b>Jadval</b>
+                  Pars<b> Jadval</b>
               </Trans>
           </h1>
         </Link>

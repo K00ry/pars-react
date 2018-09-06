@@ -8,9 +8,9 @@ const Table = props =>
 
 
     <tr>
-        <td>{props.shipping}</td>
-        <td>{props.price}</td>
-        <td>{props.type}</td>
+        <td>{props.t(props.shipping)}</td>
+        <td>{props.t(props.price)}</td>
+        <td>{props.t(props.type)}</td>
     </tr>;
 
 

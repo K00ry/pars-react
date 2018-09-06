@@ -1,21 +1,23 @@
 @font-face {
     font-family: asli;
-    src: url(../fonts/AAmine.ttf);
+    //src: url(../fonts/AAmine.ttf);
+    //src: url(../fonts/Vazir-WOL.ttf);
+    //src: url(../fonts/2-NAZANIN.ttf);
+    //src: url(../fonts/Karbalaei.ttf);
+    //src: url(../fonts/Parastoo-Bold-FD-WOL.ttf);
+    //src: url(../fonts/Parastoo-WOL.ttf);
+    src: url(../fonts/titr.ttf);
+
+
 }
 
 @font-face {
     font-family: dovom;
-    src: url(../fonts/zarghan.ttf);
+    //src: url(../fonts/zarghan.ttf);
+    src: url(../fonts/Parastoo-WOL.ttf);
 }
 
-//@font-face {
-//    font-family: sevom;
-//    src: url(../fonts/vazir-FD.ttf);
-//}
-//@font-face {
-//    font-family: charom;
-//    src: url(../fonts/vazir-WOL.ttf);
-//}
+
 
 
 a {
@@ -30,22 +32,7 @@ a {
     text-decoration: none;
     z-index: 2;
 }
-//.f-left{
-//    padding-left: 10vw;
-//    float: left;
-//    @include media(tablet) {
-//
-//        padding-left: 10vw;
-//    }
-//}
-//.f-right{
-//    padding-right: 10vw;
-//    float: right;
-//    @include media(tablet) {
-//
-//        padding-right: 10vw;
-//    }
-//}
+
 
 
 

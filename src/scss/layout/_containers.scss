@@ -25,78 +25,65 @@
 
 
 .main {
-    //padding-top: 5em;
     width: 100%;
     margin: auto;
-    //background: url("../img/cat-back.svg") no-repeat;
-    //background-size: 100%;
-    //background-position: top ;
-
 }
 
+////////////CATALOG HEADER STYLES WITH TRANSLATION STYLES
 
-
-#genre{
-    //background: url("../img/cat-back.png") no-repeat;
-    //background-size: cover;
-    //
-    //height: 30vh;
+.catalog-header-farsi{
     padding: 3em 0;
-    //height: 30vh;
-    //margin-bottom: 1em 0;
-    @include flex-display(flex, row, center, 100%);
-    div{
-        margin: auto
-    }
-    .sub-title {
-        text-align: center;
-        @include font-fam-size( 4em, asli, bold, $hard-gray);
-
+    @include flex-display(flex, column, center, 100%);
+    .catalog-header__title{
         margin: auto;
-
+        .catalog-header__title_info {
+            text-align: center;
+            @include font-fam-size( 4em, asli, bold, $hard-gray);
+            margin: auto;
+        }
     }
-
-
-
+}
+.catalog-header-english{
+    padding: 3em 0;
+    @include flex-display(flex, column, center, 100%);
+    .catalog-header__title{
+        margin: auto;
+        .catalog-header__title_info {
+            text-align: center;
+            @include font-fam-size( 4em, $main-font-2, bold, $hard-gray);
+            margin: auto;
+        }
+    }
 }
 
-.genres {
+.catalog-header__genres {
     @include flex-display(flex, row, space-around, 100%);
     list-style: none;
     padding: 0;
-  margin-top: 2rem;
+    margin-top: 2rem;
     @include media(tablet) {
         margin:auto;
-
         width: 70%;
     }
-
-    //li {
-    //  margin: 0 4px;
-    //}
-
-    li  {
-
+    .catalog-header__genres_navigation  {
+         width: 25%;
+         border:1px solid #fabb00; border-radius: 20px;
+         padding: 10px 0;
+         text-decoration:none; display:flex;
+         color: #FFFFFF;
+         background-color: #FFCC33; background-image: -webkit-gradient(linear, left top, left bottom, from(#FFCC33), to(#CC9933));
+         background-image: -webkit-linear-gradient(top, #FFCC33, #CC9933);
+         background-image: -moz-linear-gradient(top, #FFCC33, #CC9933);
+         background-image: -ms-linear-gradient(top, #FFCC33, #CC9933);
+         background-image: -o-linear-gradient(top, #FFCC33, #CC9933);
+         background-image: linear-gradient(to bottom, #FFCC33, #CC9933);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FFCC33, endColorstr=#CC9933);
+         //margin: auto;
+     }
+    .catalog-header__genres_navigation--active{
         width: 25%;
-
         border:1px solid #fabb00; border-radius: 20px;
         padding: 10px 0;
         text-decoration:none; display:flex;
-        //text-shadow: -1px -1px 0 rgba(0,0,0,0.3);
-        color: #FFFFFF;
-        background-color: #FFCC33; background-image: -webkit-gradient(linear, left top, left bottom, from(#FFCC33), to(#CC9933));
-        background-image: -webkit-linear-gradient(top, #FFCC33, #CC9933);
-        background-image: -moz-linear-gradient(top, #FFCC33, #CC9933);
-        background-image: -ms-linear-gradient(top, #FFCC33, #CC9933);
-        background-image: -o-linear-gradient(top, #FFCC33, #CC9933);
-        background-image: linear-gradient(to bottom, #FFCC33, #CC9933);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FFCC33, endColorstr=#CC9933);
-        margin: auto;
-
-    }
-
-    li.navigation--active{
-
-        //border:1px solid $active-color;
         background-color: #FFCC33; background-image: -webkit-gradient(linear, left top, left bottom, from(#FFCC33), to($active-color));
         background-image: -webkit-linear-gradient(top, #FFCC33, $active-color);
         background-image: -moz-linear-gradient(top, #FFCC33, $active-color);
@@ -104,52 +91,33 @@
         background-image: -o-linear-gradient(top, #FFCC33, $active-color);
         background-image: linear-gradient(to bottom, #FFCC33, $active-color);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FFCC33, endColorstr=$active-color);
         transition: all .5s ease-in-out;
-
-
     }
-      .button_example{
+
+
+      .catalog-header__genres_navigation--btn-farsi{
           @include font-fam-size( 1em, asli, bold, $hard-gray );
           width: 100%;
         text-align: center;
       }
-        .button_example.navigation--active{
+    .catalog-header__genres_navigation--btn-farsi .active{
             transition: all .5s ease-in;
-
-
-        font-size: 1.1em;
+            font-size: 1.1em;
             color: $hard-gray;
         }
-
-
-}
-
-.group {
-    // transition-duration: 2s;
-    @include flex-display(flex, row, space-between, 100%, center);
-    flex-wrap: wrap;
-    .itemha {
-        @include flex-display(flex, column, space-between, 70%, center);
-        padding: 10px 0;
-        border-bottom: 2px solid #BFBFBF;
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-        &:last-child {
-            border-bottom: none;
-            padding-bottom: 20px;
-        }
-        .item-detail {
-            @include flex-display(flex, row, space-between, 50%, center);
-            span {
-                @include font-fam-size( 1em, sevom, bold, $text-black-m);
-            }
-            .item-name {
-                @include font-fam-size( 1em, charom, bold, $text-black-m);
-            }
-        }
+    .catalog-header__genres_navigation--btn-english {
+        @include font-fam-size( 1em, $main-font-2, bold, $hard-gray );
+        width: 100%;
+        text-align: center;
     }
+    .catalog-header__genres_navigation--btn-english .active{
+        transition: all .5s ease-in;
+        font-size: 1.1em;
+        color: $hard-gray;
+    }
+
 }
+
+
 
 
 .home-genres{
@@ -169,7 +137,7 @@
         padding:8px;
         margin:25px 0;
         a{
-             @include font-fam-size( 1.3em, asli, bold, $text-yellow-main);
+             @include font-fam-size( 1.3em, dovom, bold, $text-yellow-main);
             width: 100%;
             text-align: center;
 
@@ -203,7 +171,7 @@
     .gallery-item {
         @include flex-display(flex, row, space-evenly, 100%);
         border-bottom: 1px solid $text-black-m;
-        .item-img {
+        .gallery-item__img {
             width:50%;
             margin: auto;
             img {
@@ -211,19 +179,70 @@
                 height: auto;
             }
         }
-
-        .item-title {
-            @include flex-display(flex, column, space-evenly, 50%, center); 
-            @include font-fam-size( 1.1em, asli, bold, $text-black-m);
-            padding: 40px 0;
-            span{
-                @include font-fam-size( 1em, asli, bold, $text-black-m);
+    }
+}
+.group {
+    // transition-duration: 2s;
+    @include flex-display(flex, row, space-between, 100%, center);
+    flex-wrap: wrap;
+    .itemha {
+        @include flex-display(flex, column, space-between, 70%, center);
+        padding: 10px 0;
+        border-bottom: 2px solid #BFBFBF;
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        &:last-child {
+            border-bottom: none;
+            padding-bottom: 20px;
+        }
+        .item-detail {
+            @include flex-display(flex, row, space-between, 50%, center);
+            span {
+                @include font-fam-size( 1em, sevom, bold, $text-black-m);
             }
-            
+            .item-name {
+                @include font-fam-size( 1em, charom, bold, $text-black-m);
+            }
         }
     }
 }
 
+
+
+////// IMAGE GALLERY PRODUCTS STYLE incuding LANG TRANSLATED STYLES
+
+
+.gallery-item__title--fa {
+    @include flex-display(flex, column, space-evenly, 50%, center);
+    @include font-fam-size( 1.1em, dovom, bold, $text-black-m);
+    padding: 40px 0;
+    .gallery-item__title_info--fa{
+        @include font-fam-size( 1em, dovom, bold, $text-black-m);
+        margin: 2px;
+        span{
+            @include font-fam-size( 1em, dovom, bold, $text-gray-m );
+        }
+
+    }
+}
+.gallery-item__title--en {
+    @include flex-display(flex, column, space-evenly, 50%, center);
+    @include font-fam-size( 1.1em, $main-font-2, bold, $text-black-m);
+    padding: 40px 0;
+    .gallery-item__title_info--en{
+        @include font-fam-size( 1em, $main-font-1, bold, $text-black-m);
+        margin: 2px;
+        span{
+            @include font-fam-size( 1em, $main-font-2, bold, $text-gray-m );
+        }
+
+    }
+}
+
+
+///////
 .table_wrapper {
     @include flex-display(flex, column, space-between, 100%, center);
     padding: 1em 0;
@@ -312,45 +331,6 @@
 
 
 
-//
-//
-//.axs0 {
-//    background: url("../img/home-jadval.png") no-repeat center;
-//    background-size: cover;
-//
-//}
-//
-//.axs1 {
-//    background: url("../img/home-blook.png") no-repeat center;
-//    background-size: cover;
-//}
-//.axs2 {
-//    background: url("../img/home-kafpoosh.png") no-repeat center;
-//    background-size: cover;
-//}
-//
-//.axs3 {
-//    background: url("../img/home-dal.png") no-repeat center;
-//    background-size: cover;
-//}
-//.axs4 {
-//    background: url("../img/home-mozayik.png") no-repeat center;
-//    background-size: cover;
-//}
-//
-//.axs5 {
-//    background: url("../img/home-kaval.png") no-repeat center;
-//    background-size: cover;
-//}
-//.axs6 {
-//    background: url("../img/home-mobleman.png") no-repeat center;
-//    background-size: cover;
-//}
-//
-//.axs7 {
-//    background: url("../img/home-nj.png") no-repeat center;
-//    background-size: cover;
-//}
 
 
 
@@ -365,11 +345,24 @@
     center);
     height: auto;
     a {
-        //width: 100%;
-        flex: 1;
+        position: relative;
+
         img{
-            max-width: 100%;
+
+            width: 100%;
             height: auto;
+        }
+        .image-head{
+            position: absolute;
+            top: .5em;
+            z-index: 0;
+
+        }
+        .image-head.f-right{
+            left: 2em;
+        }
+        .image-head.f-left{
+            right: 2em;
         }
 
     }
@@ -390,6 +383,28 @@
     }
 
 }
+.col-feature.farsi{
+    a{
+        .image-head{
+            @include font-fam-size(2em, asli, 400, $text-yellow-main);
+
+        }
+    }
+
+
+}
+.col-feature.english{
+    a{
+        .image-head{
+            @include font-fam-size(2em, $main-font-2, 400, $text-yellow-main);
+
+        }
+    }
+
+
+}
+
+
 
 
 .contact {
@@ -414,11 +429,11 @@
                     $hard-gray-l);
         }
     }
-    .contact-info {
+    .contact-fa {
         font-family: asli;
         padding: 30px 0; // border-bottom: 2px solid #BFBFBF;
         text-align: center;
-        h4 {
+       .contact-fa__line {
 
             color: $hard-gray;
             a{
@@ -426,8 +441,6 @@
                         -apple-,
                         bold,
                         $hard-gray);
-
-
             }
         }
         span {
@@ -437,16 +450,39 @@
             $text-yellow-main);
         }
     }
-}
+    .contact-en{
 
-.jabeja {
-    @include background('../img/chideman.jpg',
-    40% 50%,
-    no-repeat,
-    414px 550px) @include media(landscape) {
-        @include background('../img/pars-jadval.jpg',
-        center,
-        no-repeat,
-        cover)
+
+        @include font-fam-size( 1em,
+                $main-font-1,
+                bold,
+                $text-yellow-main);
+        padding: 30px 0; // border-bottom: 2px solid #BFBFBF;
+        text-align: center;
+        .contact-en__line {
+            color: $hard-gray;
+            a{
+                @include font-fam-size( 0.9em,
+                        $main-font-1,
+                        bold,
+                        $hard-gray);
+            }
+        }
+        span {
+            @include font-fam-size( 1.2em,
+                    $main-font-2,
+                    bold,
+                    $text-yellow-main);
+        }
+        .contact-en__line.address{
+            @include font-fam-size( 1em,
+                    $main-font-1,
+                    bold,
+                    $hard-gray);
+
+        }
+
+
     }
 }
+

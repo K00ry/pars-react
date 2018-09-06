@@ -1,11 +1,11 @@
 import React from 'react';
 
 
-import { Parallax } from 'react-parallax';
+// import { Parallax } from 'react-parallax';
 // import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 // import { Link } from 'react-router-dom';
-import HomeGenres from './homeGenres';
-import image1 from '../../img/chideman2.png';
+// import HomeGenres from './homeGenres';
+// import image1 from '../../img/chideman2.png';
 import img from '../../img/khanabig.png';
 import HomeProducts from "./homeProducts";
 
@@ -25,51 +25,43 @@ const MainContainer = props => {
         />
 
       </div>
-      <div className="head-intro-sub" />
+      {/*<div className="head-intro-sub" />*/}
 
 
-      <Parallax bgImage={image1} strength={300}>
-        <div style={{ height: '80vh' }}>
-            <div className="home-genres" style={insideStyles}>
-                <div className="home-genres-title">
-                    <h2>{props.t("products")}</h2>
-                </div>
+      {/*<Parallax bgImage={image1} strength={300}>*/}
+        {/*<div style={{ height: '80vh' }}>*/}
+            {/*<div className="home-genres" style={insideStyles}>*/}
+                {/*<div className="home-genres-title">*/}
+                    {/*<h2>{props.t("products")}</h2>*/}
+                {/*</div>*/}
                 {/*{props.dataArray.map((arr, index) => (*/}
                     {/*<HomeGenres*/}
                         {/*key={index}*/}
-                        {/*address={`/catalog/${arr[0].genreEn}`}*/}
-                        {/*product={arr[0].genreFarsi}*/}
-                        {/*correctCatalogClick={() => props.correctHomeCatalog(index)}*/}
+                        {/*address={`/${index}`}*/}
+                        {/*product={arr[0].genreEn}*/}
+                        {/*t={props.t}*/}
                     {/*/>*/}
                 {/*))}*/}
-                {props.dataArray.map((arr, index) => (
-                    <HomeGenres
-                        key={index}
-                        address={`/${index}`}
-                        product={arr[0].genreEn}
-                        t={props.t}
-                        // correctCatalogClick={() => props.correctHomeCatalog(index)}
-                    />
-                ))}
-            </div>
-        </div>
-      </Parallax>
+            {/*</div>*/}
+        {/*</div>*/}
+      {/*</Parallax>*/}
 
 
       <div className="product-showcase">
           {props.dataArray.map((arr, i) => {
-                // let floatClass;
-                //   if (i === 0 || i ===3 || i === 4 || i === 7){
-                //       floatClass = 'f-right';
-                //   } else{ floatClass = 'f-left';}
+                let floatClass;
+                  if (i === 0 || i ===3 || i === 4 || i === 7){
+                      floatClass = 'f-right';
+                  } else{ floatClass = 'f-left';}
               return(
               <HomeProducts
                   key={i}
                   class={i}
-                  // floatDirection={floatClass}
+                  floatDirection={floatClass}
                   address={`/${i}`}
                   imgSrc={arr[0].genreEn}
-                  product={arr[0].genreFarsi}
+                  product={arr[0].genreEn}
+                  t={props.t}
                   // correctCatalogClick={() => props.correctHomeCatalog(i)}
               />
           )})}
