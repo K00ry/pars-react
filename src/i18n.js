@@ -11,11 +11,7 @@ i18n.use(LanguageDetector).init({
                     "To get started, edit <1>src/App.js</1> and save to reload.",
                 "Welcome to React": "Welcome to React and react-i18next",
 
-                // "<1 href='tel:+989121180175'>۹۱۲-۱۱۸-۰۱۷۵</1><2>: تلفن همراه  </span>":
-                //     "<a href='tel:+989121180175'>۹۱۲-۱۱۸-۰۱۷۵</a> <span>: تلفن همراه</span>"
-
-
-                "Pars<1> Jadval</1>":"Pars<1>Jadval</1>",
+                "Pars<1> Jadval</1>":"Pars <1>Jadval</1>",
                 "pars-title-footer": "Pars Jadval",
                 "sideNav-class-select":"left",
                 "lang-class":"english",
@@ -469,7 +465,7 @@ i18n.use(LanguageDetector).init({
             }
         }
     },
-    fallbackLng: "fa",
+    fallbackLng: "en",
     debug: true,
 
     // have a common namespace used around the full app
@@ -483,9 +479,9 @@ i18n.use(LanguageDetector).init({
         formatSeparator: ","
     },
 
-    react: {
-        wait: true
-    }
+    // react: {
+    //     wait: true
+    // }
 });
 
 export default i18n;

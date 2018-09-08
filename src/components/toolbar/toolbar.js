@@ -10,9 +10,11 @@ const Toolbar = props => {
 
     const { i18n } = props;
 
-    const changeLanguage = lng => {
-        i18n.changeLanguage(lng);
-    };
+    let langString;
+    let lang = props.i18n.language;
+    lang === "en" ? lang = "fa" : lang = "en";
+    lang === "en" ? langString = "English" : langString = "فارسی";
+    const toggle = lng => i18n.changeLanguage(lng);
 
 
 
@@ -30,6 +32,10 @@ const Toolbar = props => {
         >
           ☰
         </span>
+
+              <div className="lang-select">
+                  <button className={`lang-select--${props.t("lang-class")}`} onClick={() => toggle(lang)}>{langString}</button>
+              </div>
 
 
 

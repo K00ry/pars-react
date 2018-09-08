@@ -22,7 +22,7 @@ class App extends Component {
     openDrawer : false,
       mainData: data,
       CatalogData: data[0],
-      CatalogSpec:data[0][0]
+      CatalogSpec:data[0][0],
   };
   openDrawer = () => {
     this.setState((prevState) => {
@@ -31,13 +31,11 @@ class App extends Component {
 
   };
 
+
   render() {
 
-          const { t, i18n } = this.props;
+      const { t, i18n } = this.props;
 
-          const changeLanguage = lng => {
-              i18n.changeLanguage(lng);
-          };
 
       let catalogRouts =  this.state.mainData.map((arr,i)=>(
           <Route exact key={i} path={`/${i}`} render={(routerProps)=> <Catalog mainOfMain={this.state.mainData}
@@ -51,12 +49,7 @@ class App extends Component {
         <Route render={({ location }) => (
 
       <div className="App">
-          <div className="lang-select">
-              <div className="lang-select__container">
-                  <button className="lang-select__container__btn en" onClick={() => changeLanguage("en")}>English</button>
-                  <button className="lang-select__container__btn fa" onClick={() => changeLanguage("fa")}>فارسی</button>
-              </div>
-          </div>
+
 
           <Toolbar openDrawer={this.openDrawer}  t={t} i18n={i18n}/>
           <SideDrawer closeDrawer={this.openDrawer}

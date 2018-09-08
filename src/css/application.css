@@ -39,7 +39,7 @@ a:focus {
     padding: 16px; }
     .navbar .header-div.farsi .toolbar-title {
       display: inline-block;
-      font-size: 2.5em;
+      font-size: 2em;
       font-family: asli;
       font-weight: bold;
       color: #FFCC33;
@@ -91,41 +91,29 @@ a:focus {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  width: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 20%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: #999999; }
-  .lang-select .lang-select__container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    width: 20%;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    background: #999999; }
-    .lang-select .lang-select__container .lang-select__container__btn {
-      outline: none;
-      margin: auto;
-      height: 100%;
-      border: 1px solid #FFF; }
-    .lang-select .lang-select__container .en {
-      font-size: 0.7em;
-      font-family: "Oswald", sans-serif;
-      font-weight: bold;
-      color: rgba(67, 73, 92, 0.8); }
-    .lang-select .lang-select__container .fa {
-      font-size: 0.7em;
-      font-family: dovom;
-      font-weight: bold;
-      color: rgba(67, 73, 92, 0.8); }
+  .lang-select .lang-select--english {
+    font-size: 0.7em;
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
+    color: rgba(67, 73, 92, 0.8);
+    outline: none;
+    border: 1px solid #FFCC33;
+    border-radius: 20px; }
+  .lang-select .lang-select--farsi {
+    font-size: 0.7em;
+    font-family: dovom;
+    font-weight: bold;
+    color: rgba(67, 73, 92, 0.8);
+    outline: none;
+    border: 1px solid #FFCC33;
+    border-radius: 20px; }
 
 .example-enter {
   opacity: 0.01;

@@ -40,7 +40,7 @@ a:focus {
         padding: 16px;
         .toolbar-title {
             display: inline-block;
-            @include font-fam-size(2.5em, asli, bold, $text-yellow-main);
+            @include font-fam-size(2em, asli, bold, $text-yellow-main);
             margin: auto;
             b {
                 @include font-fam-size(1em, asli, bold, #fff);
@@ -70,31 +70,39 @@ a:focus {
 .back-axs {
     width: 100%;
 }
-.lang-select{
-    @include flex-display(flex, row, flex-start, 100%);
-    background:$light-grey;
+//.lang-select{
+    //@include flex-display(flex, row, flex-start, 100%);
+    //background:$light-grey;
 
-    .lang-select__container{
+    .lang-select{
         @include flex-display(flex, row, space-around, 20%, center);
-
         background:$light-grey;
 
-        .lang-select__container__btn {
+        .lang-select--english{
+            @include font-fam-size(.7em, $main-font-2, bold, $h-color);
             outline: none;
-            margin: auto;
-            height: 100%;
-            border: 1px solid $white;
+            //margin: auto;
+
+
+
+            border: 1px solid $text-yellow-main ;
+            border-radius: 20px;
         }
-        .en{
 
-            @include font-fam-size(.7em, $main-font-2, bold, $h-color);}
 
-        .fa{
+        .lang-select--farsi{
+            @include font-fam-size(.7em, dovom, bold, $h-color);
+            outline: none;
+            //margin: auto;
+            //background: transparent;
 
-            @include font-fam-size(.7em, dovom, bold, $h-color);}
+
+            border: 1px solid $text-yellow-main ;
+            border-radius: 20px;
+        }
 
     }
-}
+
 
 //.example-appear {
 //    opacity: 0.01;
