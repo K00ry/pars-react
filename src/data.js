@@ -5,7 +5,7 @@ const data = [
               genreFarsi: 'جدول',
               genreId: 'wet',
               type: 'وت پرس',
-              img: '/images/jadval/mobile/40.jpg',
+              img: '/images/jadval/mobile/40.png',
               sizes: [
                 {
                   type: '۵۰*۳۰*۱۰',
@@ -29,7 +29,7 @@ const data = [
                 genreEn: 'jadval',
               genreId: 'kush',
               type: 'پرس خشك',
-              img: '/images/jadval/mobile/50.jpg',
+              img: '/images/jadval/mobile/50.png',
               sizes: [
                  {
                   type: '۵۰*۳۰*۱۰',
@@ -52,7 +52,7 @@ const data = [
                 genreEn: 'jadval',
               genreId: 'hand',
               type: 'دستی',
-              img: '/images/jadval/mobile/d1.jpg',
+              img: '/images/jadval/mobile/d1.png',
               sizes: [
                 {
                   type: '۵۰*۳۰*۶',
@@ -78,7 +78,7 @@ const data = [
               genreFarsi: 'بلوک',
               genreId: 'pooke',
               type:'سبك پوكه',
-              img: '/images/blook/mobile/pooke.jpg',
+              img: '/images/blook/mobile/pooke.png',
               sizes: [
                {
                   image: '#',
@@ -114,7 +114,7 @@ const data = [
                 genreEn: 'blook',
               genreId: 'simani',
               type: 'بلوك سيمانی',
-              img: '/images/blook/mobile/simani.jpg',
+              img: '/images/blook/mobile/simani.png',
               sizes: [
                 {
                   image: '#',
@@ -174,10 +174,10 @@ const data = [
               genreFarsi: 'كفپوش',
               genreId: 'khoshk',
               type: 'پرس خشك',
-              img: '/images/kafpoosh/mobile/39.jpg',
+              img: '/images/kafpoosh/mobile/transparent/39.jpg',
               sizes: [
                 {
-                  img: '/images/kafpoosh/mobile/40x40.png',
+                  img: '/images/kafpoosh/mobile/transparent/40x40.png',
                   type: '۴۰*۴۰ پرسی',
                   inSquarefeet: '۶/۲۵ عدد',
                   toosi: '۲۰۵۰۰۰',
@@ -186,7 +186,7 @@ const data = [
                   shipping: '۵۰۰۰',
                 },
                  {
-                  img: '/images/kafpoosh/mobile/20x20.png',
+                  img: '/images/kafpoosh/mobile/transparent/20x20.png',
                   type: '۲۰*۲۰ پرسی',
                   inSquarefeet: '۲۵ عدد',
                   toosi: '۲۰۵۰۰۰',
@@ -239,7 +239,7 @@ const data = [
               img: '/images/kafpoosh/mobile.jpg',
                 sizes: [
                     {
-                        img: '/images/kafpoosh/wetpress/mobile/red.jpg',
+                        img: '/images/kafpoosh/wetpress/mobile/red.png',
                         type: '۵۰*۵۰*۸',
                         type_en: '50x50x8',
                         inSquarefeet: '۴ عدد',
@@ -250,7 +250,7 @@ const data = [
                         shipping: '۵۰۰۰',
                     },
                     {
-                        img: '/images/kafpoosh/wetpress/mobile/yellow.jpg',
+                        img: '/images/kafpoosh/wetpress/mobile/yellow.png',
                         type: '۵۰*۵۰*۸',
                         type_en: '50x50x8',
                         inSquarefeet: '۴ عدد',
@@ -261,7 +261,7 @@ const data = [
                         shipping: '۵۰۰۰',
                     },
                     {
-                        img: '/images/kafpoosh/wetpress/mobile/grey.jpg',
+                        img: '/images/kafpoosh/wetpress/mobile/grey.png',
                         type: '۵۰*۵۰*۸',
                         type_en: '50x50x8',
                         inSquarefeet: '۴ عدد',
@@ -277,10 +277,10 @@ const data = [
               genreEn: 'kafpoosh',
               genreId: 'vibrate',
               type: 'ويبره',
-              img: '/images/kafpoosh/mobile/39.jpg',
+              img: '/images/kafpoosh/mobile/transparent/39.jpg',
               sizes: [
                  {
-                  img: '/images/kafpoosh/mobile/i.png',
+                  img: '/images/kafpoosh/mobile/transparent/i.png',
                   type: 'آی خشک چین',
 
                   inSquarefeet: '۲۳ عدد',
@@ -291,7 +291,7 @@ const data = [
                   shipping: '۵۰۰۰',
                 },
                  {
-                  img: '/images/kafpoosh/mobile/6zeli.png',
+                  img: '/images/kafpoosh/mobile/transparent/6zeli.png',
                   type: 'خشک چین ۶ گوش',
 
 
@@ -302,7 +302,7 @@ const data = [
                   shipping: '۵۰۰۰',
                 },
                  {
-                  img: '/images/kafpoosh/mobile/puzzle.png',
+                  img: '/images/kafpoosh/mobile/transparent/puzzle.png',
                   type: 'خشک چین پازل',
                   inSquarefeet: '۱۶ عدد',
                   toosi: '۱۲۵۰۰۰',
@@ -311,7 +311,7 @@ const data = [
                   shipping: '۵۰۰۰',
                 },
                 {
-                  img: '/images/kafpoosh/mobile/tabbari.png',
+                  img: '/images/kafpoosh/mobile/transparent/tabbari.png',
                   type: 'خشک چین طبری',
                   inSquarefeet: '۲۸ عدد',
                   toosi: '۱۲۵۰۰۰',
@@ -320,7 +320,7 @@ const data = [
                   shipping: '۵۰۰۰',
                 },
                  {
-                  img: '/images/kafpoosh/mobile/congere.png',
+                  img: '/images/kafpoosh/mobile/transparent/congere.png',
                   type: 'خشک چین کنگره',
                   inSquarefeet: '۱۶ عدد',
                   toosi: '۱۲۵۰۰۰',
@@ -329,7 +329,7 @@ const data = [
                   shipping: '۵۰۰۰',
                 },
                  {
-                  img: '/images/kafpoosh/mobile/kandooyi.png',
+                  img: '/images/kafpoosh/mobile/transparent/kandooyi.png',
                   type: 'خشک چین کندویی',
                   inSquarefeet: '۱۸ عدد',
                   toosi: '۱۲۵۰۰۰',
@@ -338,7 +338,7 @@ const data = [
                   shipping: '۵۰۰۰',
                 },
                 {
-                  img: '/images/kafpoosh/mobile/koozeyi.png',
+                  img: '/images/kafpoosh/mobile/transparent/koozeyi.png',
                   type: 'خشک چین کوزه ای و شنی',
                   inSquarefeet: '۲۲ عدد',
                   toosi: '۱۲۵۰۰۰',
@@ -347,7 +347,7 @@ const data = [
                   shipping: '۵۰۰۰',
                 },
                  {
-                  img: '/images/kafpoosh/mobile/ajori.png',
+                  img: '/images/kafpoosh/mobile/transparent/ajori.png',
                   type: 'خشک چین آجری',
                   inSquarefeet: '۴۹ عدد',
                   toosi: '۱۶۵۰۰۰',
@@ -356,7 +356,7 @@ const data = [
                   shipping: '۵۰۰۰',
                 },
                 {
-                  img: '/images/kafpoosh/mobile/badbar.png',
+                  img: '/images/kafpoosh/mobile/transparent/badbar.png',
                   type: 'بادبر',
                   inSquarefeet: '۲۲ عدد',
                   toosi: '۱۲۵۰۰۰',
@@ -365,7 +365,7 @@ const data = [
                   shipping: '۵۰۰۰',
                 },
                  {
-                  img: '/images/kafpoosh/mobile/20x20.png',
+                  img: '/images/kafpoosh/mobile/transparent/20x20.png',
                   type: '۲۰*۲۰ ساده پوست ماری',
                   inSquarefeet: '۲۵ عدد',
                   toosi: '۱۴۵۰۰۰',
@@ -374,7 +374,7 @@ const data = [
                   shipping: '۵۰۰۰',
                 },
                  {
-                  img: '/images/kafpoosh/mobile/40x40.png',
+                  img: '/images/kafpoosh/mobile/transparent/40x40.png',
                   type: '۴۰*۴۰ ساده پوست ماری',
                   inSquarefeet: '۶/۲۵ عدد',
                   toosi: '۱۴۵۰۰۰',
@@ -383,7 +383,7 @@ const data = [
                   shipping: '۵۰۰۰',
                 },
                  {
-                  img: '/images/kafpoosh/mobile/lozipoostmari.png',
+                  img: '/images/kafpoosh/mobile/transparent/lozipoostmari.png',
                   type: '۵ ضلعی ساده پوست ماری',
                   inSquarefeet: '۲۰ عدد',
 
@@ -393,7 +393,7 @@ const data = [
                   shipping: '۵۰۰۰',
                 },
                 {
-                  img: '/images/kafpoosh/mobile/setareyi.png',
+                  img: '/images/kafpoosh/mobile/transparent/setareyi.png',
                   type: 'حیاطی ۴۰*۴۰ ستاره',
                   inSquarefeet: '۶/۲۵ عدد',
 
@@ -403,7 +403,7 @@ const data = [
                   shipping: '۵۰۰۰',
                 },
                 {
-                  img: '/images/kafpoosh/mobile/yasaman.png',
+                  img: '/images/kafpoosh/mobile/transparent/yasaman.png',
                   type: 'حیاطی ۴۰*۴۰ یاسمن',
                   inSquarefeet: '۶/۲۵ عدد',
 
@@ -413,7 +413,7 @@ const data = [
                   shipping: '۵۰۰۰',
                 },
                  {
-                  img: '/images/kafpoosh/mobile/sekeyi.png',
+                  img: '/images/kafpoosh/mobile/transparent/sekeyi.png',
                   type: 'حیاطی ۳۰*۳۰ سکه ای',
                   inSquarefeet: '۱۱ عدد',
                   toosi: '۱۲۵۰۰۰',
@@ -422,7 +422,7 @@ const data = [
                   shipping: '۵۰۰۰',
                 },
                 {
-                  img: '/images/kafpoosh/mobile/hayati.png',
+                  img: '/images/kafpoosh/mobile/transparent/sangi.png',
                   type: 'حیاطی ۳۳*۳۳ قلوه سنگی',
                   inSquarefeet: '۹ عدد',
                     type_en: '40x40 Yard Rock',
@@ -441,7 +441,7 @@ const data = [
               img: '/images/kafpoosh/mobile.jpg',
               sizes: [
                 {
-                  img: '/images/kafpoosh/mobile/40x40.png',
+                  img: '/images/kafpoosh/mobile/transparent/40x40.png',
                   type: '۳۰x۳۰',
                   inSquarefeet: '۴ عدد',
                   toosi: '۲۵۰۰۰۰',
@@ -450,7 +450,7 @@ const data = [
                   shipping: '۵۰۰۰',
                 },
                 {
-                  img: '/images/kafpoosh/mobile/40x40.png',
+                  img: '/images/kafpoosh/mobile/transparent/40x40.png',
                   type: '۴۰x۴۰',
                   inSquarefeet: '۴ عدد',
                   toosi: '۲۵۰۰۰۰',
@@ -467,7 +467,7 @@ const data = [
               genreFarsi: 'دال بتنی',
               genreId: 'light',
               type: 'ترافیک سبک',
-              img: '/images/dal/mobile/39.jpg',
+              img: '/images/dal/mobile/39.png',
               sizes: [
                  {
                   type: '۸۰*۶۰*۱۰',
@@ -490,7 +490,7 @@ const data = [
                 genreEn: 'dal',
               genreId: 'heavy',
               type: 'ترافیک سنگین',
-              img: '/images/dal/mobile/44.jpg',
+              img: '/images/dal/mobile/44.png',
               sizes: [
                  {
                   type: '۸۰*۶۰*۱۵',
@@ -531,10 +531,10 @@ const data = [
               genreFarsi: 'موزاییک',
               genreId: 'simple',
               type: 'ساده',
-              img: '/images/mozayik/mobile/sade.jpg',
+              img: '/images/mozayik/mobile/sade.png',
               sizes: [
                  {
-                  img: '/images/kafpoosh/mobile/40x40',
+                  img: '/images/kafpoosh/mobile/transparent/40x40',
                   type: 'ساده ایرانی ۳۰*۳۰ درجه ۱، درجه ۲',
                   inSquarefeet: '۱۱ عدد',
                   toosi: '۹۰۰۰۰/۷۰۰۰۰',
@@ -543,7 +543,7 @@ const data = [
                   shipping: '۵۰۰۰',
                 },
                  {
-                  img: '/images/kafpoosh/mobile/40x40',
+                  img: '/images/kafpoosh/mobile/transparent/40x40',
                   type: 'ساده ایرانی ۴۰*۴۰',
                   inSquarefeet: '۶​​/۲۵ عدد',
                   toosi: '۱۰۰۰۰۰',
@@ -552,7 +552,7 @@ const data = [
                   shipping: '۵۰۰۰',
                 },
                 {
-                  img: '/images/kafpoosh/mobile/40x40',
+                  img: '/images/kafpoosh/mobile/transparent/40x40',
                   type: 'گرانیتی ساده ۴۰*۴۰',
                   inSquarefeet: '۶​​/۲۵ عدد',
                   toosi: '۱۲۵۰۰۰',
@@ -561,7 +561,7 @@ const data = [
                   shipping: '۵۰۰۰',
                 },
                 {
-                  img: '/images/kafpoosh/mobile/40x40',
+                  img: '/images/kafpoosh/mobile/transparent/40x40',
                   type: 'مرمری ساده ۴۰*۴۰',
                   inSquarefeet: '۶​​/۲۵ عدد',
                   toosi: '۱۲۵۰۰۰',
@@ -575,10 +575,10 @@ const data = [
                 genreEn: 'mozayik',
               genreId: 'hayati',
               type: 'حياطی',
-              img: '/images/mozayik/mobile.jpg',
+              img: '/images/mozayik/mobile/sade2.png',
               sizes: [
                 {
-                  img: '/images/kafpoosh/mobile/40x40',
+                  img: '/images/kafpoosh/mobile/transparent/40x40',
                   type: 'موزائیک گرانیتی حیاطی ۴۰*۴۰',
                   inSquarefeet: '۶​​/۲۵ عدد',
                   toosi: '۱۲۵۰۰۰',
@@ -587,7 +587,7 @@ const data = [
                   shipping: '۵۰۰۰',
                 },
                  {
-                  img: '/images/kafpoosh/mobile/40x40',
+                  img: '/images/kafpoosh/mobile/transparent/40x40',
                   type: 'موزائیک مرمری حیاطی ۴۰*۴۰',
                   inSquarefeet: '۶​​/۲۵ عدد',
                   toosi: '۱۲۵۰۰۰',
@@ -604,7 +604,7 @@ const data = [
               genreFarsi: 'كول',
               genreId: 'gerd',
               type: 'گرد',
-              img: '/images/kaval/mobile/2gerd.jpg',
+              img: '/images/kaval/mobile/2gerd.png',
               sizes: [
                  {
                   type: '۷۰',
@@ -652,7 +652,7 @@ const data = [
                 genreEn: 'kaval',
               genreId: 'anbari',
               type: 'انباری',
-              img: '/images/kaval/mobile/2anbari.jpg',
+              img: '/images/kaval/mobile/2anbari.png',
               sizes: [
                {
                   type: 'دوتکه ۱۰۰',
@@ -685,7 +685,7 @@ const data = [
                 genreEn: 'kaval',
               genreId: 'kanaly',
               type: 'بیضی',
-              img: '/images/kaval/mobile/beyzi.jpg',
+              img: '/images/kaval/mobile/beyzi.png',
               sizes: [
                 {
                   type: '۱۲۰',
@@ -698,7 +698,7 @@ const data = [
                 genreEn: 'kaval',
               genreId: 'takhte',
               type: 'تخته',
-              img: '/images/kaval/mobile/takhte.jpg',
+              img: '/images/kaval/mobile/takhte.png',
               sizes: [
                 {
                   type: '۱۰۰*۲۵*۵',
@@ -730,18 +730,36 @@ const data = [
         {
             genreEn: 'nj',
             genreFarsi: 'نيوجرسی',
-            genreId: 'big',
-            type: 'گرد',
-            img: '/images/kaval/mobile/2gerd.jpg',
-            sizes: [],
+            genreId: 'jersey',
+            type: 'جرسی',
+                img: '/images/nj/nj.png',
+            sizes: [
+                {
+                type:"۱۰۰*۷۰*۵۰",
+                kg:"۴۵۰ کیلو",
+                },
+                {
+                    type:"۲۰۰*۷۰*۵۰",
+                    kg:"۹۰۰ کیلو",
+                },
+                {
+                    type:"۳۰۰*۱۱۰*۸۰",
+                    kg:"۳۴۰۰ کیلو",
+                }
+            ]
         },
         {
             genreEn: 'nj',
             genreFarsi: 'نيوجرسی',
-            genreId: 'small',
-            type: 'گرد',
-            img: '/images/kaval/mobile/2gerd.jpg',
-            sizes: [],
+            genreId: 'mini',
+            type: 'مینی جرسی',
+            img: '/images/nj/mini-nj.png',
+            sizes: [
+                {
+                    type:"۴۰*۴۰*۴۵",
+                    kg:"۹۵ کیلو",
+                }
+            ],
         }
     ]
 ];

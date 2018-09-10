@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
 import CatalogGenre from './catalogGenre';
-import ImgAndTable from './imgAndTable';
+import ImgAndTable from './imgAndTable/imgAndTable';
 import ImgGallery from './imgGallery/imgGallery';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
@@ -61,6 +61,7 @@ render(){
         <ImgAndTable key={this.state.ProdSpec.genreId} img={this.state.ProdSpec.img}
                                      imageAlt={this.state.ProdSpec.type}
                                      tableSizes={this.state.ProdSpec.sizes}
+                                    check={this.state.ProdSpec.genreEn}
                                     t={this.props.t}
           />
           :

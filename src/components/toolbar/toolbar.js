@@ -39,8 +39,8 @@ const Toolbar = props => {
 
 
 
-        <Link to="/">
-          <h1 className="toolbar-title">
+        <Link  to="/" className="toolbar-title">
+          <h1 className="toolbar-title__h1">
               <Trans>
                   Pars<b> Jadval</b>
               </Trans>

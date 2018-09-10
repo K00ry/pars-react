@@ -1,24 +1,26 @@
-#btn {
-  color: $text-yellow-main;
+.sideNav-title {
+  width: 100%;
+  padding: 10px;
+  li {
+    @include flex-display(flex, column, space-between, 100%, center);
+
+    .sideNav-sub {
+      width: 100%;
+      padding: 0;
+      list-style: none;
+    }
+  }
 }
 
-
-
-
-.head-intro-sub {
-  height: 0;
-  width: 100%;
-  position: relative;
-  z-index: 100000;
-  background-color: #000;
-  transition: 0.5s;
+.nav-link {
+  @include font-fam-size(1.3em, asli, bold, $text-black-m);
 }
 
 .sidenav {
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 1040;
+  z-index: 3;
   top: 0;
   background-color: $hard-gray;
   overflow-x: hidden;
@@ -27,8 +29,8 @@
   &.nav-open {
     width: 200px;
   }
-    ///// style change from right to left on language change \\\\
-  &.left {
+  ///// style change from right to left on language change \\\\
+  &.english {
     left: 0;
     .closebtn {
       left: 8px;
@@ -39,10 +41,18 @@
 
     }
     .nav-link-style {
+      //margin: 1rem 0;
       text-decoration: none;
       @include flex-display(flex, row-reverse, space-between, 100%);
       @include font-fam-size( 2em, $main-font-2, bold, $white);
       transition: 0.3s;
+      @include media(iphone-plus) {
+        font-size: 2.2em;
+        margin:.3em 0;
+      }
+      .nav-link-style__title{
+       color: $white;
+      }
       .arrow-style {
         transform: rotateZ(180deg);
 
@@ -55,19 +65,26 @@
 
     .nav-link-style-sub {
       text-align: left;
-        @include font-fam-size(1em, $main-font-1, 100, $text-yellow-main-l);
+      margin: .2em 0;
+      @include font-fam-size(1.2em, $main-font-1, 100, $text-yellow-main-l);
     }
   }
-  &.right {
+  &.farsi {
     right: 0;
 
     .closebtn {
       right: 3px;
     }
     .nav-link-style {
+      //margin: 1rem 0;
       text-decoration: none;
       @include flex-display(flex, row, space-between, 100%);
       transition: 0.3s;
+      @include media(iphone-plus) {
+        font-size: 2.2em;
+        margin:.3em 0;
+      }
+
       .expand {
         transform-origin: center;
         transform: rotateZ(-90deg);
@@ -75,8 +92,8 @@
     }
     .nav-link-style-sub {
       text-align: right;
-        @include font-fam-size(1.4em, dovom, 100, $text-yellow-main-l);
-      margin: 6px 0;
+      @include font-fam-size(1.4em, dovom-bold, bold, $text-yellow-main-l);
+      margin: .2em 0;
     }
   }
   .closebtn {
@@ -87,23 +104,30 @@
   }
 }
 
-
-
-
-
-
-
-
-
+.head-intro-sub {
+  height: 0;
+  width: 100%;
+  position: relative;
+  z-index: 100000;
+  background-color: #000;
+  transition: 0.5s;
+}
 
 .sidenav-home-btn {
-  @include font-fam-size(2em, asli, 200, $w-color );
-  padding: 20px 0;
+  //farsi
+  @include font-fam-size(2em, asli, 200, $white );
+  padding: .5em 0;
 }
 
 .sidenav-li-drop {
   .nav-link-style {
-    @include font-fam-size(2em, asli, 200, $w-color );
+
+    @include font-fam-size(2em, asli, 200, $color: $white);
+    .nav-link-style__title{
+      color: $white;
+
+    }
+
     ///// arrow turns down main styles \\\\
     .arrow-style {
       width: 20px;
@@ -135,6 +159,10 @@
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-in-out;
+  @include media(tablet) {
+    display: flex;
+    flex-direction: row-reverse;
+  }
 }
 
 .nav-sub-container {

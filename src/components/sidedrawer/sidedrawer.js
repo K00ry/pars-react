@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import Sublinks from './subLinks';
 import { Link } from 'react-router-dom';
-
 import logo from '../../logo.svg';
-// import data from '../../data';
+
 
 class SideDrawer extends Component {
   state = {
@@ -33,7 +32,7 @@ class SideDrawer extends Component {
     }
 
     return (
-      <div id="mySidenav" className={`${this.props.t("sideNav-class-select")} ${sideDraw}`}>
+      <div id="mySidenav" className={`${this.props.t("lang-class")} ${sideDraw}`}>
         <a onClick={this.props.closeDrawer} className="closebtn">
           ×
         </a>
@@ -47,12 +46,11 @@ class SideDrawer extends Component {
           <li className="sidenav-li-drop">
             <div className="nav-link-style"
               onClick={this.subNavToggle}>
-              <div>
+              <div className="nav-link-style__arrow">
                 <img className={subNavOpen} src={logo} alt="Arrow" />
               </div>
-              <div>{this.props.t("products")}</div>
+              <div className="nav-link-style__title">{this.props.t("products")}</div>
             </div>
-
             <div className="nav" style={subOpenDisplay}>
               <ul className="sideNav-sub">
                 {this.props.dataMain.map((arr, index) => (

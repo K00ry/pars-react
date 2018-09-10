@@ -13,17 +13,15 @@
 
 @font-face {
     font-family: dovom;
-    //src: url(../fonts/zarghan.ttf);
     src: url(../fonts/Parastoo-WOL.ttf);
 }
-
-
-
-
-a {
-    text-decoration: none;
-    color: $text-black-m;
+@font-face {
+    font-family: dovom-bold;
+    src: url(../fonts/Parastoo-Bold-FD-WOL.ttf);
 }
+
+
+
 
 .image-head {
     font-family: asli;
@@ -38,7 +36,4 @@ a {
 
 
 
-.arrow {
-    width: 20px;
-    height: 20px;
-}
+

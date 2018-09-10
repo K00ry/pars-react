@@ -1,0 +1,141 @@
+.head-intro {
+
+  @include flex-display(flex, column, center, 100%, center);
+
+  img {
+    max-width: 100%;
+    height: auto;
+    width:100%;
+  }
+  .image-head-slog {
+    font-family: asli;
+    font-size: 2em;
+    color: #fff;
+    text-decoration: none;
+    margin: 0;
+  }
+  .image-head-company {
+    font-family: asli;
+    font-size: 4em;
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+
+
+.main {
+  width: 100%;
+  margin: auto;
+}
+.home-genres{
+  @include flex-display(flex, row, space-evenly, 100%, center);
+  flex-wrap:wrap;
+  padding:15px 0;
+  background-color:$text-black;
+
+
+
+
+  .home-genre-item{
+    @include flex-display(flex, column, space-evenly, 40%, center);
+    background-color:  $light-grey;
+
+    border: 1px solid $hard-gray-l;
+    padding:8px;
+    margin:25px 0;
+    a{
+      @include font-fam-size( 1.3em, dovom, bold, $text-yellow-main);
+      width: 100%;
+      text-align: center;
+
+
+    }
+  }
+
+
+}
+.home-genres-title{
+  @include font-fam-size( 1em, asli, bold, $text-yellow-main);
+  width:88%;
+  padding: 1em 0 ;
+
+  background-color: $hard-gray-l;
+
+  h2{
+    margin: auto;
+    text-align:center;
+
+  }
+}
+
+.col-feature {
+  // background-size: cover;
+  @include flex-display(flex,
+          column,
+          space-between,
+          100%,
+          center);
+  height: auto;
+  a {
+    position: relative;
+
+    img{
+
+      width: 100%;
+      height: auto;
+    }
+    .image-head{
+      position: absolute;
+      top: .5em;
+      z-index: 0;
+
+    }
+    .image-head.f-right{
+      left: 2em;
+
+    }
+    .image-head.f-left{
+      right: 2em;
+    }
+
+  }
+  @include media(tablet) {
+    width: 50%;
+
+
+  }
+
+  @include media(desktop) {
+
+
+
+  }
+
+}
+.col-feature.farsi{
+  a{
+    .image-head{
+      @include font-fam-size(1.5em, asli, 400, $text-yellow-main);
+      @include media(iphone-plus) {
+        font-size: 2em;
+      }
+
+    }
+  }
+
+
+}
+.col-feature.english{
+  a{
+    .image-head{
+      @include font-fam-size(1.5em, $main-font-2, 400, $text-yellow-main);
+      @include media(iphone-plus) {
+        font-size: 2em;
+      }
+
+    }
+  }
+
+
+}

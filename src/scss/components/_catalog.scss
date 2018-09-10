@@ -1,0 +1,281 @@
+////////////CATALOG HEADER STYLES WITH TRANSLATION STYLES
+
+.catalog-header-farsi {
+  padding: 1em;
+  @include flex-display(flex, column, center, 100%);
+  .catalog-header__title {
+    margin: 2em auto;
+    .catalog-header__title_info {
+      text-align: center;
+      @include font-fam-size(3em, asli, bold, $hard-gray);
+      margin: auto;
+    }
+  }
+}
+.catalog-header-english {
+  padding: 1em;
+  @include flex-display(flex, column, center, 100%);
+  .catalog-header__title {
+    margin: 2em auto;
+    .catalog-header__title_info {
+      text-align: center;
+      @include font-fam-size(3em, $main-font-2, bold, $hard-gray);
+      margin: auto;
+    }
+  }
+}
+
+.catalog-header__genres {
+  @include flex-display(flex, row, space-around, 100%);
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+  @include media(tablet) {
+    margin: auto;
+    width: 70%;
+  }
+  .catalog-header__genres_navigation {
+    width: 25%;
+    border: 1px solid #fabb00;
+    border-radius: 20px;
+    padding: 10px 0;
+    text-decoration: none;
+    display: flex;
+    color: #ffffff;
+    background-color: #ffcc33;
+    background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(#ffcc33),
+      to(#cc9933)
+    );
+    background-image: -webkit-linear-gradient(top, #ffcc33, #cc9933);
+    background-image: -moz-linear-gradient(top, #ffcc33, #cc9933);
+    background-image: -ms-linear-gradient(top, #ffcc33, #cc9933);
+    background-image: -o-linear-gradient(top, #ffcc33, #cc9933);
+    background-image: linear-gradient(to bottom, #ffcc33, #cc9933);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FFCC33, endColorstr=#CC9933);
+    //margin: auto;
+  }
+  .catalog-header__genres_navigation--active {
+    width: 25%;
+    border: 1px solid #fabb00;
+    border-radius: 20px;
+    padding: 10px 0;
+    text-decoration: none;
+    display: flex;
+    background-color: #ffcc33;
+    background-image: -webkit-gradient(
+      linear,
+      left top,
+      left bottom,
+      from(#ffcc33),
+      to($active-color)
+    );
+    background-image: -webkit-linear-gradient(top, #ffcc33, $active-color);
+    background-image: -moz-linear-gradient(top, #ffcc33, $active-color);
+    background-image: -ms-linear-gradient(top, #ffcc33, $active-color);
+    background-image: -o-linear-gradient(top, #ffcc33, $active-color);
+    background-image: linear-gradient(to bottom, #ffcc33, $active-color);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FFCC33, endColorstr=$active-color);
+    transition: all 0.5s ease-in-out;
+  }
+
+  .catalog-header__genres_navigation--btn-farsi {
+    @include font-fam-size(1em, asli, bold, $hard-gray);
+    width: 100%;
+    text-align: center;
+  }
+  .catalog-header__genres_navigation--btn-farsi .active {
+    transition: all 0.5s ease-in;
+    font-size: 1.1em;
+    color: $hard-gray;
+  }
+  .catalog-header__genres_navigation--btn-english {
+    @include font-fam-size(1em, $main-font-2, bold, $hard-gray);
+    width: 100%;
+    text-align: center;
+  }
+  .catalog-header__genres_navigation--btn-english .active {
+    transition: all 0.5s ease-in;
+    font-size: 1.1em;
+    color: $hard-gray;
+  }
+}
+
+.group {
+  @include flex-display(flex, row, space-between, 100%, center);
+  flex-wrap: wrap;
+
+  .gallery-wrapper {
+    @include flex-display(
+      flex,
+      column,
+      space-evenly,
+      100%,
+      center
+    );
+
+    .gallery-item {
+      @include flex-display(flex, row, space-evenly, 100%);
+      border-bottom: 1px solid $text-black-m;
+      &:last-child {
+        border-bottom: none;
+        padding-bottom: 20px;
+      }
+      .gallery-item__img {
+        width: 40%;
+        margin: auto;
+        img {
+          max-width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+}
+
+////// IMAGE GALLERY PRODUCTS STYLE incuding LANG TRANSLATED STYLES
+
+.gallery-item__title--fa {
+  @include flex-display(flex, column, space-evenly, 50%, center);
+  @include font-fam-size(1.1em, dovom, bold, $text-black-m);
+  padding: 1em 0;
+  width: 60%;
+  .gallery-item__title_info--fa {
+    @include font-fam-size(0.8em, dovom, bold, $text-black-m);
+    margin: 2px;
+    span {
+      @include font-fam-size(1em, dovom, bold, $text-gray-m);
+    }
+  }
+}
+.gallery-item__title--en {
+  @include flex-display(flex, column, space-evenly, 50%, center);
+  @include font-fam-size(1.1em, $main-font-2, bold, $text-black-m);
+  padding: 1em 0;
+  width: 60%;
+  .gallery-item__title_info--en {
+    @include font-fam-size(1em, $main-font-1, bold, $text-black-m);
+    margin: 2px;
+    span {
+      @include font-fam-size(1em, $main-font-2, bold, $text-gray-m);
+    }
+  }
+}
+
+///////
+.table_wrapper {
+  @include flex-display(flex, column, space-between, 100%, center);
+  padding: 1em 0;
+  @include media(tablet) {
+    margin: auto;
+
+    width: 100%;
+  }
+
+  .aks_table {
+    @include media(tablet) {
+      margin: auto;
+
+      width: 70%;
+    }
+
+    .aks_preview {
+      padding: 1em 0;
+      max-width: 100%;
+      height: auto;
+      @include media(tablet) {
+        margin: auto;
+        //width: 50%;
+      }
+    }
+  }
+
+  tr:nth-child(even) {
+    background-color: #cdcdcd;
+  }
+  cdcdcd
+  tr:nth-child(odd) {
+    background-color: #e6e6e6;
+  }
+  td {
+    padding: 10px;
+  }
+  th {
+    font-weight: 400;
+    padding: 10px;
+    text-align: center; // background-color: #f5f5f5;
+  }
+  th {
+    @include font-fam-size(1.2em, asli, bold, $text-black-m);
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  td,
+  th {
+    text-align: center;
+  }
+}
+
+.product-showcase {
+  @include flex-display(flex, column, flex-start, 100%, center);
+  & :nth-child(1) {
+    order: 1;
+  }
+  & :nth-child(2) {
+    order: 2;
+  }
+  & :nth-child(3) {
+    order: 4;
+  }
+  & :nth-child(4) {
+    order: 3;
+  }
+  & :nth-child(5) {
+    order: 5;
+  }
+  & :nth-child(6) {
+    order: 6;
+  }
+  & :nth-child(7) {
+    order: 8;
+  }
+  & :nth-child(8) {
+    order: 7;
+  }
+
+  @include media(tablet) {
+    @include flex-display(flex, row, space-between, 100%, center);
+    flex-wrap: wrap;
+
+    & :nth-child(1) {
+      order: 1;
+    }
+    & :nth-child(2) {
+      order: 2;
+    }
+    & :nth-child(3) {
+      order: 3;
+    }
+    & :nth-child(4) {
+      order: 4;
+    }
+    & :nth-child(5) {
+      order: 5;
+    }
+    & :nth-child(6) {
+      order: 6;
+    }
+    & :nth-child(7) {
+      order: 7;
+    }
+    & :nth-child(8) {
+      order: 8;
+    }
+  }
+}

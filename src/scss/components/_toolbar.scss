@@ -1,0 +1,109 @@
+.navbar {
+  width: 100%;
+  background-color: $light-grey;
+  border: none;
+  margin-bottom: 0;
+  border-radius: 0;
+  #btn {
+    color: $text-yellow-main;
+    margin: auto;
+  }
+
+  .header-div.farsi {
+    @include flex-display(flex, row, space-between, 100%);
+    transition: margin-left 0.5s;
+    padding: 1em;
+    @include media(iphone-plus) {
+      padding: 1.5em;
+    }
+    .toolbar-title {
+      margin: auto ;
+
+      .toolbar-title__h1 {
+        height: 100%;
+        display: inline-block;
+        @include font-fam-size(1.8em, asli, bold, $text-yellow-main);
+        margin: auto;
+        @include media(iphone-plus) {
+          font-size: 2.2em;
+        }
+        b {
+          @include font-fam-size(1em, asli, bold, #fff);
+        }
+      }
+    }
+  }
+  .header-div.english {
+    @include flex-display(flex, row, space-between, 100%);
+    transition: margin-left 0.5s;
+    padding: 1em;
+    @include media(iphone-plus) {
+      padding: 1.5em;
+    }
+    .toolbar-title {
+      margin: auto;
+      margin: auto;
+      .toolbar-title__h1 {
+        height: 100%;
+        display: inline-block;
+        @include font-fam-size(2em, $main-font-2, bold, $text-yellow-main);
+        margin: auto;
+        @include media(iphone-plus) {
+          font-size: 2.5em;
+        }
+        b {
+          @include font-fam-size(1em, $main-font-2, bold, #fff);
+        }
+      }
+    }
+  }
+
+  .navbar-toggler {
+    font-size: 1.9em;
+    outline: none;
+  }
+}
+
+.back-axs {
+  width: 100%;
+}
+
+.lang-select {
+  @include flex-display(flex, row, space-around, 20%, center);
+  background: $light-grey;
+  margin: 0 3em;
+
+  .lang-select--english {
+    margin: auto;
+    @include font-fam-size(0.8em, dovom, bold, $white);
+    outline: none;
+    padding: 4px;
+    background: $light-grey;
+    border: 2px solid $text-yellow-main;
+    border-radius: 20px;
+    @include media(iphone-plus) {
+      font-size: 1em;
+      padding: 6px;
+    }
+  }
+
+  .lang-select--farsi {
+    @include font-fam-size(0.8em, $main-font-2, bold, $white);
+    margin: auto;
+    outline: none;
+    padding: 4px;
+    //margin: auto;
+    background: $light-grey;
+    border: 2px solid $text-yellow-main;
+    border-radius: 20px;
+    @include media(iphone-plus) {
+      font-size: 1em;
+      padding: 6px;
+    }
+  }
+}
+
+///////////////////
+
+
+

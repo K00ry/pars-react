@@ -13,6 +13,7 @@ import SideDrawer from './components/sidedrawer/sidedrawer';
 import MainContainer from './components/mainContainer/mainContainer';
 import Catalog from './components/catalog/catalog';
 import Contact from './components/contact/contact';
+import BackDrop from "./components/toolbar/backDrop";
 // import NotFound from './components/NotFound';
 
 
@@ -52,11 +53,12 @@ class App extends Component {
 
 
           <Toolbar openDrawer={this.openDrawer}  t={t} i18n={i18n}/>
+          <BackDrop openDrawer={this.openDrawer} show={this.state.openDrawer} />
           <SideDrawer closeDrawer={this.openDrawer}
                       show={this.state.openDrawer}
                       dataMain={this.state.mainData}
                       t={this.props.t}
-                      // correctCatalog={this.rightStateCatalog}
+
           />
 
           <TransitionGroup>
@@ -82,7 +84,7 @@ class App extends Component {
 
 
           <Contact t={this.props.t}/>
-          <footer className="footer" >
+          <footer className={`footer ${this.props.t("lang-class")}`}>
               <h1>©{t("pars-title-footer")}</h1>
           </footer>
 

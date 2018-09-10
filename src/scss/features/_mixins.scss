@@ -44,6 +44,11 @@
             @content;
         }
     }
+    @else if $break==iphone-plus {
+        @media (min-width: $brk-iphone-plus) {
+            @content;
+        }
+    }
     @else if $break==tablet {
         @media (min-width: $brk-tablet) {
             @content;

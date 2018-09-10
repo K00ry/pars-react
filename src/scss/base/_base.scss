@@ -1,13 +1,25 @@
 body {
     // padding-top: 75px; // background: url(../img/asset-3.png) no-repeat 100%;
     // background-size: 100%;
-    // background-position: bottom left;
+     background-color: $background-White;
 }
 
 a:hover,
 a:focus {
     color: none;
     text-decoration: none;
+}
+.backDrop-invisible{
+ display:none;
+}
+.backDrop-visible{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    top: 0;
+    left:0;
+    z-index: 2;
 }
 
 .container {
@@ -28,90 +40,8 @@ a:focus {
     -webkit-transition: all .3s ease-out;
 }
 
-.navbar {
-    width: 100%;
-    background-color: $light-grey;
-    border: none;
-    margin-bottom: 0;
-    border-radius: 0;
-    .header-div.farsi{
-        @include flex-display(flex, row, space-between, 100%);
-        transition: margin-left 0.5s;
-        padding: 16px;
-        .toolbar-title {
-            display: inline-block;
-            @include font-fam-size(2em, asli, bold, $text-yellow-main);
-            margin: auto;
-            b {
-                @include font-fam-size(1em, asli, bold, #fff);
-            }
-        }
-    }
-    .header-div.english{
-        @include flex-display(flex, row, space-between, 100%);
-        transition: margin-left 0.5s;
-        padding: 16px;
-        .toolbar-title {
-            display: inline-block;
-            @include font-fam-size(2.5em, $main-font-2, bold, $text-yellow-main);
-            margin: auto;
-            b {
-                @include font-fam-size(1em, $main-font-2, bold, #fff);
-            }
-        }
-    }
-
-    .navbar-toggler {
-        font-size: 1.9em;
-        outline: none;
-    }
-}
-
-.back-axs {
-    width: 100%;
-}
-//.lang-select{
-    //@include flex-display(flex, row, flex-start, 100%);
-    //background:$light-grey;
-
-    .lang-select{
-        @include flex-display(flex, row, space-around, 20%, center);
-        background:$light-grey;
-
-        .lang-select--english{
-            @include font-fam-size(.7em, $main-font-2, bold, $h-color);
-            outline: none;
-            //margin: auto;
 
 
-
-            border: 1px solid $text-yellow-main ;
-            border-radius: 20px;
-        }
-
-
-        .lang-select--farsi{
-            @include font-fam-size(.7em, dovom, bold, $h-color);
-            outline: none;
-            //margin: auto;
-            //background: transparent;
-
-
-            border: 1px solid $text-yellow-main ;
-            border-radius: 20px;
-        }
-
-    }
-
-
-//.example-appear {
-//    opacity: 0.01;
-//}
-//
-//.example-appear.example-appear-active {
-//    opacity: 1;
-//    transition: opacity .5s ease-in;
-//}
 
 .example-enter {
     opacity: 0.01;

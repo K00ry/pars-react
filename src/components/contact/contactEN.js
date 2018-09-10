@@ -1,26 +1,25 @@
-import React from 'react';
+import React, {Fragment} from 'react';
+import logo from "../../arrow.png";
 
 
-const ContactEN = props =>
-    <div>
+const ContactEN = () =>
+    <Fragment>
     <div className="top-nav">
-        <a  id="back-to-top">
-            <svg className="arrow-icon">
-                <use xlinkHref="#arrow-up" />
-            </svg>
+        <a href="#btn" id="back-to-top">
+            <img className="contact-arrow" src={logo} alt="Arrow" />
             <br />Top
         </a>
     </div>
 
 
     <div className="contact-en">
-        <h4 className="contact-en__line"><span>phone :</span><a href="tel:+989121180175"> +98 (912)-118-0175</a></h4>
-        <h4 className="contact-en__line"><span>phone :</span><a href="tel:+989123368183"> +98 (912)-336-8183</a></h4>
-        <h4 className="contact-en__line"><span>E-mail :</span><a href="mailto:info@parsjadval.ir"> info@parsjadval.ir</a></h4>
-        <h4 className="contact-en__line address"><span>Address :</span> Varamin,past the Valiasr Square,close to Jafar Abad Alley</h4>
+        <div className="contact-en__line"><span>phone :</span><a className="contact-en__line--mod" href="tel:+989121180175" > +98 (912)-118-0175</a></div>
+        <div className="contact-en__line"><span>phone :</span><a className="contact-en__line--mod" href="tel:+989123368183"> +98 (912)-336-8183</a></div>
+        <div className="contact-en__line"><span>E-mail :</span><a className="contact-en__line--mod" href="mailto:info@parsjadval.ir"> info@parsjadval.ir</a></div>
+        <div className="contact-en__line address"><span>Address :</span><a className="contact-en__line--mod">Varamin, past the Valiasr Square, close to Jafar Abad Alley</a></div>
 
     </div>
-    </div>;
+    </Fragment>;
 
 
 

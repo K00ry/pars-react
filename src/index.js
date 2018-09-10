@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
-import './css/application.css';
+import './scss/application.css';
 import App from './App';
 import ScrollToTop from './components/scrollToTop';
 import { I18nextProvider } from "react-i18next";

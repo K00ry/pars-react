@@ -62,7 +62,7 @@ const MainContainer = props => {
                   imgSrc={arr[0].genreEn}
                   product={arr[0].genreEn}
                   t={props.t}
-                  // correctCatalogClick={() => props.correctHomeCatalog(i)}
+
               />
           )})}
 
