@@ -241,9 +241,9 @@ const data = [
                     {
                         img: '/images/kafpoosh/wetpress/mobile/red.png',
                         type: '۵۰*۵۰*۸',
-                        type_en: '50x50x8',
+
                         inSquarefeet: '۴ عدد',
-                        inSquarefeet_en: '4 Piece',
+
                         toosi: '۲۵۰۰۰۰',
                         red: '۳۰۰۰۰۰',
                         yellowmix: '۳۵۰۰۰۰',
@@ -252,9 +252,9 @@ const data = [
                     {
                         img: '/images/kafpoosh/wetpress/mobile/yellow.png',
                         type: '۵۰*۵۰*۸',
-                        type_en: '50x50x8',
+
                         inSquarefeet: '۴ عدد',
-                        inSquarefeet_en: '4 Piece',
+
                         toosi: '۲۵۰۰۰۰',
                         red: '۳۰۰۰۰۰',
                         yellowmix: '۳۵۰۰۰۰',
@@ -709,22 +709,39 @@ const data = [
             },
           ],
           [
+              {
+              genreEn: 'mobleman',
+              genreFarsi: 'مبلمان شهری',
+              genreId: 'mobleman',
+              type: 'بولارد',
+              img: '/images/nimkat/bollards.png',
+              sizes: [
+                  {
+                      type: 'پروب',
+                  },
+                  {type: 'پروب نوری',
+                  }
+              ],
+          },
             {
               genreEn: 'mobleman',
               genreFarsi: 'مبلمان شهري',
               genreId: 'mobleman',
-              type: '#',
-              img: '/images/kaval/mobile/2gerd.jpg',
-              sizes: [],
-            },
-              {
-                  genreEn: 'mobleman',
-                  genreFarsi: 'مبلمان شهری',
-                  genreId: 'mobleman',
-                  type: '#',
-                  img: '/images/kaval/mobile/2gerd.jpg',
-                  sizes: [],
-              }
+              type: 'نیمکت',
+              img: '/images/nimkat/nimkat.png',
+              sizes: [
+                  {
+                      type: 'نیمکت پایی',
+                  },
+                  {
+                      type: 'منحنی',
+                  },
+                  {
+                      type: 'ساده',
+                  }
+              ],
+            }
+
           ],
           [
         {

@@ -11,10 +11,10 @@ const CatalogGenre = props =>
             className={props.isActive ? `catalog-header__genres_navigation--active`: `catalog-header__genres_navigation`}
             onClick={ props.onActiveTab }
         >
-            <span className={`catalog-header__genres_navigation--btn-${props.t("lang-class")} ${props.isActive ? 'active': ''}
+            <div className={`catalog-header__genres_navigation--btn-${props.t("lang-class")} ${props.isActive ? 'active': ''}
             `}
                 onClick={props.correctGallery}
-            >{props.t(props.productSub)}</span>
+            >{props.t(props.productSub)}</div>
         </li>;
 
 

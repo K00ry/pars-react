@@ -58,8 +58,9 @@ class App extends Component {
                       show={this.state.openDrawer}
                       dataMain={this.state.mainData}
                       t={this.props.t}
-
           />
+
+
 
           <TransitionGroup>
               <CSSTransition

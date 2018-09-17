@@ -1,22 +1,5 @@
-.sideNav-title {
-  width: 100%;
-  padding: 10px;
-  li {
-    @include flex-display(flex, column, space-between, 100%, center);
-
-    .sideNav-sub {
-      width: 100%;
-      padding: 0;
-      list-style: none;
-    }
-  }
-}
-
-.nav-link {
-  @include font-fam-size(1.3em, asli, bold, $text-black-m);
-}
-
 .sidenav {
+  position: relative;
   height: 100%;
   width: 0;
   position: fixed;
@@ -25,38 +8,60 @@
   background-color: $hard-gray;
   overflow-x: hidden;
   transition: 0.5s;
-  padding-top: 60px;
+  padding-top: 2em;
+  @include media(iphone-plus) {
+    padding-top: 3em;
+  }
+  @include media(tablet) {
+    padding-top: 5em;
+  }
+
   &.nav-open {
     width: 200px;
+    @include media(iphone-plus) {
+
+    }
+    @include media(tablet) {
+      width: 30%;
+    }
   }
   ///// style change from right to left on language change \\\\
   &.english {
     left: 0;
     .closebtn {
-      left: 8px;
+      left: .3em;
     }
     .sidenav-home-btn{
       @include font-fam-size( 2em, $main-font-2, bold, $white);
-
-
+      @include media(laptop) {
+        font-size: 4em;
+      }
     }
     .nav-link-style {
-      //margin: 1rem 0;
       text-decoration: none;
       @include flex-display(flex, row-reverse, space-between, 100%);
       @include font-fam-size( 2em, $main-font-2, bold, $white);
       transition: 0.3s;
+      margin: .2em 0;
       @include media(iphone-plus) {
         font-size: 2.2em;
-        margin:.3em 0;
+        margin:.4em 0;
+      }
+      @include media(laptop) {
+        font-size: 4em;
+        margin:.5em 0;
+
       }
       .nav-link-style__title{
        color: $white;
+        @include media(laptop) {
+          font-size: 1em;
+        }
       }
       .arrow-style {
         transform: rotateZ(180deg);
 
-        &.expand {
+        &.turn {
           transform-origin: center;
           transform: rotateZ(270deg);
         }
@@ -65,44 +70,118 @@
 
     .nav-link-style-sub {
       text-align: left;
-      margin: .2em 0;
+      margin: .3em 0;
       @include font-fam-size(1.2em, $main-font-1, 100, $text-yellow-main-l);
+
+      @include media(iphone-plus) {
+        font-size: 1.5em;
+        margin:.4em 0;
+      }
+      @include media(tablet) {
+        font-size: 1.6em;
+      }
+      @include media(laptop) {
+        font-size: 2em;
+      }
     }
   }
   &.farsi {
     right: 0;
 
     .closebtn {
-      right: 3px;
+      right:.3em;
+    }
+    .sidenav-home-btn{
+      @include font-fam-size( 1.9em, asli, bold, $white);
+      @include media(laptop) {
+        font-size: 4em;
+      }
+    }
+    .nav-link-style__title{
+      font-size: 1em;
+      @include media(laptop) {
+        font-size: 1em;
+      }
     }
     .nav-link-style {
       //margin: 1rem 0;
       text-decoration: none;
       @include flex-display(flex, row, space-between, 100%);
       transition: 0.3s;
+      //margin: .2em 0;
       @include media(iphone-plus) {
         font-size: 2.2em;
-        margin:.3em 0;
+        margin: .3em 0;
+      }
+      @include media(laptop) {
+        font-size: 4em;
+        margin:.5em 0;
+
       }
 
-      .expand {
+      .turn {
         transform-origin: center;
         transform: rotateZ(-90deg);
       }
+
     }
     .nav-link-style-sub {
       text-align: right;
-      @include font-fam-size(1.4em, dovom-bold, bold, $text-yellow-main-l);
-      margin: .2em 0;
+      @include font-fam-size(1.2em, dovom-bold, bold, $text-yellow-main-l);
+      margin:.4em 0;
+
+      @include media(iphone-plus) {
+        font-size: 1.5em;
+      }
+      @include media(laptop) {
+        font-size: 2em;
+      }
     }
   }
+
+///////////// Shared styles between languages \\\\\\\\\\\\\
+
+  .sideNav-title {
+    width: 100%;
+    padding: 1em;
+    li {
+      @include flex-display(flex, column, space-between, 100%, center);
+
+      .sideNav-sub {
+        width: 100%;
+        padding: 0;
+        list-style: none;
+      }
+    }
+  }
+
+  .nav-link {
+    @include font-fam-size(1.3em, asli, bold, $text-black-m);
+  }
+
+  .expand{
+    max-height: 30em;
+    @include media(laptop) {
+      max-height: 50em;
+    }
+  }
+
+
   .closebtn {
     position: absolute;
     top: -20px;
     font-size: 4em;
     color: $text-yellow-main-l;
+    @include media(laptop) {
+      font-size: 6em;
+    }
+
   }
 }
+
+
+
+
 
 .head-intro-sub {
   height: 0;
@@ -130,9 +209,17 @@
 
     ///// arrow turns down main styles \\\\
     .arrow-style {
-      width: 20px;
-      height: 20px;
+      width: .6em;
+      height: .6em;
       transition: all 0.3s;
+      @include media(iphone-plus) {
+        width: .8em;
+        height: .8em;
+      }
+
+      @include media(laptop) {
+
+      }
     }
 
     .arrow-style-sub {
@@ -195,4 +282,5 @@
 .arrow-icon {
   width: 20px;
   height: 20px;
+
 }

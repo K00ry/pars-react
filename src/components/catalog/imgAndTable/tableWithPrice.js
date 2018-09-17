@@ -3,7 +3,7 @@ import Table from './table';
 
 
 const TableWithPrice = props =>(
-    <table className="tg">
+    <table className={`tg-${props.t("lang-class")}`}>
         <tbody>
         <tr>
             <th className="tg-6xid">{props.t("ship")}</th>

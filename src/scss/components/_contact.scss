@@ -9,51 +9,68 @@
   .top-nav {
     margin: auto;
     width: 90%;
-    padding: 20px 0;
+    padding: 1em 0;
     border-bottom: 2px solid $light-gray-l;
     text-align: center;
-    a {
+    @include media(tablet) {
+      padding: 2em 0;
+    }
+    #back-to-top {
       @include font-fam-size( 1em,
               asli,
               bold,
-              $hard-gray);
+              $hard-gray-l);
+      @include media(tablet) {
+        font-size:1.3em;
+      }
+      @include media(laptop) {
+        font-size: 1.5em;
+      }
+
       .contact-arrow{
 
         max-width: 100%;
-        width: 14px;
+        width: .7em;
         height: auto;
         transform: rotateZ(90deg);
       }
     }
   }
   .contact-fa {
-    width: 100%;
+    width: 90%;
     margin: auto;
 
     font-family: asli;
-    padding: 30px 0; // border-bottom: 2px solid #BFBFBF;
+    padding: 30px 0;
     text-align: center;
     .contact-fa__line {
-      //font-size: 1em;
+
       color: $hard-gray;
-      //a{
-      //  @include font-fam-size(1.2em,
-      //          asli,
-      //          bold,
-      //          $hard-gray);
-      //}
+
     }
     span {
       @include font-fam-size( 1em,
               asli,
               bold,
-              $light-grey);
+              $light-gray-l );
+      @include media(tablet) {
+        font-size:1.6em;
+      }
+      @include media(laptop) {
+        font-size: 2.3em;
+      }
     }
     .contact-en__line--mod{
       @include font-fam-size( 1.2em,
-              asli,
+              dovom-bold,
               bold,
-              $hard-gray);
+              $hard-gray-l);
+      @include media(tablet) {
+        font-size:1.6em;
+      }
+      @include media(laptop) {
+        font-size: 2.3em;
+      }
 
     }
   }
@@ -64,28 +81,35 @@
             $main-font-1,
             bold,
             $text-yellow-main);
-    padding: 30px 0; // border-bottom: 2px solid #BFBFBF;
+    padding: 30px 0;
     text-align: center;
     .contact-en__line {
       color: $hard-gray;
-      //a{
-      //  @include font-fam-size( 1em,
-      //          $main-font-1,
-      //          bold,
-      //          $hard-gray);
-      //}
+
     }
     span {
       @include font-fam-size( 1.2em,
               $main-font-2,
               bold,
-              $light-grey);
+              $light-gray-l);
+      @include media(tablet) {
+        font-size:1.6em;
+      }
+      @include media(laptop) {
+        font-size: 2.3em;
+      }
     }
     .contact-en__line--mod{
       @include font-fam-size( 1.2em,
               $main-font-2,
               bold,
-              $hard-gray);
+              $hard-gray-l );
+      @include media(tablet) {
+        font-size:1.6em;
+      }
+      @include media(laptop) {
+        font-size: 2.3em;
+      }
 
     }
 

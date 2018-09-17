@@ -1,28 +1,30 @@
 import React from "react";
-import TableKg from './tableKg';
+import TableModel from './tableModel';
 
 
-const TableWithKg = props =>(
+const TableWithModel = props =>(
+
     <table className={`tg-${props.t("lang-class")}`}>
         <tbody>
         <tr>
-            <th className="tg-4s02">{props.t("kg")}</th>
-            <th>{props.t("sizes")}</th>
+
+            <th className="stubborn" colSpan="3">{props.t("model")}</th>
+
         </tr>
+        <tr>
         {
             props.tableSizes.map((obj,index)=>
-
-                <TableKg
+                <TableModel
                     key={index}
                     type={obj.type}
-                    kg={obj.kg}
                     t={props.t}
                 />)
 
         }
+        </tr>
 
         </tbody>
     </table>
 );
 
-export default TableWithKg;
+export default TableWithModel;

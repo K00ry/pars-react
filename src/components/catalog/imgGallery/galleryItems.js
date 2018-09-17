@@ -1,12 +1,12 @@
 import React from 'react';
-import GalleryItems__en from './galleryItems__en';
-import GalleryItems__fa from './galleryItems__fa'
+import GalleryItemsEn from './galleryItemsEn';
+import GalleryItemsFa from './galleryItemsFa'
 
 
 const GalleryItems = props =>{
     let className = `gallery-item ${props.t("lang-class")}`;
     let transComponent;
-    className === `gallery-item english` ? transComponent = <GalleryItems__en
+    className === `gallery-item english` ? transComponent = <GalleryItemsEn
         type={props.type}
         squareFeet={props.squareFeet}
         grey={props.grey}
@@ -14,7 +14,7 @@ const GalleryItems = props =>{
         yellow={props.yellow}
         ship={props.ship}
         t={props.t}
-    /> : transComponent = <GalleryItems__fa
+    /> : transComponent = <GalleryItemsFa
         type={props.type}
         squareFeet={props.squareFeet}
         grey={props.grey}

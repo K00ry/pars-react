@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+// import {Redirect} from 'react-router-dom';
 
 import CatalogGenre from './catalogGenre';
 import ImgAndTable from './imgAndTable/imgAndTable';
@@ -40,14 +41,9 @@ state = {
     };
 
     subGenreView = chosen => {
-
         this.setState({
-
             ProdSpec: this.state.prodData[chosen]
         });
-
-
-
     };
 
 
@@ -72,6 +68,7 @@ render(){
 
     return (
         <div className="container main">
+            {/*<Redirect to="/"/>*/}
 
             <div className={`catalog-header-${this.props.t("lang-class")}`} key={this.state.ProdSpec.genreFarsi}>
                 <div className="catalog-header__title"><h1 className="catalog-header__title_info">{this.props.t(this.state.prodData[0].genreEn)}</h1></div>

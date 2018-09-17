@@ -9,7 +9,7 @@ import React from 'react';
 import img from '../../img/khanabig.png';
 import HomeProducts from "./homeProducts";
 
-const insideStyles = {background: 'transparent', padding: 20, position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)'};
+// const insideStyles = {background: 'transparent', padding: 20, position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)'};
 
 const MainContainer = props => {
 

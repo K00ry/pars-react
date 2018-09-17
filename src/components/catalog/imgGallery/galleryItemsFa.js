@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const GalleryItems__fa = props =>
+const GalleryItemsFa = props =>
 
 
     <div className="gallery-item__title--fa">
@@ -16,4 +16,4 @@ const GalleryItems__fa = props =>
 
 
 
-export default GalleryItems__fa;
+export default GalleryItemsFa;

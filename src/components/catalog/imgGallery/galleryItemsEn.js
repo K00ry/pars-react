@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const GalleryItems__en = props =>
+const GalleryItemsEn = props =>
 
 
         <div className="gallery-item__title--en">
@@ -16,4 +16,4 @@ const GalleryItems__en = props =>
 
 
 
-export default GalleryItems__en;
+export default GalleryItemsEn;

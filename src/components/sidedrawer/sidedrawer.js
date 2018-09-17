@@ -23,12 +23,10 @@ class SideDrawer extends Component {
 
     }
     let subNavOpen = 'arrow-style';
-    let subOpenDisplay;
+    let subOpenDisplay = 'nav';
     if (this.state.productSubNavOpen) {
-      subNavOpen = 'arrow-style expand';
-      subOpenDisplay = {
-        maxHeight: '30em',
-      };
+      subNavOpen = 'arrow-style turn';
+      subOpenDisplay = 'nav expand'
     }
 
     return (
@@ -51,7 +49,7 @@ class SideDrawer extends Component {
               </div>
               <div className="nav-link-style__title">{this.props.t("products")}</div>
             </div>
-            <div className="nav" style={subOpenDisplay}>
+            <div className={subOpenDisplay}>
               <ul className="sideNav-sub">
                 {this.props.dataMain.map((arr, index) => (
                   <Sublinks

@@ -1,13 +1,44 @@
+.container {
+  padding: 0;
+  @include flex-display(flex, column, space-between, 100%);
+
+}
+@media (min-width: 1200px){
+  .container {
+    width: 100%;
+  }
+}
+@media (min-width: 992px){
+  .container {
+    width: 100%;
+  }
+}
+
+
+
 .navbar {
   width: 100%;
   background-color: $light-grey;
   border: none;
   margin-bottom: 0;
   border-radius: 0;
+.btn{
   #btn {
+    font-size: 30px;
+    cursor: pointer;
     color: $text-yellow-main;
     margin: auto;
+    @include media(tablet) {
+      font-size: 40px;
+      margin-left :1em;
+    }
+    @include media(laptop) {
+      font-size: 60px;
+      margin-left :.8em;
+    }
   }
+}
+
 
   .header-div.farsi {
     @include flex-display(flex, row, space-between, 100%);
@@ -16,16 +47,32 @@
     @include media(iphone-plus) {
       padding: 1.5em;
     }
+    @include media(tablet) {
+      padding: 1.7em 0;
+      //justify-content: space-a;
+    }
+    @include media(laptop) {
+
+    }
     .toolbar-title {
       margin: auto ;
+      @include media(tablet) {
+        margin-right :2em;
+      }
 
       .toolbar-title__h1 {
         height: 100%;
         display: inline-block;
-        @include font-fam-size(1.8em, asli, bold, $text-yellow-main);
+        @include font-fam-size(1.7em, asli, bold, $text-yellow-main);
         margin: auto;
         @include media(iphone-plus) {
           font-size: 2.2em;
+        }
+        @include media(tablet) {
+          font-size: 2.8em;
+        }
+        @include media(desktop) {
+          font-size: 4em;
         }
         b {
           @include font-fam-size(1em, asli, bold, #fff);
@@ -40,9 +87,15 @@
     @include media(iphone-plus) {
       padding: 1.5em;
     }
+    @include media(tablet) {
+      padding: 1.7em 0;
+      //justify-content: space-a;
+    }
     .toolbar-title {
       margin: auto;
-      margin: auto;
+      @include media(tablet) {
+        margin-right :2em;
+      }
       .toolbar-title__h1 {
         height: 100%;
         display: inline-block;
@@ -50,6 +103,12 @@
         margin: auto;
         @include media(iphone-plus) {
           font-size: 2.5em;
+        }
+        @include media(tablet) {
+          font-size:2.8em;
+        }
+        @include media(desktop) {
+          font-size: 4em;
         }
         b {
           @include font-fam-size(1em, $main-font-2, bold, #fff);
@@ -64,14 +123,14 @@
   }
 }
 
-.back-axs {
-  width: 100%;
-}
+//.back-axs {
+//  width: 100%;
+//}
 
 .lang-select {
   @include flex-display(flex, row, space-around, 20%, center);
   background: $light-grey;
-  margin: 0 3em;
+  margin: 0 2em;
 
   .lang-select--english {
     margin: auto;
@@ -83,7 +142,10 @@
     border-radius: 20px;
     @include media(iphone-plus) {
       font-size: 1em;
-      padding: 6px;
+      padding: .2em;
+    }
+    @include media(laptop) {
+      font-size: 1.3em;
     }
   }
 
@@ -98,7 +160,10 @@
     border-radius: 20px;
     @include media(iphone-plus) {
       font-size: 1em;
-      padding: 6px;
+      padding: .2em;
+    }
+    @include media(laptop) {
+      font-size: 1.3em;
     }
   }
 }

@@ -1,7 +1,7 @@
 body {
     // padding-top: 75px; // background: url(../img/asset-3.png) no-repeat 100%;
     // background-size: 100%;
-     background-color: $background-White;
+
 }
 
 a:hover,
@@ -9,6 +9,21 @@ a:focus {
     color: none;
     text-decoration: none;
 }
+#root{
+    display: flex;
+    background-color: $hard-gray;
+    .App{
+        background-color: $background-White;
+        margin: auto;
+        @include media(desktop) {
+            max-width: 1200px;
+            width: 80%;
+            margin: auto;
+        }
+    }
+
+}
+
 .backDrop-invisible{
  display:none;
 }
@@ -22,9 +37,7 @@ a:focus {
     z-index: 2;
 }
 
-.container {
-    padding: 0;
-}
+
 
 
 

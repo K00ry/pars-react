@@ -1,6 +1,6 @@
 import i18n from "i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
-import React from "react";
+// import React from "react";
 
 i18n.use(LanguageDetector).init({
     // we init with resources
@@ -229,11 +229,24 @@ i18n.use(LanguageDetector).init({
                 "۳۰۰*۱۱۰*۸۰":"300x110x80",
                 "۴۰*۴۰*۴۵":"40x40x45",
 
+
+                ///////furnish
+                "پروب":"Bollard",
+                "پروب نوری":"Light Bollard",
+                "منحنی":"Curved",
+                // "ساده":"simple",
+                "نیمکت پایی":"Foot Bench",
+                "نیمکت":"Benches",
+                "بولارد":"Bollards",
+                "":"",
+
                 ///////// table translations
                 "ship":"Ship Fee ",
                 "price":"Price(Rial)",
                 "sizes":"Size(cm)",
                 "kg":"Weight",
+                "model":"Model",
+                "type":"Type",
 
 
 
@@ -475,7 +488,14 @@ i18n.use(LanguageDetector).init({
                 "۲۰۰*۷۰*۵۰":"۲۰۰*۷۰*۵۰",
                 "۳۰۰*۱۱۰*۸۰":"۳۰۰*۱۱۰*۸۰",
                 "۴۰*۴۰*۴۵":"۴۰*۴۰*۴۵",
-                // "":"",
+                ///////furnish
+                "پروب":"پروب",
+                "پروب نوری":"پروب نوری",
+                "منحنی":"منحنی",
+
+                "نیمکت پایی":"نیمکت پایی",
+                "نیمکت":"نیمکت",
+                "بولارد":"بولارد",
 
 
 
@@ -491,6 +511,8 @@ i18n.use(LanguageDetector).init({
                 "price":"(فی(ریال",
                 "sizes":"ابعاد(cm)",
                 "kg":"وزن",
+                "model":"مدل",
+                "type":"نوع",
 
 
 

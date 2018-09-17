@@ -120,6 +120,9 @@
       @include media(iphone-plus) {
         font-size: 2em;
       }
+      @include media(laptop) {
+        font-size: 3em;
+      }
 
     }
   }
@@ -129,13 +132,74 @@
 .col-feature.english{
   a{
     .image-head{
-      @include font-fam-size(1.5em, $main-font-2, 400, $text-yellow-main);
+      @include font-fam-size(1.6em, $main-font-2, 400, $text-yellow-main);
       @include media(iphone-plus) {
         font-size: 2em;
+      }
+      @include media(laptop) {
+        font-size: 3em;
       }
 
     }
   }
 
 
+}
+
+.product-showcase {
+  @include flex-display(flex, column, flex-start, 100%, center);
+  & :nth-child(1) {
+    order: 1;
+  }
+  & :nth-child(2) {
+    order: 2;
+  }
+  & :nth-child(3) {
+    order: 4;
+  }
+  & :nth-child(4) {
+    order: 3;
+  }
+  & :nth-child(5) {
+    order: 5;
+  }
+  & :nth-child(6) {
+    order: 6;
+  }
+  & :nth-child(7) {
+    order: 8;
+  }
+  & :nth-child(8) {
+    order: 7;
+  }
+
+  @include media(tablet) {
+    @include flex-display(flex, row, space-between, 100%, center);
+    flex-wrap: wrap;
+
+    & :nth-child(1) {
+      order: 1;
+    }
+    & :nth-child(2) {
+      order: 2;
+    }
+    & :nth-child(3) {
+      order: 3;
+    }
+    & :nth-child(4) {
+      order: 4;
+    }
+    & :nth-child(5) {
+      order: 5;
+    }
+    & :nth-child(6) {
+      order: 6;
+    }
+    & :nth-child(7) {
+      order: 7;
+    }
+    & :nth-child(8) {
+      order: 8;
+    }
+  }
 }

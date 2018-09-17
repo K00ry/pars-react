@@ -25,13 +25,15 @@ const Toolbar = props => {
   <header>
     <Navbar>
       <div className={`header-div ${props.t("lang-class")}`}>
+          <div className="btn">
         <span
           id="btn"
           onClick={props.openDrawer}
-          style={{ fontSize: 30, cursor: 'pointer' }}
+
         >
           ☰
         </span>
+          </div>
 
               <div className="lang-select">
                   <button className={`lang-select--${props.t("lang-class")}`} onClick={() => toggle(lang)}>{langString}</button>
