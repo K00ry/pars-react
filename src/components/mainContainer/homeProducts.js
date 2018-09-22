@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 const HomeProducts = props =>
 
-    <div className={`container col-feature ${props.t("lang-class")} ${props.class} `}
+    <div className={`col-feature ${props.t("lang-class")} ${props.class} `}
          // onClick={props.correctCatalogClick}
     >
         <Link to={props.address}>

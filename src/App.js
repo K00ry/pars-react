@@ -14,6 +14,7 @@ import MainContainer from './components/mainContainer/mainContainer';
 import Catalog from './components/catalog/catalog';
 import Contact from './components/contact/contact';
 import BackDrop from "./components/toolbar/backDrop";
+import {Col, Grid, Row} from "react-bootstrap";
 // import NotFound from './components/NotFound';
 
 
@@ -86,7 +87,13 @@ class App extends Component {
 
           <Contact t={this.props.t}/>
           <footer className={`footer ${this.props.t("lang-class")}`}>
-              <h1>©{t("pars-title-footer")}</h1>
+              <Grid fluid>
+              <Row >
+                  <Col >
+                      <h1>©{t("pars-title-footer")}</h1>
+                  </Col>
+              </Row>
+              </Grid>
           </footer>
 
       </div>

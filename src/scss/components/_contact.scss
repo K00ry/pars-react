@@ -36,20 +36,31 @@
       }
     }
   }
-  .contact-fa {
-    width: 90%;
-    margin: auto;
+  //.contact-fa {
+  //  width: 90%;
+  //  margin: auto;
+  //
+  //  font-family: asli;
+  //  padding: 30px 0;
+  //  text-align: center;
+    .contact-fa {
+      padding: 2em 0;
+      color: $hard-gray-l;
+      @include media(tablet) {
+        padding: 2em 0;
+        display:flex;
+        justify-content: space-between;
 
-    font-family: asli;
-    padding: 30px 0;
+      }
+
+.contact-fa__line{
+  @include media(tablet) {
     text-align: center;
-    .contact-fa__line {
-
-      color: $hard-gray;
-
+  }
+}
     }
-    span {
-      @include font-fam-size( 1em,
+  .contact-fa__line--h5 {
+      @include font-fam-size( 1.2em,
               asli,
               bold,
               $light-gray-l );
@@ -60,7 +71,7 @@
         font-size: 2.3em;
       }
     }
-    .contact-en__line--mod{
+    .contact-fa__line--a{
       @include font-fam-size( 1.2em,
               dovom-bold,
               bold,
@@ -73,47 +84,49 @@
       }
 
     }
+  //}
+
+  .contact-en {
+    padding: 2em 0;
+    color: $hard-gray-l;
+    @include media(tablet) {
+      padding: 2em 0;
+      display:flex;
+      justify-content: space-between;
+
+    }
+
+    .contact-en__line{
+      @include media(tablet) {
+        text-align: center;
+      }
+    }
   }
-  .contact-en{
-    width: 90%;
-    margin: auto;
-    @include font-fam-size( 1em,
-            $main-font-1,
+  .contact-en__line--h5 {
+    @include font-fam-size( 1.2em,
+            $main-font-2,
             bold,
-            $text-yellow-main);
-    padding: 30px 0;
-    text-align: center;
-    .contact-en__line {
-      color: $hard-gray;
-
+            $light-gray-l);
+    @include media(tablet) {
+      font-size:1.6em;
     }
-    span {
-      @include font-fam-size( 1.2em,
-              $main-font-2,
-              bold,
-              $light-gray-l);
-      @include media(tablet) {
-        font-size:1.6em;
-      }
-      @include media(laptop) {
-        font-size: 2.3em;
-      }
+    @include media(laptop) {
+      font-size: 2.3em;
     }
-    .contact-en__line--mod{
-      @include font-fam-size( 1.2em,
-              $main-font-2,
-              bold,
-              $hard-gray-l );
-      @include media(tablet) {
-        font-size:1.6em;
-      }
-      @include media(laptop) {
-        font-size: 2.3em;
-      }
-
+  }
+  .contact-en__line--a{
+    @include font-fam-size( 1.2em,
+            $main-font-2,
+            bold,
+            $hard-gray-l );
+    @include media(tablet) {
+      font-size:1.6em;
     }
-
+    @include media(laptop) {
+      font-size: 2.3em;
+    }
 
   }
+
 }
 

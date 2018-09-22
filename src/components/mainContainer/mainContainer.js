@@ -16,8 +16,8 @@ const MainContainer = props => {
     const medium = process.env.PUBLIC_URL + 'images/sizeset/main-mob.png';
     const large = process.env.PUBLIC_URL + 'images/sizeset/main-desk.png';
   return (
-    <div key={props.productSpec.type} className="container main">
-      <div className="container head-intro">
+    <div key={props.productSpec.type} className="main">
+      <div className="head-intro">
         <img
           src={large}
           srcSet={`${medium} 768w, ${large} 1280w`}

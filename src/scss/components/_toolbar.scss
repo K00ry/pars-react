@@ -1,18 +1,18 @@
-.container {
-  padding: 0;
-  @include flex-display(flex, column, space-between, 100%);
-
-}
-@media (min-width: 1200px){
-  .container {
-    width: 100%;
-  }
-}
-@media (min-width: 992px){
-  .container {
-    width: 100%;
-  }
-}
+//.container {
+//  padding: 0;
+//  @include flex-display(flex, column, space-between, 100%);
+//
+//}
+//@media (min-width: 1200px){
+//  .container {
+//    width: 100%;
+//  }
+//}
+//@media (min-width: 992px){
+//  .container {
+//    width: 100%;
+//  }
+//}
 
 
 

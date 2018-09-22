@@ -9,20 +9,20 @@ a:focus {
     color: none;
     text-decoration: none;
 }
-#root{
-    display: flex;
-    background-color: $hard-gray;
-    .App{
-        background-color: $background-White;
-        margin: auto;
-        @include media(desktop) {
-            max-width: 1200px;
-            width: 80%;
-            margin: auto;
-        }
-    }
-
-}
+//#root{
+//    display: flex;
+//    background-color: $hard-gray;
+//    .App{
+//        background-color: $background-White;
+//        margin: auto;
+//        @include media(desktop) {
+//            max-width: 1200px;
+//            width: 80%;
+//            margin: auto;
+//        }
+//    }
+//
+//}
 
 .backDrop-invisible{
  display:none;
