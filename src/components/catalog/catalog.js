@@ -67,7 +67,7 @@ render(){
 
 
     return (
-        <div className="container main">
+        <div className="main">
             {/*<Redirect to="/"/>*/}
 
             <div className={`catalog-header-${this.props.t("lang-class")}`} key={this.state.ProdSpec.genreFarsi}>

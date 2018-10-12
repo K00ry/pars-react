@@ -1,11 +1,17 @@
-.head-intro {
+.intro {
 
   @include flex-display(flex, column, center, 100%, center);
+  position: relative;
 
-  img {
+  .intro__img {
     max-width: 100%;
     height: auto;
     width:100%;
+  }
+  .intro__h2 {
+   position: absolute;
+    @include font-fam-size( 1.2em, $main-font-2, bold, $hard-gray);
+    bottom: 1em;
   }
   .image-head-slog {
     font-family: asli;
@@ -21,12 +27,133 @@
     text-decoration: none;
   }
 }
+///////////////Jumbo on the main-page \\\\\\\\\\\\\\\\
+.parallax-my-custom{
+  background: rgba(0,0,0,.6);
+  height: 60vh;
+  @include media(iphone-plus) {
+    //height: 50vh;
+  }
+  @include media(laptop) {
+    height: 60vh;
+  }
 
 
+}
+
+.overlaySection.farsi{
+  position: relative;
+  @include flex-display(flex, column, space-evenly, 100%, center);
+
+  .overlaySection__img{
+    max-width: 100%;
+    height: auto;
+  }
+  .overlaySection__card{
+    background-color: rgba($hard-gray,0.9);
+    position: absolute;
+    //bottom: 10%;
+   padding: 1em;
+    @include flex-display(flex, column, space-evenly, 90%, flex-end);
+    text-align: right;
+    @include media(iphone-plus) {
+      //bottom: 20%;
+    }
+    .overlaySection__card--title{
+      @include font-fam-size( 1.3em, asli, bold, $text-yellow-main );
+      margin: 0 0 .5em 0 ;
+    }
+    .overlaySection__card--p{
+      @include font-fam-size( 1em, dovom, bold, $w-color );
+    }
+  }
+}
+.overlaySection.english{
+  position: relative;
+  @include flex-display(flex, column, space-evenly, 100%, center);
+
+  .overlaySection__img{
+    max-width: 100%;
+    height: auto;
+  }
+  .overlaySection__card{
+    background-color: rgba($hard-gray,0.9);
+    position: absolute;
+    //bottom: 10%;
+    padding: 1em;
+    @include flex-display(flex, column, space-evenly, 90%, flex-start);
+    text-align: left;
+    @include media(iphone-plus) {
+      //bottom: 20%;
+    }
+    .overlaySection__card--title{
+      @include font-fam-size( 1.3em, $main-font-2, bold, $text-yellow-main );
+      margin: 0 0 .5em 0 ;
+    }
+    .overlaySection__card--p{
+      @include font-fam-size( 1em, $main-font-2, bold, $w-color );
+    }
+  }
+}
+
+//////////////////
+.feature_holder{
+  padding-top: 2em;
+  padding-bottom: 2em;
+
+
+  @include media(desktop) {
+    padding-top: 14em;
+    padding-bottom: 14em;
+  }
+  background: #969799;
+
+
+}
+.feature{
+  padding-top: 2em;
+  padding-bottom: 2em;
+.feature__block{
+  @include flex-display(flex, column, space-evenly, 100%);
+  .feature__block--img{
+    margin: auto;
+    max-width: 100%;
+    height: auto;
+  }
+  .feature__block--title{
+    margin: .5em 0;
+
+  }
+  .feature__block--title.farsi{
+    text-align: right;
+    @include font-fam-size( 1.3em, asli, bold, $text-yellow-main );
+
+  }
+  .feature__block--title.english{
+    @include font-fam-size( 1.3em, $main-font-2, bold, $text-yellow-main );
+
+  }
+  .feature__block--text{
+   margin:  .5em auto;
+  }
+  .feature__block--text.farsi{
+    text-align: right;
+    @include font-fam-size( 1em, dovom, bold, $white);
+    line-height: 1.5;
+
+   }
+  .feature__block--text.english{
+    @include font-fam-size( 1em, $main-font-1, bold, $white );
+    line-height: 1.5;
+  }
+}
+
+}
 
 .main {
   width: 100%;
   margin: auto;
+  background: $background-White;
 }
 .home-genres{
   @include flex-display(flex, row, space-evenly, 100%, center);
@@ -69,59 +196,57 @@
   }
 }
 
-.col-feature {
-  // background-size: cover;
+.product-showcase__items{
+
   @include flex-display(flex,
           column,
           space-between,
           100%,
           center);
   height: auto;
-  a {
+  .product-showcase__linkBlock {
     position: relative;
 
-    img{
-
+    .product-showcase__linkBlock--image{
       width: 100%;
       height: auto;
     }
-    .image-head{
+    .product-showcase__linkBlock--title{
       position: absolute;
       top: .5em;
       z-index: 0;
 
     }
-    .image-head.f-right{
+    .product-showcase__linkBlock--title.f-right{
       left: 2em;
 
     }
-    .image-head.f-left{
+    .product-showcase__linkBlock--title.f-left{
       right: 2em;
     }
 
   }
   @include media(tablet) {
     width: 50%;
-
-
   }
 
-  @include media(desktop) {
-
-
-
+  @include media(laptop) {
+    width: 25%;
   }
 
 }
-.col-feature.farsi{
-  a{
-    .image-head{
+.product-showcase__items.farsi{
+  .product-showcase__linkBlock{
+    .product-showcase__linkBlock--title{
       @include font-fam-size(1.5em, asli, 400, $text-yellow-main);
       @include media(iphone-plus) {
         font-size: 2em;
       }
       @include media(laptop) {
-        font-size: 3em;
+        font-size: 1.5em;
+      }
+      @include media(desktop) {
+        font-size: 2em;
       }
 
     }
@@ -129,15 +254,19 @@
 
 
 }
-.col-feature.english{
-  a{
-    .image-head{
+.product-showcase__items.english{
+  .product-showcase__linkBlock{
+    .product-showcase__linkBlock--title{
       @include font-fam-size(1.6em, $main-font-2, 400, $text-yellow-main);
       @include media(iphone-plus) {
         font-size: 2em;
       }
       @include media(laptop) {
-        font-size: 3em;
+        font-size: 1.5em;
+
+      }
+      @include media(desktop) {
+        font-size: 2em;
       }
 
     }
@@ -145,7 +274,6 @@
 
 
 }
-
 .product-showcase {
   @include flex-display(flex, column, flex-start, 100%, center);
   & :nth-child(1) {
@@ -202,4 +330,34 @@
       order: 8;
     }
   }
+  @include media(laptop) {
+    & :nth-child(1) {
+      order: 1;
+    }
+    & :nth-child(2) {
+      order: 2;
+    }
+    & :nth-child(3) {
+      order: 4;
+    }
+    & :nth-child(4) {
+      order: 3;
+    }
+    & :nth-child(5) {
+      order: 6;
+    }
+    & :nth-child(6) {
+      order: 5;
+    }
+    & :nth-child(7) {
+      order: 7;
+    }
+    & :nth-child(8) {
+      order: 8;
+    }
+
+  }
 }
+
+
+

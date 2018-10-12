@@ -1,8 +1,16 @@
 ////////////CATALOG HEADER STYLES WITH TRANSLATION STYLES
 
 .catalog-header-farsi {
+  position: relative;
+  background: url('../img/catalog-head.jpg') no-repeat center;
+
+  background-size: 100%;
   margin: auto;
-  //padding: 1em;
+  padding: 1em 0;
+  @include media(iphone-5) {
+    padding: 1.9em 0;
+  }
+
   @include media(tablet) {
     padding: 4em 2em;
   }
@@ -12,7 +20,9 @@
   }
   @include flex-display(flex, column, center, 100%);
   .catalog-header__title {
-    margin: 2em auto;
+
+
+    padding: 1em 0;
     @include media(tablet) {
       margin: 3em auto;
     }
@@ -37,9 +47,15 @@
   }
 }
 .catalog-header-english {
+  position: relative;
+  background: url('../img/catalog-head.jpg') no-repeat center;
+
+  background-size: 100%;
   margin: auto;
-  //padding: 1em;
-  @include flex-display(flex, column, center, 100%);
+  padding: 1em 0;
+  @include media(iphone-5) {
+    padding: 1.9em 0;
+  }
   @include media(tablet) {
     padding: 4em 2em;
   }
@@ -48,7 +64,7 @@
     width: 70%;
   }
   .catalog-header__title {
-    margin: 2em auto;
+    padding: 1em 0;
     @include media(tablet) {
       margin: 3em auto;
     }
@@ -72,10 +88,16 @@
 }
 
 .catalog-header__genres {
+  position: absolute;
   @include flex-display(flex, row, space-around, 100%);
   list-style: none;
+  top:6.5em;
+  @include media(iphone-5) {
+    top:8em;
+  }
+
   padding: 0;
-  margin-top: 2rem;
+  //margin-top: 2rem;
   @include media(tablet) {
     margin: auto;
     padding: 1em 0;
@@ -206,6 +228,7 @@
   flex-wrap: wrap;
 
   .gallery-wrapper {
+    padding-top: 3em;
     @include flex-display(
       flex,
       column,

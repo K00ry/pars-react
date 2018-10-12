@@ -8,22 +8,25 @@ $nav-li-color		   : #BFBFBF;
 $head-color			   : #43495C;
 $shadow		    	   : #FFBD4F;
 $border-color		   : 2px dotted rgba(0, 0, 0, 0.1);
+$test-color: #fff;
 
 
 // added colors
-$text-yellow-main : #fdc53e;
+$text-yellow-main : #fdc53f;
 $light-grey	  : #999999;
 $hard-gray	  : #666666;
 $button-color : #D3D1FF;
 $dark-purple  : #7000CE;
 $body-text    : #E7F0E2;
-$highlight	  : #EBB301;
+$highlight	  : #fcc646;
 $white      : #FFF;
+$white2     : #f6f6f6;
+
 $background-White: #e6e7e9;
-
 $active-color :#CC6600;
+$test-color: #283441;
 
-// lightend colors \\
+  // lightend colors \\
 $text-black-m	  		   : rgba($text-black,.9);
 $text-gray-m	  		   : rgba($text-black,.7);
 $light-gray-l			   : rgba($light-grey,.9);
@@ -35,7 +38,9 @@ $dark-purple-m			   : rgba($dark-purple,.6);
 $text-color			   : rgba($text-black,.7);
 $link-color-light	   : rgba($link-color,.6);
 $h-color			   : rgba($head-color,.8);
-$w-color                : rgba($white ,.8);
+$w-color                : rgba($white ,.9);
+
+
 
 // font variables \\
 

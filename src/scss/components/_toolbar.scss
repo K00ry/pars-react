@@ -24,16 +24,17 @@
   border-radius: 0;
 .btn{
   #btn {
-    font-size: 30px;
+    padding: 0;
+    font-size: 2em;
     cursor: pointer;
     color: $text-yellow-main;
     margin: auto;
     @include media(tablet) {
-      font-size: 40px;
+      //font-size: 40px;
       margin-left :1em;
     }
     @include media(laptop) {
-      font-size: 60px;
+      //font-size: 60px;
       margin-left :.8em;
     }
   }
@@ -43,9 +44,9 @@
   .header-div.farsi {
     @include flex-display(flex, row, space-between, 100%);
     transition: margin-left 0.5s;
-    padding: 1em;
+    //padding: 1em;
     @include media(iphone-plus) {
-      padding: 1.5em;
+      padding: .5em;
     }
     @include media(tablet) {
       padding: 1.7em 0;
@@ -56,6 +57,13 @@
     }
     .toolbar-title {
       margin: auto ;
+      width: 45%;
+      .toolbar-title__img{
+
+        max-width: 100%;
+
+        height: auto;
+      }
       @include media(tablet) {
         margin-right :2em;
       }
@@ -83,9 +91,9 @@
   .header-div.english {
     @include flex-display(flex, row, space-between, 100%);
     transition: margin-left 0.5s;
-    padding: 1em;
+    //padding: 1em;
     @include media(iphone-plus) {
-      padding: 1.5em;
+      padding: .5em;
     }
     @include media(tablet) {
       padding: 1.7em 0;
@@ -93,6 +101,11 @@
     }
     .toolbar-title {
       margin: auto;
+      width: 45%;
+      .toolbar-title__img{
+        max-width: 100%;
+        height: auto;
+      }
       @include media(tablet) {
         margin-right :2em;
       }
@@ -128,18 +141,19 @@
 //}
 
 .lang-select {
-  @include flex-display(flex, row, space-around, 20%, center);
-  background: $light-grey;
-  margin: 0 2em;
+  width: 100%;
+  background: $hard-gray;
+  //margin: 0 2em;
 
   .lang-select--english {
     margin: auto;
     @include font-fam-size(0.8em, dovom, bold, $white);
     outline: none;
     padding: 4px;
-    background: $light-grey;
-    border: 2px solid $text-yellow-main;
-    border-radius: 20px;
+    margin: 0 1em;
+    //background: $light-grey;
+    //border: 2px solid $text-yellow-main;
+    //border-radius: 20px;
     @include media(iphone-plus) {
       font-size: 1em;
       padding: .2em;
@@ -154,10 +168,10 @@
     margin: auto;
     outline: none;
     padding: 4px;
-    //margin: auto;
-    background: $light-grey;
-    border: 2px solid $text-yellow-main;
-    border-radius: 20px;
+    margin: 0 1em;
+    //background: $light-grey;
+    //border: 2px solid $text-yellow-main;
+    //border-radius: 20px;
     @include media(iphone-plus) {
       font-size: 1em;
       padding: .2em;

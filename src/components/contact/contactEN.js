@@ -4,7 +4,7 @@ import {Col, Grid, Row} from "react-bootstrap";
 
 
 const ContactEN = () =>
-    <Grid>
+    <Grid fluid>
         <Row>
             <div className="top-nav">
                 <a href="#btn" id="back-to-top">

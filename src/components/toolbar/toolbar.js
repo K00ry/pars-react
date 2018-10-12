@@ -19,39 +19,36 @@ const Toolbar = props => {
 
 
   return  (
+      <header>
     <Headroom
         wrapperStyle={{height: 'auto'}}
        >
-  <header>
-    <Navbar>
+        <div className="lang-select">
+            <button className={`lang-select--${props.t("lang-class")}`} onClick={() => toggle(lang)}>{langString}</button>
+        </div>
+
+
+    <Navbar staticTop>
       <div className={`header-div ${props.t("lang-class")}`}>
           <div className="btn">
-        <span
-          id="btn"
-          onClick={props.openDrawer}
-
-        >
+        <span  id="btn" onClick={props.openDrawer}>
           ☰
         </span>
           </div>
 
-              <div className="lang-select">
-                  <button className={`lang-select--${props.t("lang-class")}`} onClick={() => toggle(lang)}>{langString}</button>
-              </div>
-
-
-
         <Link  to="/" className="toolbar-title">
-          <h1 className="toolbar-title__h1">
-              <Trans>
-                  Pars<b> Jadval</b>
-              </Trans>
-          </h1>
+            <img className="toolbar-title__img" src={process.env.PUBLIC_URL + 'img/main-logo.png'}/>
+          {/*<h1 className="toolbar-title__h1">*/}
+              {/*<Trans>*/}
+                  {/*Pars<b> Jadval</b>*/}
+              {/*</Trans>*/}
+          {/*</h1>*/}
         </Link>
       </div>
     </Navbar>
-  </header>
     </Headroom>
+  </header>
+
 )};
 
 export default Toolbar;

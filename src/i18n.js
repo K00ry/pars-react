@@ -9,7 +9,7 @@ i18n.use(LanguageDetector).init({
             translations: {
                 "To get started, edit <1>src/App.js</1> and save to reload.":
                     "To get started, edit <1>src/App.js</1> and save to reload.",
-                "Welcome to React": "Welcome to React and react-i18next",
+                "concrete-precast": "Concrete Precast Products Inc.",
 
                 "Pars<1> Jadval</1>":"Pars <1>Jadval</1>",
                 "pars-title-footer": "Pars Jadval",
@@ -253,8 +253,11 @@ i18n.use(LanguageDetector).init({
 
                 "contact":"Contact",
 
-
-
+                "overlay-paragraph":"Pars Jadval Founded in 1983 with a plan to produce concrete blocks. Since its early days the goal was to produce high quality products, resulting not only in the best products but also national attention and recognition.",
+                "labratory":"Considering the importance of produce quality of the wet curbstones and daily control of concrete, Pars Jadval is equipped with Concrete Testing Laboratory",
+                "lab":"LABORATORY",
+                "pack":"PACKING & CURING",
+                "prod":"PRODUCTION",
 
 
             }
@@ -263,7 +266,7 @@ i18n.use(LanguageDetector).init({
             translations: {
                 "To get started, edit <1>src/App.js</1> and save to reload.":
                     "Starte in dem du, <1>src/App.js</1> editierst und speicherst.",
-                "Welcome to React": "Willkommen bei React und react-i18next",
+                "concrete-precast": "تولید کننده قطعات بتنی",
 
                 "Pars<1> Jadval</1>":"پارس <1>جدول</1>",
                 "pars-title-footer": "پارس جدول",
@@ -518,6 +521,13 @@ i18n.use(LanguageDetector).init({
 
 
                 "contact":"تماس",
+
+                "overlay-paragraph":"کارخانه پارس جدول در سال ۱۳۶۲ با هدف تولید تیرچه و بلوک تاسيس گرديد. از همان ابتدا خط مشی و سیاست کلی شرکت تولید محصول مرغوب و با کیفیت مورد توجه قرار گرفت",
+                "labratory":"با توجه به اهمیت مصالح با کیفیت در نحوه تولید جداول خیس متراکم و همچنین کنترل روزانه بتن کارخانه پارس جدول مجهز به آزمایشگاه بتن کنترل کیفیت مصالح میباشد",
+                "lab":"آزمایشگاه",
+                "pack":"بسته بندی و دپو",
+                "prod":"تولید",
+
             }
         }
     },

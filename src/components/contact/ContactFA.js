@@ -4,7 +4,7 @@ import logo from "../../arrow.png";
 
 
 const ContactFA = () =>
-    <Grid>
+    <Grid fluid>
         <Row>
         <div className="top-nav">
             <a  href="#btn" id="back-to-top">
