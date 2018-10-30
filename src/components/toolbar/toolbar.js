@@ -2,7 +2,7 @@ import React from 'react';
 import {Navbar} from 'react-bootstrap';
 import Headroom from 'react-headroom';
 import { Link } from 'react-router-dom';
-import {  Trans } from "react-i18next";
+// import {  Trans } from "react-i18next";
 
 
 
@@ -24,11 +24,11 @@ const Toolbar = props => {
         wrapperStyle={{height: 'auto'}}
        >
         <div className="lang-select">
-            <button className={`lang-select--${props.t("lang-class")}`} onClick={() => toggle(lang)}>{langString}</button>
+            <span className={`lang-select--${props.t("lang-class")}`} onClick={() => toggle(lang)}>{langString}</span>
         </div>
 
 
-    <Navbar staticTop>
+    <Navbar staticTop fluid>
       <div className={`header-div ${props.t("lang-class")}`}>
           <div className="btn">
         <span  id="btn" onClick={props.openDrawer}>
@@ -45,6 +45,7 @@ const Toolbar = props => {
           {/*</h1>*/}
         </Link>
       </div>
+
     </Navbar>
     </Headroom>
   </header>

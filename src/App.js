@@ -13,6 +13,7 @@ import SideDrawer from './components/sidedrawer/sidedrawer';
 import MainContainer from './components/mainContainer/mainContainer';
 import Catalog from './components/catalog/catalog';
 import Contact from './components/contact/contact';
+import ContactPage from  './components/contact/contactPage';
 import BackDrop from "./components/toolbar/backDrop";
 import {Col, Grid, Row} from "react-bootstrap";
 // import NotFound from './components/NotFound';
@@ -75,6 +76,10 @@ class App extends Component {
                                  productSpec={this.state.CatalogSpec}
                                  t={this.props.t}/>
               } />
+              <Route  exact path="/contact" render={()=>
+                  <ContactPage t={this.props.t}/>
+              } />
+
               {catalogRouts}
 
           </Switch>

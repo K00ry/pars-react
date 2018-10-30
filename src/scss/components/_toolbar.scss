@@ -23,6 +23,15 @@
   margin-bottom: 0;
   border-radius: 0;
 .btn{
+  @include media(tablet) {
+    font-size: 15px;
+
+  }
+  @include media(laptop) {
+    font-size: 30px;
+
+  }
+
   #btn {
     padding: 0;
     font-size: 2em;
@@ -34,11 +43,12 @@
       margin-left :1em;
     }
     @include media(laptop) {
-      //font-size: 60px;
+      //font-size: 30px;
       margin-left :.8em;
     }
   }
 }
+
 
 
   .header-div.farsi {
@@ -56,12 +66,13 @@
 
     }
     .toolbar-title {
-      margin: auto ;
+      margin: auto 0;
       width: 45%;
+      @include media(tablet) {
+        width: 25%;
+      }
       .toolbar-title__img{
-
         max-width: 100%;
-
         height: auto;
       }
       @include media(tablet) {
@@ -100,8 +111,11 @@
       //justify-content: space-a;
     }
     .toolbar-title {
-      margin: auto;
+      margin: auto 0;
       width: 45%;
+      @include media(tablet) {
+        width: 25%;
+      }
       .toolbar-title__img{
         max-width: 100%;
         height: auto;

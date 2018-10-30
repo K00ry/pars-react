@@ -252,6 +252,8 @@ i18n.use(LanguageDetector).init({
 
 
                 "contact":"Contact",
+                "contactUs":"CONTACT US",
+                "contactUs-p":"For more information or questions on any of our products.",
 
                 "overlay-paragraph":"Pars Jadval Founded in 1983 with a plan to produce concrete blocks. Since its early days the goal was to produce high quality products, resulting not only in the best products but also national attention and recognition.",
                 "labratory":"Considering the importance of produce quality of the wet curbstones and daily control of concrete, Pars Jadval is equipped with Concrete Testing Laboratory",
@@ -521,6 +523,8 @@ i18n.use(LanguageDetector).init({
 
 
                 "contact":"تماس",
+                "contactUs":"تماس با ما",
+                "contactUs-p":"برای هرگونه سوال و اطلاعات راجب محصولات ما",
 
                 "overlay-paragraph":"کارخانه پارس جدول در سال ۱۳۶۲ با هدف تولید تیرچه و بلوک تاسيس گرديد. از همان ابتدا خط مشی و سیاست کلی شرکت تولید محصول مرغوب و با کیفیت مورد توجه قرار گرفت",
                 "labratory":"با توجه به اهمیت مصالح با کیفیت در نحوه تولید جداول خیس متراکم و همچنین کنترل روزانه بتن کارخانه پارس جدول مجهز به آزمایشگاه بتن کنترل کیفیت مصالح میباشد",

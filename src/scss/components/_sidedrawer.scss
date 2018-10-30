@@ -5,7 +5,7 @@
   position: fixed;
   z-index: 3;
   top: 0;
-  background-color: $hard-gray;
+  //background-color: $hard-gray;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 2em;
@@ -17,7 +17,7 @@
   }
 
   &.nav-open {
-    width: 200px;
+    width: 100vw;
     @include media(iphone-plus) {
 
     }
@@ -30,6 +30,10 @@
     left: 0;
     .closebtn {
       left: .3em;
+      @include media(desktop) {
+        left: .8em;
+        top:.5em
+      }
     }
     .sidenav-home-btn{
       @include font-fam-size( 2em, $main-font-2, bold, $white);
@@ -67,9 +71,10 @@
         }
       }
     }
+  .sideNav-sub__li{
+    text-align: left;
+    .sideNav-sub__li--link {
 
-    .nav-link-style-sub {
-      text-align: left;
       margin: .3em 0;
       @include font-fam-size(1.2em, $main-font-1, 100, $text-yellow-main-l);
 
@@ -85,11 +90,24 @@
       }
     }
   }
+    .sidenav-contact{
+      .sidenav-contact__Link{
+        text-align: left;
+        .sidenav-contact__Link--font{
+          @include font-fam-size( 2em, $main-font-2, bold, $white);
+        }
+      }
+    }
+  }
   &.farsi {
     right: 0;
 
     .closebtn {
       right:.3em;
+      @include media(desktop) {
+        right: .8em;
+        top:.5em
+      }
     }
     .sidenav-home-btn{
       @include font-fam-size( 1.9em, asli, bold, $white);
@@ -125,16 +143,30 @@
       }
 
     }
-    .nav-link-style-sub {
+    .sideNav-sub__li {
       text-align: right;
-      @include font-fam-size(1.2em, dovom-bold, bold, $text-yellow-main-l);
-      margin:.4em 0;
 
-      @include media(iphone-plus) {
-        font-size: 1.5em;
+
+      .sideNav-sub__li--link {
+
+        @include font-fam-size(1.2em, dovom-bold, bold, $text-yellow-main-l);
+        margin: .4em 0;
+
+        @include media(iphone-plus) {
+          font-size: 1.5em;
+        }
+        @include media(laptop) {
+          font-size: 2em;
+        }
       }
-      @include media(laptop) {
-        font-size: 2em;
+    }
+
+    .sidenav-contact{
+      .sidenav-contact__Link{
+        text-align: right;
+        .sidenav-contact__Link--font{
+          @include font-fam-size( 1.9em, asli, bold, $white);
+        }
       }
     }
   }
@@ -144,15 +176,10 @@
   .sideNav-title {
     width: 100%;
     padding: 1em;
-    li {
+    .sidenav-li-drop,.sidenav-home {
       @include flex-display(flex, column, space-between, 100%, center);
-
-      .sideNav-sub {
-        width: 100%;
-        padding: 0;
-        list-style: none;
-      }
     }
+
   }
 
   .nav-link {
@@ -207,7 +234,11 @@
 
     }
 
+
+
     ///// arrow turns down main styles \\\\
+
+
     .arrow-style {
       width: .6em;
       height: .6em;
@@ -230,8 +261,10 @@
   }
 
   .sideNav-sub {
+padding: 0;
     @include flex-display(flex, column, space-between, 100%, center);
-    .nav-link-style-sub {
+    .sideNav-sub__li {
+      list-style: none;
       width: 100%;
     }
   }

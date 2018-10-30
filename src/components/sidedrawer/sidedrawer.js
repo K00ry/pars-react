@@ -64,13 +64,11 @@ class SideDrawer extends Component {
               </ul>
             </div>
           </li>
-          <li className="sidenav-li-drop">
-            <div className="nav-link-style" onClick={this.subNavToggle}>
-              <div>
-                {/*<img className={subNavOpen} src={logo} alt="Arrow" />*/}
-              </div>
-              <div>{this.props.t("contact")}</div>
-            </div>
+          <li className="sidenav-contact">
+            <Link to="/contact" className="sidenav-contact__Link" onClick={this.props.closeDrawer}>
+
+              <div className="sidenav-contact__Link--font">{this.props.t("contact")}</div>
+            </Link>
           </li>
         </ul>
       </div>

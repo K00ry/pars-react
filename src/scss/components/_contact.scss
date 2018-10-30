@@ -69,7 +69,7 @@
         font-size:1.6em;
       }
       @include media(laptop) {
-        font-size: 2.3em;
+        //font-size: 2.3em;
       }
     }
     .contact-fa__line--a{
@@ -81,7 +81,7 @@
         font-size:1.6em;
       }
       @include media(laptop) {
-        font-size: 2.3em;
+        //font-size: 2.3em;
       }
 
     }
@@ -112,7 +112,7 @@
       font-size:1.6em;
     }
     @include media(laptop) {
-      font-size: 2.3em;
+      //font-size: 2.3em;
     }
   }
   .contact-en__line--a{
@@ -124,7 +124,7 @@
       font-size:1.6em;
     }
     @include media(laptop) {
-      font-size: 2.3em;
+      //font-size: 2.3em;
     }
 
   }

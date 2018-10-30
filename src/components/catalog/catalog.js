@@ -15,9 +15,7 @@ class Catalog extends Component {
 
 
 state = {
-    // jaber: this.props.location.pathname,
-    //
-    // catalogData:this.props.productData,
+
 
     subLinkClass: 1
 
@@ -68,7 +66,8 @@ render(){
 
     return (
         <div className="main">
-            {/*<Redirect to="/"/>*/}
+
+
 
             <div className={`catalog-header-${this.props.t("lang-class")}`} key={this.state.ProdSpec.genreFarsi}>
                 <div className="catalog-header__title"><h1 className="catalog-header__title_info">{this.props.t(this.state.prodData[0].genreEn)}</h1></div>
