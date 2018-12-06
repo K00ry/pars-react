@@ -12,7 +12,7 @@ i18n.use(LanguageDetector).init({
                 "concrete-precast": "Concrete Precast Products Inc.",
 
                 "Pars<1> Jadval</1>":"Pars <1>Jadval</1>",
-                "pars-title-footer": "Pars Jadval",
+                "pars-title-footer": "PARS JADVAL",
                 "sideNav-class-select":"left",
                 "lang-class":"english",
 
@@ -42,8 +42,8 @@ i18n.use(LanguageDetector).init({
                 "انباری":"Depot",
                 "بیضی":"Oval",
                 "تخته":"Plank",
-                'جرسی':'Jersey',
-                'مینی جرسی':'Mini Jersey',
+                'نيوجرسی':'Barrier',
+                'مینی جرسی':'Mini Barrier',
 
 
                 /// table Translation
@@ -237,7 +237,7 @@ i18n.use(LanguageDetector).init({
                 // "ساده":"simple",
                 "نیمکت پایی":"Foot Bench",
                 "نیمکت":"Benches",
-                "بولارد":"Bollards",
+                "استاپر":"Bollards",
                 "":"",
 
                 ///////// table translations
@@ -250,8 +250,12 @@ i18n.use(LanguageDetector).init({
 
 
 
+                "about":"ABOUT US",
+                "contact":"CONTACT",
+                "catalog":"CATALOG",
+                "loadIn":"LOAD-IN",
+                "loadIn-p":"LOAD-IN",
 
-                "contact":"Contact",
                 "contactUs":"CONTACT US",
                 "contactUs-p":"For more information or questions on any of our products.",
 
@@ -303,7 +307,7 @@ i18n.use(LanguageDetector).init({
                 "انباری":"انباری",
                 "بیضی":"بیضی",
                 "تخته":"تخته",
-                'جرسی':'جرسی',
+                'نيوجرسی':'نيوجرسی',
                 'مینی جرسی':'مینی جرسی',
 
                 /// table Translation
@@ -500,7 +504,7 @@ i18n.use(LanguageDetector).init({
 
                 "نیمکت پایی":"نیمکت پایی",
                 "نیمکت":"نیمکت",
-                "بولارد":"بولارد",
+                "استاپر":"استاپر",
 
 
 
@@ -521,8 +525,11 @@ i18n.use(LanguageDetector).init({
 
 
 
-
+                "about":"درباره ما",
                 "contact":"تماس",
+                "loadIn":"بارگیری مکانیزه",
+                "loadIn-p":"LOAD-IN",
+                "catalog":"کاتالوگ",
                 "contactUs":"تماس با ما",
                 "contactUs-p":"برای هرگونه سوال و اطلاعات راجب محصولات ما",
 

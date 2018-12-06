@@ -1,22 +1,25 @@
 import React, { Component } from 'react';
-import {  Route, Switch
-    // ,Redirect
-} from 'react-router-dom';
-import { translate,
-    // Trans
-} from "react-i18next";
+import {  Route, Switch} from 'react-router-dom';
+import { translate} from "react-i18next";
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
-
+import ScrollTrigger from 'scrolltrigger-classes';
+import {Col, Grid, Row} from "react-bootstrap";
 import data from './data';
 import Toolbar from './components/toolbar/toolbar';
 import SideDrawer from './components/sidedrawer/sidedrawer';
 import MainContainer from './components/mainContainer/mainContainer';
 import Catalog from './components/catalog/catalog';
-import Contact from './components/contact/contact';
 import ContactPage from  './components/contact/contactPage';
 import BackDrop from "./components/toolbar/backDrop";
-import {Col, Grid, Row} from "react-bootstrap";
-// import NotFound from './components/NotFound';
+import LoadIn from './components/pages/loadIn';
+import CatalogDownLoad from './components/pages/catalogDownLoad';
+import Laboratory from './components/pages/laboratory';
+import AboutUs from './components/pages/aboutUs';
+import Contact from './components/contact/contact';
+
+
+
+
 
 
 class App extends Component {
@@ -26,13 +29,27 @@ class App extends Component {
       mainData: data,
       CatalogData: data[0],
       CatalogSpec:data[0][0],
+      catalogMount:false
   };
   openDrawer = () => {
-    this.setState((prevState) => {
-     return  {openDrawer: !prevState.openDrawer}
-    })
+        this.setState((prevState) => {
+            return  {openDrawer: !prevState.openDrawer}
+        })
 
-  };
+    };
+    catalogState = () => {
+        this.setState((prevState) => {
+            return  {catalogMount: !prevState.catalogMount}
+        })
+
+    };
+    componentDidMount(){
+        document.addEventListener('DOMContentLoaded', function(){
+            let trigger = new ScrollTrigger();
+            console.log(trigger);
+        });
+
+    }
 
 
   render() {
@@ -42,6 +59,8 @@ class App extends Component {
 
       let catalogRouts =  this.state.mainData.map((arr,i)=>(
           <Route exact key={i} path={`/${i}`} render={(routerProps)=> <Catalog mainOfMain={this.state.mainData}
+                                                                               mountToggle={this.catalogState}
+
                                                                                t={t}
                                                                                {...routerProps}/>} />
       ));
@@ -54,7 +73,7 @@ class App extends Component {
       <div className="App">
 
 
-          <Toolbar openDrawer={this.openDrawer}  t={t} i18n={i18n}/>
+          <Toolbar openDrawer={this.openDrawer} mountState={this.state.catalogMount} t={t} i18n={i18n}/>
           <BackDrop openDrawer={this.openDrawer} show={this.state.openDrawer} />
           <SideDrawer closeDrawer={this.openDrawer}
                       show={this.state.openDrawer}
@@ -64,7 +83,7 @@ class App extends Component {
 
 
 
-          <TransitionGroup>
+          <TransitionGroup component="main">
               <CSSTransition
                   timeout={500}
                   key={location.key}
@@ -76,9 +95,17 @@ class App extends Component {
                                  productSpec={this.state.CatalogSpec}
                                  t={this.props.t}/>
               } />
-              <Route  exact path="/contact" render={()=>
-                  <ContactPage t={this.props.t}/>
-              } />
+
+              <Route  exact path="/load-in"
+                      render={()=> <LoadIn t={this.props.t}/>} />
+              <Route  exact path="/catalog"
+                      render={()=> <CatalogDownLoad t={this.props.t}/>} />
+              <Route  exact path="/lab"
+                      render={()=> <Laboratory t={this.props.t}/>} />
+              <Route  exact path="/About"
+                      render={()=> <AboutUs t={this.props.t}/>} />
+              <Route  exact path="/contact"
+                      render={()=> <ContactPage t={this.props.t}/>} />
 
               {catalogRouts}
 

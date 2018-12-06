@@ -1,4 +1,4 @@
-import HomeGenres from "./homeGenres";
+import HomeGenres from "../catalog/catalogDesktop/homeGenres";
 import React from "react";
 const insideStyles = {background: 'transparent', padding: 20, position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)'};
 const Unused = props =>{

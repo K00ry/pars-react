@@ -1,7 +1,28 @@
+.parallax-for-contactPage{
+  background: rgb(230,218,218);
+  background: linear-gradient(190deg, rgba(230,218,218,0.8029586834733894) 0%, rgba(39,64,70,0.7973564425770308) 48%);
+  height: 70vh;
+  @include media(iphone-plus) {
+    //height: 50vh;
+  }
+  @include media(laptop) {
+    //height: 90vh;
+  }
+}
+
+
 .contact-us.farsi {
-  display: flex;
-  width: 100%;
+  @include flex-display(flex, column, space-between, 100%);
+
   text-align: center;
+  @include media(tablet) {
+    text-align: center;
+
+  }
+
+  @include media(laptop) {
+
+  }
   .contact-us__block {
     margin: auto;
     @include flex-display(flex, column, space-between, 90%);
@@ -18,11 +39,28 @@
 }
 
 .contact-us.english {
-  width: 100%;
+  @include flex-display(flex, column, space-between, 100%);
+
   text-align: left;
+  @include media(tablet) {
+    text-align: center;
+
+  }
+
+  @include media(laptop) {
+
+  }
   .contact-us__block {
     float: left;
     @include flex-display(flex, column, space-between, 70%);
+    @include media(tablet) {
+ margin: auto;
+
+    }
+
+    @include media(laptop) {
+
+    }
     .contact-us__block--h2 {
       margin: 0.7em 0;
 

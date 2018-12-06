@@ -10,7 +10,7 @@
     margin: auto;
     width: 90%;
     padding: 1em 0;
-    border-bottom: 2px solid $light-gray-l;
+    border-bottom: 2px solid $light-grey;
     text-align: center;
     @include media(tablet) {
       padding: 2em 0;
@@ -19,7 +19,7 @@
       @include font-fam-size( 1em,
               asli,
               bold,
-              $hard-gray-l);
+              $hard-gray);
       @include media(tablet) {
         font-size:1.3em;
       }
@@ -64,18 +64,19 @@
       @include font-fam-size( 1.2em,
               asli,
               bold,
-              $light-gray-l );
+              $hard-gray );
       @include media(tablet) {
         font-size:1.6em;
       }
       @include media(laptop) {
-        //font-size: 2.3em;
+        font-weight: 500;
+
       }
     }
     .contact-fa__line--a{
       @include font-fam-size( 1.2em,
               dovom-bold,
-              bold,
+              400,
               $hard-gray-l);
       @include media(tablet) {
         font-size:1.6em;
@@ -106,24 +107,26 @@
   .contact-en__line--h5 {
     @include font-fam-size( 1.2em,
             $main-font-2,
-            bold,
-            $light-gray-l);
+            600,
+            $hard-gray);
     @include media(tablet) {
       font-size:1.6em;
     }
     @include media(laptop) {
+      font-weight: 500;
       //font-size: 2.3em;
     }
   }
   .contact-en__line--a{
     @include font-fam-size( 1.2em,
             $main-font-2,
-            bold,
+            400,
             $hard-gray-l );
     @include media(tablet) {
       font-size:1.6em;
     }
     @include media(laptop) {
+      font-weight: 300;
       //font-size: 2.3em;
     }
 

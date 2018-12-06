@@ -1,13 +1,13 @@
 ///////////////Jumbo on the main-page \\\\\\\\\\\\\\\\
 .parallax-my-custom{
   background: rgb(230,218,218);
-  background: linear-gradient(132deg, rgba(230,218,218,0.8029586834733894) 0%, rgba(39,64,70,0.7973564425770308) 48%);
-  height: 90vh;
+  background: linear-gradient(190deg, rgba(230,218,218,0.8029586834733894) 0%, rgba(39,64,70,0.7973564425770308) 48%);
+  height: 100vh;
   @include media(iphone-plus) {
     //height: 50vh;
   }
   @include media(laptop) {
-    height: 90vh;
+    //height: 90vh;
   }
 }
 .parallax-my-custom-2{
@@ -18,7 +18,7 @@
     //height: 50vh;
   }
   @include media(laptop) {
-    height: 60vh;
+    height: 80vh;
   }
 }
 
@@ -31,9 +31,9 @@
   padding: 20px;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-80%);
+  transform: translate(-50%,-60%);
   @include media(iphone-plus) {
-    transform: translate(-50%,-80%);
+    transform: translate(-50%,-70%);
   }
   @include media(laptop) {
     transform: translate(-50%,-60%);
@@ -46,13 +46,24 @@
   }
   .intro__h2.english {
    position: absolute;
-    @include font-fam-size( 2em, $main-font-2, bold, $white);
+    @include font-fam-size( 1.5em, $main-font-2, 400, rgba($white,.9));
     bottom: -1em;
+    @include media(iphone-plus) {
+      font-size: 2em;
+    }
+    @include media(laptop) {
+      bottom: -1em;
+      font-size: 4em;
+
+    }
   }
   .intro__h2.farsi {
     position: absolute;
     @include font-fam-size( 2em, asli, bold, $white);
     bottom: -1em;
+    @include media(laptop) {
+      font-size: 4em;
+    }
   }
   .image-head-slog {
     font-family: asli;
@@ -79,7 +90,7 @@
     height: auto;
   }
   .overlaySection__card{
-    background-color: rgba($hard-gray,0.9);
+    background:transparent;
     position: absolute;
     //bottom: 10%;
    padding: 1em;
@@ -92,16 +103,22 @@
       width: 60%;
     }
     .overlaySection__card--title{
-      @include font-fam-size( 1.3em, asli, bold, $text-yellow-main );
+      @include font-fam-size( 2.3em, asli, bold, $text-yellow-main );
       margin: 0 0 .5em 0 ;
       @include media(tablet) {
-        font-size: 2em;
+        font-size: 4em;
+      }
+      @include media(laptop) {
+        font-size: 6em;
       }
     }
     .overlaySection__card--p{
       @include font-fam-size( 1em, dovom, bold, $w-color );
       @include media(tablet) {
-        font-size: 1.5em;
+        font-size: 2em;
+      }
+      @include media(laptop) {
+        font-size: 3em;
       }
     }
   }
@@ -115,7 +132,7 @@
     height: auto;
   }
   .overlaySection__card{
-    background-color: rgba($hard-gray,0.9);
+    background:transparent;
     position: absolute;
     padding: 1em;
     @include media(iphone-plus) {
@@ -130,146 +147,47 @@
       //bottom: 20%;
     }
     .overlaySection__card--title{
-      @include font-fam-size( 1.3em, $main-font-2, bold, $text-yellow-main );
+      @include font-fam-size( 2.3em, $main-font-2, bold, $text-yellow-main );
       margin: 0 0 .5em 0 ;
       @include media(tablet) {
-        font-size: 2em;
+        font-size: 4em;
+      }
+      @include media(laptop) {
+        font-size: 6em;
       }
     }
     .overlaySection__card--p{
       @include font-fam-size( 1em, $main-font-2, bold, $w-color );
       @include media(tablet) {
-        font-size: 1.5em;
+        font-size: 2em;
+        font-weight: 400;
+      }
+      @include media(laptop) {
+        font-size: 3em;
       }
     }
   }
 }
 
 //////////////////
-.feature_holder{
-  padding-top: 2em;
-  padding-bottom: 2em;
-  //background-color: $background-White ;
-  //background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
 
 
-
-  @include media(desktop) {
-    padding-top: 14em;
-    padding-bottom: 14em;
-  }
-  //background: #969799;
-
-
-}
-.feature{
-  padding: 2em 0;
-
-
-.feature__block{
-
-
-
-  margin: 0;
-  @include flex-display(flex, column, space-evenly, 100%);
-  @include media(tablet) {
-
-    width: 90%;
-    margin: auto;
-
-  }
-  @include media(laptop) {
-
-    width: 80%;
-
-
-  }
-  .feature__block--img{
-
-    margin: auto;
-    max-width: 100%;
-    height: auto;
-  }
-  .feature__block--title{
-    padding: 0 1em;
-    margin: .5em 0;
-
-
-  }
-  .feature__block--title.farsi{
-    text-align: right;
-    @include font-fam-size( 1.3em, asli, bold, $light-gray-l );
-
-
-
-  }
-  .feature__block--title.english{
-    @include font-fam-size( 1.3em, $main-font-2, bold, $light-gray-l );
-
-  }
-  .feature__block--text{
-    padding: 0 1em;
-   margin:  .5em auto;
-  }
-  .feature__block--text.farsi{
-    text-align: right;
-    @include font-fam-size( 1em, dovom, bold, $hard-gray-l);
-    line-height: 1.5;
-
-   }
-  .feature__block--text.english{
-    @include font-fam-size( 1em, $main-font-1, bold, $hard-gray-l );
-    line-height: 1.5;
-  }
-}
-
-}
 
 .main {
   width: 100%;
   margin: auto;
   background: $background-White;
-}
-.home-genres{
-  @include flex-display(flex, row, space-evenly, 100%, center);
-  flex-wrap:wrap;
-  padding:15px 0;
-  background-color:$text-black;
 
-
-
-
-  .home-genre-item{
-    @include flex-display(flex, column, space-evenly, 40%, center);
-    background-color:  $light-grey;
-
-    border: 1px solid $hard-gray-l;
-    padding:8px;
-    margin:25px 0;
-    a{
-      @include font-fam-size( 1.3em, dovom, bold, $text-yellow-main);
-      width: 100%;
-      text-align: center;
-
-
-    }
-  }
-
+  //@include flex-display(flex,
+  //        column,
+  //        flex-start,
+  //        100%,
+  //        center);
 
 }
-.home-genres-title{
-  @include font-fam-size( 1em, asli, bold, $text-yellow-main);
-  width:88%;
-  padding: 1em 0 ;
-  background-color: $hard-gray-l;
-  h2{
-    margin: auto;
-    text-align:center;
-  }
-}
+
 
 .product-showcase__items{
-
   @include flex-display(flex,
           column,
           space-between,
@@ -277,24 +195,28 @@
           center);
   height: auto;
   .product-showcase__linkBlock {
+    //width: 100%;
+
     position: relative;
 
     .product-showcase__linkBlock--image{
-      width: 100%;
+      transition: all .5s;
+      max-width: 100%;
       height: auto;
     }
     .product-showcase__linkBlock--title{
       position: absolute;
       top: .5em;
       z-index: 0;
+      transition: all .5s;
 
     }
     .product-showcase__linkBlock--title.f-right{
       left: 2em;
-
     }
     .product-showcase__linkBlock--title.f-left{
       right: 2em;
+
     }
 
   }
@@ -309,13 +231,60 @@
 }
 .product-showcase__items.farsi{
   .product-showcase__linkBlock{
+
+    &:hover{
+      //background: rgb(230,218,218);
+      background-color: rgba(39,64,70,0.8);
+
+      .product-showcase__linkBlock--image{
+        opacity: 0.4;
+      }
+
+
+      .product-showcase__linkBlock--title.f-right{
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        span{
+          margin: auto;
+        }
+        @include media(laptop) {
+          font-size: 2em;
+        }
+        @include media(desktop) {
+          font-size: 4em;
+        }
+      }
+      .product-showcase__linkBlock--title.f-left{
+
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        span{
+          margin: auto;
+        }
+        @include media(laptop) {
+          font-size:2em;
+        }
+        @include media(desktop) {
+          font-size: 4em;
+        }
+      }
+    }
+
+    }
     .product-showcase__linkBlock--title{
+      transition: all 1s;
       @include font-fam-size(1.5em, asli, 400, $text-yellow-main);
       @include media(iphone-plus) {
         font-size: 2em;
       }
       @include media(laptop) {
-        font-size: 1.5em;
+        font-size: 1.3em;
       }
       @include media(desktop) {
         font-size: 2em;
@@ -325,16 +294,60 @@
   }
 
 
-}
+
 .product-showcase__items.english{
   .product-showcase__linkBlock{
+
+    &:hover{
+      //background: rgb(230,218,218);
+      background-color: rgba(39,64,70,0.8);
+
+      .product-showcase__linkBlock--image{
+        opacity: 0.4;
+      }
+
+
+      .product-showcase__linkBlock--title.f-right{
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+       display: flex;
+      span{
+        margin: auto;
+      }
+        @include media(laptop) {
+          font-size: 2em;
+        }
+        @include media(desktop) {
+          font-size: 4em;
+        }
+      }
+      .product-showcase__linkBlock--title.f-left{
+
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        span{
+          margin: auto;
+        }
+        @include media(laptop) {
+          font-size:2em;
+        }
+        @include media(desktop) {
+          font-size: 4em;
+        }
+      }
+    }
     .product-showcase__linkBlock--title{
       @include font-fam-size(1.6em, $main-font-2, 400, $text-yellow-main);
       @include media(iphone-plus) {
         font-size: 2em;
       }
       @include media(laptop) {
-        font-size: 1.5em;
+        font-size: 1.3em;
 
       }
       @include media(desktop) {
@@ -347,8 +360,14 @@
 
 }
 .product-showcase {
+
+
   @include flex-display(flex, column, flex-start, 100%, center);
   & :nth-child(1) {
+    //width: 100%;
+    //@include media(tablet) {
+    //  width: auto;
+    //}
     order: 1;
   }
   & :nth-child(2) {

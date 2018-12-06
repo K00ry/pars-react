@@ -15,7 +15,7 @@ const ContactEN = () =>
         </Row>
 
 
-        <Row className="contact-en">
+        <Row className="contact-en" data-scroll="toggle(.fromTopIn, .fromTopOut)">
 
             <Col sm={4} className="contact-en__line text-left">
                 <h5 className="contact-en__line--h5">phone</h5>
@@ -30,7 +30,7 @@ const ContactEN = () =>
             </Col>
             <Col sm={4} className="contact-en__line text-left">
                 <h5 className="contact-en__line--h5">Address</h5>
-                <a className="contact-en__line--a">Varamin, past the Valiasr Square, close to Jafar Abad Alley</a>
+                <div className="contact-en__line--a">Varamin, past the Valiasr Square, close to Jafar Abad Alley</div>
             </Col>
         </Row>
 

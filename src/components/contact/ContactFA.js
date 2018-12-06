@@ -15,13 +15,13 @@ const ContactFA = () =>
         </Row>
 
 
-        <Row className="contact-fa">
+        <Row className="contact-fa" data-scroll="toggle(.fromTopIn, .fromTopOut)">
 
             <Col sm={4} className="contact-fa__line text-right">
                 <h5 className="contact-fa__line--h5">تلفن همراه</h5>
-                <a className="contact-fa__line--a" href="tel:+989121180175">۹۱۲-۱۱۸-۰۱۷۵</a>
+                <a className="contact-fa__line--a" href="tel:+989121180175">۰۹۱۲-۱۱۸-۰۱۷۵</a>
                 <br/>
-                <a className="contact-fa__line--a" href="tel:+989123368183">۹۱۲-۳۳۶-۸۱۸۳</a>
+                <a className="contact-fa__line--a" href="tel:+989123368183">۰۹۱۲-۳۳۶-۸۱۸۳</a>
             </Col>
             <Col sm={4} className="contact-fa__line text-right">
                 <h5 className="contact-fa__line--h5">ایمل</h5>
@@ -30,7 +30,7 @@ const ContactFA = () =>
             </Col>
             <Col sm={4} className="contact-fa__line text-right">
                 <h5 className="contact-fa__line--h5">آدرس</h5>
-                <a className="contact-fa__line--a">ورامین بعد از میدان ولیعصر جنب کوی جعفر آباد</a>
+                <div className="contact-fa__line--a">ورامین بعد از میدان ولیعصر جنب کوی جعفر آباد</div>
             </Col>
         </Row>
 
