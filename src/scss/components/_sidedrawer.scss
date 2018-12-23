@@ -1,11 +1,12 @@
 .sidenav {
-  position: relative;
+
   height: 100%;
   width: 0;
   position: fixed;
   z-index: 3;
   top: 0;
-  background-color: $hard-gray;
+  //background-color: $hard-gray;
+  background: linear-gradient(132deg, rgba(230, 218, 218, 0.802959) 0%, rgba(39, 64, 70, 0.797356) 0%);
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 2em;
@@ -17,7 +18,7 @@
   }
 
   &.nav-open {
-    width: 200px;
+    width: 70%;
     @include media(iphone-plus) {
 
     }
@@ -30,26 +31,36 @@
     left: 0;
     .closebtn {
       left: .3em;
-    }
-    .sidenav-home-btn{
-      @include font-fam-size( 2em, $main-font-2, bold, $white);
-      @include media(laptop) {
-        font-size: 4em;
+      @include media(desktop) {
+        left: .5em;
+        top:.1em
       }
     }
+    .sidenav-home {
+      @include flex-display(flex, column, space-between, 100%,left);
+
+      .sidenav-home-btn{
+        margin:.5em 0;
+        @include font-fam-size( 1.8em, $main-font-2, bold, $white);
+        @include media(laptop) {
+          font-size: 3em;
+        }
+      }
+    }
+
     .nav-link-style {
       text-decoration: none;
       @include flex-display(flex, row-reverse, space-between, 100%);
       @include font-fam-size( 2em, $main-font-2, bold, $white);
       transition: 0.3s;
-      margin: .2em 0;
+
       @include media(iphone-plus) {
         font-size: 2.2em;
-        margin:.4em 0;
+        //margin:.4em 0;
       }
       @include media(laptop) {
-        font-size: 4em;
-        margin:.5em 0;
+        font-size: 3em;
+        margin:.4em 0;
 
       }
       .nav-link-style__title{
@@ -67,11 +78,12 @@
         }
       }
     }
+  .sideNav-sub__li{
+    text-align: left;
+    .sideNav-sub__li--link {
 
-    .nav-link-style-sub {
-      text-align: left;
       margin: .3em 0;
-      @include font-fam-size(1.2em, $main-font-1, 100, $text-yellow-main-l);
+      @include font-fam-size(1.2em, $main-font-1, 600, $text-yellow-main-l);
 
       @include media(iphone-plus) {
         font-size: 1.5em;
@@ -85,22 +97,56 @@
       }
     }
   }
+    .sidenav-noSub{
+      @include flex-display(flex, column, space-between, 100%);
+      padding: .6em 0;
+      //border-top: 2px solid $text-yellow-main;
+      .sidenav-noSub__Link{
+        text-align: left;
+        margin: auto 0 ;
+        .sidenav-noSub__Link--font{
+          @include font-fam-size( 1.3em, $main-font-2, bold, $white);
+          @include media(iphone-plus) {
+            font-size: 1.5em;
+          }
+
+          @include media(tablet) {
+            font-size: 2.2em;
+          }
+          @include media(laptop) {
+            font-size: 2.5em;
+          }
+
+        }
+      }
+    }
+  }
   &.farsi {
     right: 0;
 
     .closebtn {
       right:.3em;
+      @include media(desktop) {
+        right: .5em;
+        top:.1em
+      }
     }
-    .sidenav-home-btn{
-      @include font-fam-size( 1.9em, asli, bold, $white);
-      @include media(laptop) {
-        font-size: 4em;
+    .sidenav-home {
+      @include flex-display(flex, column, space-between, 100%, right);
+
+      .sidenav-home-btn {
+        text-align: right;
+        @include font-fam-size(1.7em, asli, bold, $white);
+        margin:.5em 0;
+        @include media(laptop) {
+          font-size: 3em;
+        }
       }
     }
     .nav-link-style__title{
       font-size: 1em;
       @include media(laptop) {
-        font-size: 1em;
+        font-size: .9em;
       }
     }
     .nav-link-style {
@@ -115,7 +161,7 @@
       }
       @include media(laptop) {
         font-size: 4em;
-        margin:.5em 0;
+        margin:.4em 0;
 
       }
 
@@ -125,16 +171,49 @@
       }
 
     }
-    .nav-link-style-sub {
+    .sideNav-sub__li {
+      @include flex-display(flex, column, space-between, 100%);
+      border-top: 1px solid $white;
       text-align: right;
-      @include font-fam-size(1.2em, dovom-bold, bold, $text-yellow-main-l);
-      margin:.4em 0;
 
-      @include media(iphone-plus) {
-        font-size: 1.5em;
+
+      .sideNav-sub__li--link {
+        margin: auto 0;
+
+
+        @include font-fam-size(1.2em, dovom-bold, bold, $text-yellow-main-l);
+        //margin: .4em 0;
+
+        @include media(iphone-plus) {
+          font-size: 1.5em;
+        }
+        @include media(laptop) {
+          font-size: 2em;
+        }
       }
-      @include media(laptop) {
-        font-size: 2em;
+    }
+
+    .sidenav-noSub{
+     padding: .6em 0 ;
+      //border-top: 2px solid $text-yellow-main;
+      @include flex-display(flex, column, space-between, 100%);
+
+      .sidenav-noSub__Link{
+        margin: auto 0;
+        text-align: right;
+        .sidenav-noSub__Link--font{
+          @include font-fam-size( 1.3em, asli, bold, $white);
+          @include media(iphone-plus) {
+            font-size: 1.5em;
+          }
+
+          @include media(tablet) {
+            font-size: 2.2em;
+          }
+          @include media(laptop) {
+            font-size: 2.5em;
+          }
+        }
       }
     }
   }
@@ -144,16 +223,16 @@
   .sideNav-title {
     width: 100%;
     padding: 1em;
-    li {
+    .sidenav-li-drop{
       @include flex-display(flex, column, space-between, 100%, center);
-
-      .sideNav-sub {
-        width: 100%;
-        padding: 0;
-        list-style: none;
-      }
     }
+    //.sidenav-noSub:last-child{
+    //  border-bottom: 2px solid $text-yellow-main;
+    //}
+
+
   }
+
 
   .nav-link {
     @include font-fam-size(1.3em, asli, bold, $text-black-m);
@@ -161,6 +240,8 @@
 
   .expand{
     max-height: 30em;
+    width: 90%;
+
     @include media(laptop) {
       max-height: 50em;
     }
@@ -207,7 +288,11 @@
 
     }
 
+
+
     ///// arrow turns down main styles \\\\
+
+
     .arrow-style {
       width: .6em;
       height: .6em;
@@ -230,8 +315,12 @@
   }
 
   .sideNav-sub {
+padding: 0;
     @include flex-display(flex, column, space-between, 100%, center);
-    .nav-link-style-sub {
+    .sideNav-sub__li {
+
+      padding: .5em 0 ;
+      list-style: none;
       width: 100%;
     }
   }
@@ -245,7 +334,7 @@
 .nav {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   @include media(tablet) {
     display: flex;
     flex-direction: row-reverse;

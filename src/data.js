@@ -5,7 +5,7 @@ const data = [
               genreFarsi: 'جدول',
               genreId: 'wet',
               type: 'وت پرس',
-              img: '/images/jadval/mobile/40.png',
+              img: '/images/jadval/mobile/1.png',
               sizes: [
                 {
                   type: '۵۰*۳۰*۱۰',
@@ -103,7 +103,7 @@ const data = [
                 },
                 {
                   image: '#',
-                  type: 'تیغه ۱۰ پوکه فروه',
+                  type: 'تیغه ۱۰ پوکه',
                   size: '۴۰*۲۰*۱۰',
                   price: '۹۳۵۰',
                   shipping: '۵۰۰',
@@ -174,7 +174,7 @@ const data = [
               genreFarsi: 'كفپوش',
               genreId: 'khoshk',
               type: 'پرس خشك',
-              img: '/images/kafpoosh/mobile/transparent/39.jpg',
+              img: '/images/kafpoosh/wetpress/yellow.png',
               sizes: [
                 {
                   img: '/images/kafpoosh/mobile/transparent/40x40.png',
@@ -239,7 +239,7 @@ const data = [
               img: '/images/kafpoosh/mobile.jpg',
                 sizes: [
                     {
-                        img: '/images/kafpoosh/wetpress/mobile/red.png',
+                        img: '/images/kafpoosh/wetpress/red.png',
                         type: '۵۰*۵۰*۸',
 
                         inSquarefeet: '۴ عدد',
@@ -250,7 +250,7 @@ const data = [
                         shipping: '۵۰۰۰',
                     },
                     {
-                        img: '/images/kafpoosh/wetpress/mobile/yellow.png',
+                        img: '/images/kafpoosh/wetpress/yellow.png',
                         type: '۵۰*۵۰*۸',
 
                         inSquarefeet: '۴ عدد',
@@ -261,7 +261,7 @@ const data = [
                         shipping: '۵۰۰۰',
                     },
                     {
-                        img: '/images/kafpoosh/wetpress/mobile/grey.png',
+                        img: '/images/kafpoosh/wetpress/grey.png',
                         type: '۵۰*۵۰*۸',
                         type_en: '50x50x8',
                         inSquarefeet: '۴ عدد',
@@ -575,7 +575,7 @@ const data = [
                 genreEn: 'mozayik',
               genreId: 'hayati',
               type: 'حياطی',
-              img: '/images/mozayik/mobile/sade2.png',
+              img: '/images/mozayik/mobile/hayati.png',
               sizes: [
                 {
                   img: '/images/kafpoosh/mobile/transparent/40x40',
@@ -713,7 +713,7 @@ const data = [
               genreEn: 'mobleman',
               genreFarsi: 'مبلمان شهری',
               genreId: 'mobleman',
-              type: 'بولارد',
+              type: 'استاپر',
               img: '/images/nimkat/bollards.png',
               sizes: [
                   {
@@ -748,7 +748,7 @@ const data = [
             genreEn: 'nj',
             genreFarsi: 'نيوجرسی',
             genreId: 'jersey',
-            type: 'جرسی',
+            type: 'نيوجرسی',
                 img: '/images/nj/nj.png',
             sizes: [
                 {

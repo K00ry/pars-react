@@ -9,10 +9,10 @@ i18n.use(LanguageDetector).init({
             translations: {
                 "To get started, edit <1>src/App.js</1> and save to reload.":
                     "To get started, edit <1>src/App.js</1> and save to reload.",
-                "Welcome to React": "Welcome to React and react-i18next",
+                "concrete-precast": "Concrete Precast Products Inc.",
 
                 "Pars<1> Jadval</1>":"Pars <1>Jadval</1>",
-                "pars-title-footer": "Pars Jadval",
+                "pars-title-footer": "PARS JADVAL",
                 "sideNav-class-select":"left",
                 "lang-class":"english",
 
@@ -42,8 +42,8 @@ i18n.use(LanguageDetector).init({
                 "انباری":"Depot",
                 "بیضی":"Oval",
                 "تخته":"Plank",
-                'جرسی':'Jersey',
-                'مینی جرسی':'Mini Jersey',
+                'نيوجرسی':'Barrier',
+                'مینی جرسی':'Mini Barrier',
 
 
                 /// table Translation
@@ -237,7 +237,7 @@ i18n.use(LanguageDetector).init({
                 // "ساده":"simple",
                 "نیمکت پایی":"Foot Bench",
                 "نیمکت":"Benches",
-                "بولارد":"Bollards",
+                "استاپر":"Bollards",
                 "":"",
 
                 ///////// table translations
@@ -250,11 +250,20 @@ i18n.use(LanguageDetector).init({
 
 
 
+                "about":"ABOUT US",
+                "contact":"CONTACT",
+                "catalog":"CATALOG",
+                "loadIn":"LOAD-IN",
+                "loadIn-p":"LOAD-IN",
 
-                "contact":"Contact",
+                "contactUs":"CONTACT US",
+                "contactUs-p":"For more information or questions on any of our products.",
 
-
-
+                "overlay-paragraph":"Pars Jadval Founded in 1983 with a plan to produce concrete blocks. Since its early days the goal was to produce high quality products, resulting not only in the best products but also national attention and recognition.",
+                "labratory":"Considering the importance of produce quality of the wet curbstones and daily control of concrete, Pars Jadval is equipped with Concrete Testing Laboratory",
+                "lab":"LABORATORY",
+                "pack":"PACKING & CURING",
+                "prod":"PRODUCTION",
 
 
             }
@@ -263,7 +272,7 @@ i18n.use(LanguageDetector).init({
             translations: {
                 "To get started, edit <1>src/App.js</1> and save to reload.":
                     "Starte in dem du, <1>src/App.js</1> editierst und speicherst.",
-                "Welcome to React": "Willkommen bei React und react-i18next",
+                "concrete-precast": "تولید کننده قطعات بتنی",
 
                 "Pars<1> Jadval</1>":"پارس <1>جدول</1>",
                 "pars-title-footer": "پارس جدول",
@@ -298,7 +307,7 @@ i18n.use(LanguageDetector).init({
                 "انباری":"انباری",
                 "بیضی":"بیضی",
                 "تخته":"تخته",
-                'جرسی':'جرسی',
+                'نيوجرسی':'نيوجرسی',
                 'مینی جرسی':'مینی جرسی',
 
                 /// table Translation
@@ -495,7 +504,7 @@ i18n.use(LanguageDetector).init({
 
                 "نیمکت پایی":"نیمکت پایی",
                 "نیمکت":"نیمکت",
-                "بولارد":"بولارد",
+                "استاپر":"استاپر",
 
 
 
@@ -516,8 +525,20 @@ i18n.use(LanguageDetector).init({
 
 
 
-
+                "about":"درباره ما",
                 "contact":"تماس",
+                "loadIn":"بارگیری مکانیزه",
+                "loadIn-p":"LOAD-IN",
+                "catalog":"کاتالوگ",
+                "contactUs":"تماس با ما",
+                "contactUs-p":"برای هرگونه سوال و اطلاعات راجب محصولات ما",
+
+                "overlay-paragraph":"کارخانه پارس جدول در سال ۱۳۶۲ با هدف تولید تیرچه و بلوک تاسيس گرديد. از همان ابتدا خط مشی و سیاست کلی شرکت تولید محصول مرغوب و با کیفیت مورد توجه قرار گرفت",
+                "labratory":"با توجه به اهمیت مصالح با کیفیت در نحوه تولید جداول خیس متراکم و همچنین کنترل روزانه بتن کارخانه پارس جدول مجهز به آزمایشگاه بتن کنترل کیفیت مصالح میباشد",
+                "lab":"آزمایشگاه",
+                "pack":"بسته بندی و دپو",
+                "prod":"تولید",
+
             }
         }
     },

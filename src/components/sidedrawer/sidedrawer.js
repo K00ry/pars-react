@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import Sublinks from './subLinks';
+
 import { Link } from 'react-router-dom';
-import logo from '../../logo.svg';
+import SideDrawerWithSubnav from "./sideDrawerWithSubnav";
+
 
 
 class SideDrawer extends Component {
@@ -22,56 +23,57 @@ class SideDrawer extends Component {
       sideDraw = 'sidenav nav-open';
 
     }
-    let subNavOpen = 'arrow-style';
-    let subOpenDisplay = 'nav';
-    if (this.state.productSubNavOpen) {
-      subNavOpen = 'arrow-style turn';
-      subOpenDisplay = 'nav expand'
-    }
+
 
     return (
       <div id="mySidenav" className={`${this.props.t("lang-class")} ${sideDraw}`}>
-        <a onClick={this.props.closeDrawer} className="closebtn">
+        <div onClick={this.props.closeDrawer} className="closebtn">
           ×
-        </a>
+        </div>
         <ul className={`sideNav-title ${this.props.t("lang-class")}`}>
           <li className="sidenav-home" onClick={this.props.closeDrawer}>
             <Link to="/" className="sidenav-home-btn">
                 {this.props.t("sideNav-home")}
             </Link>
           </li>
+          <SideDrawerWithSubnav
+              navOpen={this.state.productSubNavOpen}
+              toggle={this.subNavToggle}
+              t={this.props.t}
+              dataPass={this.props.dataMain}
+              closeSub={this.props.closeDrawer}
+          />
 
-          <li className="sidenav-li-drop">
-            <div className="nav-link-style"
-              onClick={this.subNavToggle}>
-              <div className="nav-link-style__arrow">
-                <img className={subNavOpen} src={logo} alt="Arrow" />
-              </div>
-              <div className="nav-link-style__title">{this.props.t("products")}</div>
-            </div>
-            <div className={subOpenDisplay}>
-              <ul className="sideNav-sub">
-                {this.props.dataMain.map((arr, index) => (
-                  <Sublinks
-                      t={this.props.t}
-                    key={index}
-                    address={`/${index}`}
-                    product={arr[0].genreEn}
-                    // correctCatalogClick={() => this.props.correctCatalog(index)}
-                    closeNav={this.props.closeDrawer}
-                  />
-                ))}
-              </ul>
-            </div>
-          </li>
-          <li className="sidenav-li-drop">
-            <div className="nav-link-style" onClick={this.subNavToggle}>
-              <div>
-                {/*<img className={subNavOpen} src={logo} alt="Arrow" />*/}
-              </div>
-              <div>{this.props.t("contact")}</div>
-            </div>
-          </li>
+
+            <li className="sidenav-noSub">
+                <Link to="/load-in" className="sidenav-noSub__Link" onClick={this.props.closeDrawer}>
+                    <div className="sidenav-noSub__Link--font">{this.props.t("loadIn")}</div>
+                </Link>
+            </li>
+            <li className="sidenav-noSub">
+                <Link to="/lab" className="sidenav-noSub__Link" onClick={this.props.closeDrawer}>
+                    <div className="sidenav-noSub__Link--font">{this.props.t("lab")}</div>
+                </Link>
+            </li>
+            <li className="sidenav-noSub">
+                <Link to="/about" className="sidenav-noSub__Link" onClick={this.props.closeDrawer}>
+                    <div className="sidenav-noSub__Link--font">{this.props.t("about")}</div>
+                </Link>
+            </li>
+            <li className="sidenav-noSub">
+                <Link to="/catalog" className="sidenav-noSub__Link" onClick={this.props.closeDrawer}>
+                    <div className="sidenav-noSub__Link--font">{this.props.t("catalog")}</div>
+                </Link>
+            </li>
+            <li className="sidenav-noSub">
+                <Link to="/contact" className="sidenav-noSub__Link" onClick={this.props.closeDrawer}>
+                    <div className="sidenav-noSub__Link--font">{this.props.t("contact")}</div>
+                </Link>
+            </li>
+
+
+
+
         </ul>
       </div>
     );

@@ -8,7 +8,9 @@ const BackDrop = props => {
         back_drop = 'backDrop-visible';
 
     }
-    return (<div className={back_drop} onClick={props.openDrawer}/>)
+    return (<div className={back_drop}
+                 onClick={props.openDrawer}
+    />)
 
 };
 

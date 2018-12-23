@@ -1,50 +1,64 @@
 import React from 'react';
+// import {Grid,Row,Col,Thumbnail} from 'react-bootstrap';
 
 
-// import { Parallax } from 'react-parallax';
+import { Parallax } from 'react-parallax';
 // import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 // import { Link } from 'react-router-dom';
-// import HomeGenres from './homeGenres';
-// import image1 from '../../img/chideman2.png';
+// import Unused from "./unused";
+
 import img from '../../img/khanabig.png';
 import HomeProducts from "./homeProducts";
 
-// const insideStyles = {background: 'transparent', padding: 20, position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)'};
+const insideStyles = {background: 'transparent', padding: 20, position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)'};
 
 const MainContainer = props => {
+    const small = process.env.PUBLIC_URL + 'images/sizeset/new/intro-mob.jpg';
+    const medium = process.env.PUBLIC_URL + 'images/sizeset/new/intro-tab.jpg';
+    const large = process.env.PUBLIC_URL + 'images/sizeset/new/intro-tab.jpg';
+    const small_logo = process.env.PUBLIC_URL + 'images/sizeset/new/intro-mob.png';
+    const medium_logo = process.env.PUBLIC_URL + 'images/sizeset/new/intro-tab.png';
+    const large_logo = process.env.PUBLIC_URL + 'images/sizeset/new/intro-desk.png';
 
-    const medium = process.env.PUBLIC_URL + 'images/sizeset/main-mob.png';
-    const large = process.env.PUBLIC_URL + 'images/sizeset/main-desk.png';
   return (
-    <div key={props.productSpec.type} className="container main">
-      <div className="container head-intro">
-        <img
-          src={large}
-          srcSet={`${medium} 768w, ${large} 1280w`}
-          alt="abbas abad"
-        />
+    <div key={props.productSpec.type} className="main">
 
-      </div>
-      {/*<div className="head-intro-sub" />*/}
+        <Parallax bgImage={small}
+                  bgImageSrcSet={`${small} 768w,${medium} 1280w, ${large} 1440w`}
+                  // bgImageSizes="(max-width: 768px) 100vw"
+                  strength={300}>
+            <div className="parallax-my-custom">
+                <div
+                    // style={insideStyles}
+                     className="intro"
+                     // data-scroll="centerVertical,toggle(.fromTopIn, .fromTopOut)"
+                >
+                    <img className="intro__img"
+                         src={small_logo}
+                         srcSet={`${small_logo} 768w,${medium_logo} 1280w, ${large_logo} 1440w`}
+                         alt="Pars Jadval logo"
+                         // sizes="(max-width: 768px) 100vw"
+                    />
+                    <h2   className={`intro__h2 ${props.t("lang-class")}`}>{props.t("concrete-precast")}</h2>
+                </div>
 
 
-      {/*<Parallax bgImage={image1} strength={300}>*/}
-        {/*<div style={{ height: '80vh' }}>*/}
-            {/*<div className="home-genres" style={insideStyles}>*/}
-                {/*<div className="home-genres-title">*/}
-                    {/*<h2>{props.t("products")}</h2>*/}
-                {/*</div>*/}
-                {/*{props.dataArray.map((arr, index) => (*/}
-                    {/*<HomeGenres*/}
-                        {/*key={index}*/}
-                        {/*address={`/${index}`}*/}
-                        {/*product={arr[0].genreEn}*/}
-                        {/*t={props.t}*/}
-                    {/*/>*/}
-                {/*))}*/}
-            {/*</div>*/}
-        {/*</div>*/}
-      {/*</Parallax>*/}
+            </div>
+        </Parallax>
+
+      {/*<div className="intro">*/}
+        {/*<img*/}
+            {/*className="intro__img"*/}
+          {/*src={small}*/}
+          {/*srcSet={`${small} 768w,${medium} 1280w, ${large} 1440w`}*/}
+            {/*sizes="(max-width: 768px) 100vw"*/}
+          {/*alt="abbas abad"*/}
+        {/*/>*/}
+
+          {/*<h2 className={`intro__h2 ${props.t("lang-class")}`}>{props.t("concrete-precast")}</h2>*/}
+
+
+      {/*</div>*/}
 
 
       <div className="product-showcase">
@@ -67,6 +81,20 @@ const MainContainer = props => {
           )})}
 
       </div>
+        <Parallax bgImage={process.env.PUBLIC_URL + 'img/deraz.jpg'} strength={280}>
+            <div className="parallax-my-custom-2"
+                // style={{ height: '40vh' }}
+            >
+                <div  style={insideStyles} className={`overlaySection ${props.t("lang-class")}`} >
+                    {/*<img className="overlaySection__img" src={process.env.PUBLIC_URL + 'img/kamyon.jpg'}/>*/}
+                    <div className="overlaySection__card" data-scroll="centerVertical,toggle(.scaleDownIn, .scaleDownOut)">
+                        <h2 className="overlaySection__card--title">{props.t("pars-title-footer")}</h2>
+                        <p className="overlaySection__card--p">{props.t("overlay-paragraph")}</p>
+                    </div>
+                </div>
+
+            </div>
+        </Parallax>
     </div>
   );
 };

@@ -1,18 +1,134 @@
-////////////CATALOG HEADER STYLES WITH TRANSLATION STYLES
+.catalog-body{
+  margin: auto;
+  max-width: 1700px;
+  @include media(laptop) {
+    @include flex-display(flex, row-reverse, center, 100%);
+    border-bottom: 1px solid $hard-gray-l;
+
+  }
+  @include media(desktop) {
+    border: 1px solid $hard-gray ;
+
+
+  }
+}
+.catalog-function{
+  @include media(laptop) {
+    @include flex-display(flex, column, flex-start, 100%);
+    //padding:  0 2em;
+
+  }
+}
+///////////CATALOG SIDE NAV for  DESKTOP  \\\\\\\\\\\\\\\\\\\
+
+.desktop-sideGenre{
+  display: none;
+  @include media(laptop) {
+    @include flex-display(flex, column, flex-start, 40%);
+  }
+}
+
+.home-genres{
+  height: 100%;
+
+  @include flex-display(flex, row, space-around, 100%, center);
+  flex-wrap:wrap;
+
+  background-color: $hard-gray;
+  .home-genres-title.farsi{
+
+    width:100%;
+    padding: 3em 0 ;
+    background-color: $hard-gray-l;
+    h2{
+      @include font-fam-size( 3em, asli, bold, $text-yellow-main);
+      margin: auto;
+      text-align:center;
+    }
+  }
+  .home-genres-title.english{
+
+    width:100%;
+    padding: 3em 0 ;
+    background-color: $hard-gray-l;
+    h2{
+      @include font-fam-size( 3em, $main-font-2, 500, $text-yellow-main);
+      margin: auto;
+      text-align:center;
+    }
+  }
+  .home-genre__item{
+    @include flex-display(flex, column, space-evenly, 50%, center);
+    //background-color:  $light-grey;
+
+    //border: 1px solid $hard-gray-l;
+    padding:8px;
+
+    -webkit-transition: all .5s ;
+    transition: all .5s ;
+
+    &:hover{
+
+      background-color: $light-grey;
+    }
+    .home-genre__item--img{
+      max-width: 100%;
+      height: auto;
+    }
+
+
+    .home-genres__item--title.english{
+      @include font-fam-size( 2em, $main-font-1, 400, rgba($text-yellow-main,0.8));
+      padding: .5em 0;
+      width: 100%;
+      text-align: center;
+
+    }
+    .home-genres__item--title.farsi{
+      @include font-fam-size( 2em, dovom, 400, rgba($text-yellow-main,0.8));
+      padding: .5em 0;
+      width: 100%;
+      text-align: center;
+
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+////////////CATALOG HEADER STYLES WITH TRANSLATION STYLES \\\\\\\\\\\\\\\\\\\
 
 .catalog-header-farsi {
+  position: relative;
+  background: url('./img/catalog-head.jpg') no-repeat center;
+
+  background-size: cover;
   margin: auto;
-  //padding: 1em;
+  padding: 1em 0;
+  @include media(iphone-5) {
+    //padding: 2em 0;
+  }
+
   @include media(tablet) {
-    padding: 4em 2em;
+    //padding: 4em 2em;
   }
   @include media(laptop) {
-    padding: 3em;
-    width: 70%;
+    //background-size: cover;
+    //background: none;
+   margin: 0;
+    width: 100%;
   }
   @include flex-display(flex, column, center, 100%);
   .catalog-header__title {
-    margin: 2em auto;
+
+
+    padding: 1em 0;
     @include media(tablet) {
       margin: 3em auto;
     }
@@ -22,14 +138,14 @@
 
     .catalog-header__title_info {
       text-align: center;
-      @include font-fam-size(3em, asli, bold, $hard-gray);
+      @include font-fam-size(3em, asli, bold, $text-dark );
       margin: auto;
       @include media(tablet) {
         padding: .6em 0;
         font-size: 4em;
       }
       @include media(laptop) {
-        font-size: 5em
+
       }
 
 
@@ -37,18 +153,25 @@
   }
 }
 .catalog-header-english {
+  position: relative;
+  background: url('./img/catalog-head.jpg') no-repeat center;
+
+  background-size: cover;
   margin: auto;
-  //padding: 1em;
-  @include flex-display(flex, column, center, 100%);
+  padding: 1em 0;
+  @include media(iphone-5) {
+    //padding: 2em 0;
+  }
   @include media(tablet) {
-    padding: 4em 2em;
+    //padding: 4em 2em;
+    //padding: 2em 0;
   }
   @include media(laptop) {
-    padding: 3em;
-    width: 70%;
+    margin: 0;
+    width: 100%;
   }
   .catalog-header__title {
-    margin: 2em auto;
+    padding: 1em 0;
     @include media(tablet) {
       margin: 3em auto;
     }
@@ -57,7 +180,7 @@
     }
     .catalog-header__title_info {
       text-align: center;
-      @include font-fam-size(3em, $main-font-2, bold, $hard-gray);
+      @include font-fam-size(3em, $main-font-2, bold, $text-dark );
       margin: auto;
       @include media(tablet) {
         padding: .6em 0;
@@ -65,27 +188,40 @@
         font-size: 4em;
       }
       @include media(laptop) {
-        font-size: 5em
+
       }
     }
   }
 }
 
+
 .catalog-header__genres {
+  position: absolute;
   @include flex-display(flex, row, space-around, 100%);
   list-style: none;
+  top:6.5em;
+  @include media(iphone-5) {
+    top:6em;
+  }
+
   padding: 0;
-  margin-top: 2rem;
+  //margin-top: 2rem;
   @include media(tablet) {
+    top:16em;
     margin: auto;
     padding: 1em 0;
-    width: 80%;
-    justify-content: space-between;
+    width: 100%;
+    justify-content: space-around;
   }
   @include media(laptop) {
-    width: 100%;
+    top:12em;
+    left: 10%;
+    width: 80%;
+    //position: static;
+    //margin: auto;
   }
   .catalog-header__genres_navigation {
+    cursor: pointer;
     width: 25%;
     border: 1px solid #fabb00;
     border-radius: 2em;
@@ -101,6 +237,7 @@
       from(#ffcc33),
       to(#cc9933)
     );
+    transition: all 1s;
     background-image: -webkit-linear-gradient(top, #ffcc33, #cc9933);
     background-image: -moz-linear-gradient(top, #ffcc33, #cc9933);
     background-image: -ms-linear-gradient(top, #ffcc33, #cc9933);
@@ -116,7 +253,7 @@
       border-radius: 3em;
     }
   }
-  .catalog-header__genres_navigation--active {
+  .catalog-header__genres_navigation.active {
     width: 25%;
     border: 1px solid #fabb00;
     border-radius: 2em;
@@ -149,7 +286,8 @@
   }
 
   .catalog-header__genres_navigation--btn-farsi {
-    @include font-fam-size(.7em, dovom-bold, bold, $hard-gray);
+    transition: all 0.5s ease-in;
+    @include font-fam-size(.7em, dovom-bold, bold, $text-dark);
 
     width: 100%;
     text-align: center;
@@ -161,11 +299,11 @@
       font-size: 1.5em;
     }
     @include media(laptop) {
-      //font-size: 2.1em
+      //font-size: 2em
     }
   }
   .catalog-header__genres_navigation--btn-farsi .active {
-    transition: all 0.5s ease-in;
+
     padding: .5em 0;
     font-size: .8em;
     color: $hard-gray;
@@ -175,7 +313,8 @@
 
   }
   .catalog-header__genres_navigation--btn-english {
-    @include font-fam-size(.7em, $main-font-2, bold, $hard-gray);
+    transition: all 0.5s ease-in;
+    @include font-fam-size(.7em, $main-font-2, 400, $text-dark);
     width: 100%;
     text-align: center;
     padding: .5em 0;
@@ -187,11 +326,11 @@
 
     }
     @include media(laptop) {
-      //font-size: 2.1em
+      //font-size: 2em
     }
   }
   .catalog-header__genres_navigation--btn-english .active {
-    transition: all 0.5s ease-in;
+
     font-size: .7;
     padding: .5em 0;
     color: $hard-gray;
@@ -206,30 +345,55 @@
   flex-wrap: wrap;
 
   .gallery-wrapper {
-    @include flex-display(
-      flex,
-      column,
-      space-evenly,
-      100%,
-      center
-    );
+    padding-top: 3em;
+    @include flex-display(flex, column, space-evenly, 100%, center);
+    @include media(laptop) {
+      @include flex-display(flex, row, space-evenly, 100%, center);
+      flex-wrap: wrap;
+
+        margin: 4em 0;
+
+
+
+    }
+
 
     .gallery-item {
       @include flex-display(flex, row, space-evenly, 100%);
       border-bottom: 1px solid $text-black-m;
+      @include media(laptop) {
+        @include flex-display(flex, column, space-evenly, 25%, center);
+
+      }
       &:last-child {
         border-bottom: none;
         padding-bottom: 3em;
+        @include media(laptop) {
+          padding-bottom: 0;
+          border-bottom: 1px solid $text-black-m;
+
+
+        }
+
       }
       .gallery-item__img {
+        //display: flex;
         width: 40%;
         margin: auto;
+        @include media(laptop) {
+          //display: flex;
+          width: 100%;
+
+        }
         img {
           max-width: 100%;
           height: auto;
+          margin: auto;
         }
       }
     }
+
+
   }
 }
 
@@ -244,6 +408,8 @@
     padding: 2.5em 0;
   }
   @include media(laptop) {
+    font-size: .9em;
+    width: 100%;
     padding: 4em 0;
 
   }
@@ -255,7 +421,7 @@
       font-size: 1.3em;
     }
     @include media(laptop) {
-      font-size: 2em
+      //font-size: 2em
     }
 
     span {
@@ -266,27 +432,29 @@
 }
 .gallery-item__title--en {
   @include flex-display(flex, column, space-around, 50%, center);
-  @include font-fam-size(1.1em, $main-font-2, bold, $text-black-m);
+  @include font-fam-size(1.1em, $main-font-2, 400, $text-black-m);
   padding: 1em 0;
 
   @include media(tablet) {
     padding: 2.5em 0;
   }
   @include media(laptop) {
-    padding: 4em 0;
+    font-size: .9em;
+    width: 100%;
+    padding: 3em 0;
 
   }
   .gallery-item__title_info--en {
-    @include font-fam-size(.8em, $main-font-1, bold, $text-black-m);
+    @include font-fam-size(.8em, $main-font-1, 600, $text-black-m);
     margin: .1em;
     @include media(tablet) {
       font-size: 1.3em;
     }
     @include media(laptop) {
-      font-size: 2em
+      //font-size: 2em
     }
     span {
-      @include font-fam-size(1em, $main-font-2, bold, $text-gray-m);
+      @include font-fam-size(1em, $main-font-2, 400, $text-gray-m);
 
     }
   }
@@ -307,7 +475,7 @@
       width: 70%;
     }
     @include media(laptop) {
-
+      margin: 4em 0;
       width: 50%;
     }
 
