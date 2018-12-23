@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d20df5d6-e763-4bb8-b988-cc34239ef681" name="Default" comment="lots done!">
+    <list default="true" id="d20df5d6-e763-4bb8-b988-cc34239ef681" name="Default" comment="xml commit.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/data.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -32,10 +31,10 @@
           <entry key="project.open.time.4" value="3" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.6" value="2" />
-          <entry key="project.open.time.7" value="1" />
+          <entry key="project.open.time.7" value="2" />
           <entry key="project.open.time.8" value="3" />
           <entry key="project.open.time.9" value="2" />
-          <entry key="project.opened" value="33" />
+          <entry key="project.opened" value="34" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -63,7 +62,7 @@
           <entry key="js" value="12675" />
           <entry key="json" value="41" />
           <entry key="scss" value="8551" />
-          <entry key="txt" value="10" />
+          <entry key="txt" value="141" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -71,7 +70,7 @@
           <entry key="HTML" value="43" />
           <entry key="JSON" value="41" />
           <entry key="JavaScript" value="12675" />
-          <entry key="PLAIN_TEXT" value="11" />
+          <entry key="PLAIN_TEXT" value="142" />
           <entry key="SCSS" value="8551" />
         </counts>
       </usages-collector>
@@ -407,7 +406,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="214" />
-    <option name="y" value="1347" />
+    <option name="y" value="1208" />
     <option name="width" value="1749" />
     <option name="height" value="885" />
   </component>
@@ -419,6 +418,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -508,7 +508,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -592,6 +591,7 @@
       <workItem from="1544578355177" duration="1244000" />
       <workItem from="1545085533917" duration="1061000" />
       <workItem from="1545260133312" duration="485000" />
+      <workItem from="1545539835191" duration="508000" />
     </task>
     <task id="LOCAL-00001" summary="lots done!">
       <created>1544138104551</created>
@@ -600,14 +600,28 @@
       <option name="project" value="LOCAL" />
       <updated>1544138104551</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Gonna attempt to make the application Full-stack by adding Node.js and Express to the Project.">
+      <created>1545540060561</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1545540060561</updated>
+    </task>
+    <task id="LOCAL-00003" summary="xml commit.">
+      <created>1545540298214</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1545540298215</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="558220000" />
+    <option name="totallyTimeSpent" value="558728000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="214" y="1347" width="1749" height="885" extended-state="0" />
+    <frame x="214" y="1208" width="1749" height="885" extended-state="0" />
     <layout>
       <window_info content_ui="combo" x="634" y="1237" width="476" height="983" id="Project" order="0" side_tool="true" visible="true" weight="0.12268519" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -637,7 +651,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="lots done!" />
-    <option name="LAST_COMMIT_MESSAGE" value="lots done!" />
+    <MESSAGE value="Gonna attempt to make the application Full-stack by adding Node.js and Express to the Project." />
+    <MESSAGE value="xml commit." />
+    <option name="LAST_COMMIT_MESSAGE" value="xml commit." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
