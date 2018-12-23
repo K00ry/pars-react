@@ -575,7 +575,7 @@ const data = [
                 genreEn: 'mozayik',
               genreId: 'hayati',
               type: 'حياطی',
-              img: '/images/mozayik/mobile/sade2.png',
+              img: '/images/mozayik/mobile/hayati.png',
               sizes: [
                 {
                   img: '/images/kafpoosh/mobile/transparent/40x40',
